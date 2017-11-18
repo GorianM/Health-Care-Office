@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace HealthAndCareOffice
 {
-    public partial class Form1 : Form
+    public partial class MainWindowForm : Form
     {
-        public Form1()
+        public MainWindowForm()
         {
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
