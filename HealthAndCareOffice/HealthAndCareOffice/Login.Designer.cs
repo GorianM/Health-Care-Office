@@ -54,6 +54,9 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(354, 510);
             this.panelLeft.TabIndex = 0;
+            this.panelLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLeft_MouseDown);
+            this.panelLeft.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelLeft_MouseMove);
+            this.panelLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelLeft_MouseUp);
             // 
             // pictureBox1
             // 
@@ -64,6 +67,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelRight
             // 
@@ -81,6 +85,10 @@
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(354, 510);
             this.panelRight.TabIndex = 1;
+            this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRight_Paint);
+            this.panelRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelRight_MouseDown);
+            this.panelRight.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelRight_MouseMove);
+            this.panelRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelRight_MouseUp);
             // 
             // checkRemmer
             // 
@@ -102,7 +110,6 @@
             this.button1.Text = "Σύδεση";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
             // 
             // label3
             // 
@@ -125,7 +132,6 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(189, 20);
             this.textBoxPassword.TabIndex = 3;
-            this.textBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPassword_KeyDown);
             // 
             // label2
             // 
@@ -145,8 +151,6 @@
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(189, 20);
             this.textBoxUser.TabIndex = 1;
-            
-            this.textBoxUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUser_KeyDown);
             // 
             // label1
             // 
