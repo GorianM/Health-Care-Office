@@ -26,6 +26,7 @@ namespace HealthAndCareOffice
         private void label3_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,11 +35,12 @@ namespace HealthAndCareOffice
             {
                 MessageBox.Show("Συνδεεστε στο συστημα", "Επυτυχια συνδεσης");
                 Save_Data();
-               // Application.Run(new MainWindowForm());
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Λαθος στοιχεια", "Aπυτυχια συνδεσης");
+                
 
             }
 

@@ -63,7 +63,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(788, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,7 +143,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(764, 441);
+            this.tabControl1.Size = new System.Drawing.Size(760, 522);
             this.tabControl1.TabIndex = 1;
             // 
             // AppointmentsTabPage
@@ -153,7 +153,7 @@
             this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 22);
             this.AppointmentsTabPage.Name = "AppointmentsTabPage";
             this.AppointmentsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.AppointmentsTabPage.Size = new System.Drawing.Size(756, 415);
+            this.AppointmentsTabPage.Size = new System.Drawing.Size(752, 496);
             this.AppointmentsTabPage.TabIndex = 0;
             this.AppointmentsTabPage.Text = "Appointments";
             this.AppointmentsTabPage.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(0, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 344);
+            this.panel1.Size = new System.Drawing.Size(752, 425);
             this.panel1.TabIndex = 1;
             // 
             // ToolbarPanel
@@ -180,8 +180,9 @@
             this.ToolbarPanel.Controls.Add(this.AddNewAppoinmentButton);
             this.ToolbarPanel.Location = new System.Drawing.Point(0, 0);
             this.ToolbarPanel.Name = "ToolbarPanel";
-            this.ToolbarPanel.Size = new System.Drawing.Size(756, 68);
+            this.ToolbarPanel.Size = new System.Drawing.Size(752, 68);
             this.ToolbarPanel.TabIndex = 0;
+            this.ToolbarPanel.Resize += new System.EventHandler(this.ToolbarPanel_Resize);
             // 
             // dateTimePicker1
             // 
@@ -250,12 +251,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 480);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "MainWindowForm";
             this.Text = "Health And Care Office";
+            this.Load += new System.EventHandler(this.MainWindowForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
