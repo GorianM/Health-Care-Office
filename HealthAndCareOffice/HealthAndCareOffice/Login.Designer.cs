@@ -32,9 +32,9 @@
             this.panelLeft = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelRight = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.checkRemmer = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxUser = new System.Windows.Forms.TextBox();
@@ -42,6 +42,7 @@
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -71,10 +72,10 @@
             // 
             // panelRight
             // 
-            this.panelRight.BackColor = System.Drawing.Color.PowderBlue;
+            this.panelRight.BackColor = System.Drawing.Color.LightBlue;
+            this.panelRight.Controls.Add(this.pictureBox2);
             this.panelRight.Controls.Add(this.checkRemmer);
             this.panelRight.Controls.Add(this.button1);
-            this.panelRight.Controls.Add(this.label3);
             this.panelRight.Controls.Add(this.textBoxPassword);
             this.panelRight.Controls.Add(this.label2);
             this.panelRight.Controls.Add(this.textBoxUser);
@@ -89,6 +90,17 @@
             this.panelRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelRight_MouseDown);
             this.panelRight.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelRight_MouseMove);
             this.panelRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelRight_MouseUp);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(304, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // checkRemmer
             // 
@@ -110,19 +122,6 @@
             this.button1.Text = "Σύδεση";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label3.Location = new System.Drawing.Point(328, 9);
-            this.label3.MaximumSize = new System.Drawing.Size(29, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxPassword
             // 
@@ -177,6 +176,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,8 +190,8 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxUser;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkRemmer;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
