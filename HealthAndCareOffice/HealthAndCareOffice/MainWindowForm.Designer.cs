@@ -29,17 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.AppointmentsTabPage = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.ToolbarPanel = new System.Windows.Forms.Panel();
-            this.AddNewAppoinmentButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.petientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +38,17 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openDocumentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.AppointmentsTabPage = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ToolbarPanel = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.AddNewAppoinmentButton = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -66,6 +66,71 @@
             this.menuStrip1.Size = new System.Drawing.Size(788, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.appointmentToolStripMenuItem,
+            this.petientToolStripMenuItem});
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
+            // appointmentToolStripMenuItem
+            // 
+            this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
+            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.appointmentToolStripMenuItem.Text = "Appointment";
+            this.appointmentToolStripMenuItem.Click += new System.EventHandler(this.appointmentToolStripMenuItem_Click);
+            // 
+            // petientToolStripMenuItem
+            // 
+            this.petientToolStripMenuItem.Name = "petientToolStripMenuItem";
+            this.petientToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.petientToolStripMenuItem.Text = "Petient";
+            // 
+            // windowToolStripMenuItem
+            // 
+            this.windowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem});
+            this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
+            this.windowToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.windowToolStripMenuItem.Text = "Window";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.checkForUpdatesToolStripMenuItem,
+            this.openDocumentationToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // checkForUpdatesToolStripMenuItem
+            // 
+            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
+            // 
+            // openDocumentationToolStripMenuItem
+            // 
+            this.openDocumentationToolStripMenuItem.Name = "openDocumentationToolStripMenuItem";
+            this.openDocumentationToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.openDocumentationToolStripMenuItem.Text = "Open Documentation";
             // 
             // tabControl1
             // 
@@ -93,25 +158,16 @@
             this.AppointmentsTabPage.Text = "Appointments";
             this.AppointmentsTabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // panel1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(756, 415);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Petients";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(756, 362);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(0, 71);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(756, 344);
+            this.panel1.TabIndex = 1;
             // 
             // ToolbarPanel
             // 
@@ -127,32 +183,12 @@
             this.ToolbarPanel.Size = new System.Drawing.Size(756, 68);
             this.ToolbarPanel.TabIndex = 0;
             // 
-            // AddNewAppoinmentButton
+            // dateTimePicker1
             // 
-            this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 4);
-            this.AddNewAppoinmentButton.Name = "AddNewAppoinmentButton";
-            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(137, 23);
-            this.AddNewAppoinmentButton.TabIndex = 0;
-            this.AddNewAppoinmentButton.Text = "New Appointment";
-            this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(167, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Today";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(249, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "<";
-            this.button2.UseVisualStyleBackColor = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(280, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // button3
             // 
@@ -163,87 +199,52 @@
             this.button3.Text = ">";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // button2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(280, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.button2.Location = new System.Drawing.Point(249, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "<";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // button1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(0, 71);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 344);
-            this.panel1.TabIndex = 1;
+            this.button1.Location = new System.Drawing.Point(167, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Today";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // addToolStripMenuItem
+            // AddNewAppoinmentButton
             // 
-            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.appointmentToolStripMenuItem,
-            this.petientToolStripMenuItem});
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.addToolStripMenuItem.Text = "Add";
+            this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 4);
+            this.AddNewAppoinmentButton.Name = "AddNewAppoinmentButton";
+            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(137, 23);
+            this.AddNewAppoinmentButton.TabIndex = 0;
+            this.AddNewAppoinmentButton.Text = "New Appointment";
+            this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
             // 
-            // appointmentToolStripMenuItem
+            // tabPage2
             // 
-            this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
-            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.appointmentToolStripMenuItem.Text = "Appointment";
-            this.appointmentToolStripMenuItem.Click += new System.EventHandler(this.appointmentToolStripMenuItem_Click);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(756, 415);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Petients";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // petientToolStripMenuItem
+            // tabPage3
             // 
-            this.petientToolStripMenuItem.Name = "petientToolStripMenuItem";
-            this.petientToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.petientToolStripMenuItem.Text = "Petient";
-            // 
-            // windowToolStripMenuItem
-            // 
-            this.windowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem});
-            this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
-            this.windowToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.windowToolStripMenuItem.Text = "Window";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.checkForUpdatesToolStripMenuItem,
-            this.openDocumentationToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // checkForUpdatesToolStripMenuItem
-            // 
-            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
-            // 
-            // openDocumentationToolStripMenuItem
-            // 
-            this.openDocumentationToolStripMenuItem.Name = "openDocumentationToolStripMenuItem";
-            this.openDocumentationToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.openDocumentationToolStripMenuItem.Text = "Open Documentation";
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(756, 415);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // MainWindowForm
             // 
