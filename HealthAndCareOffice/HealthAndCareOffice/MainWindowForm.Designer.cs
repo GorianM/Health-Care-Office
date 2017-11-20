@@ -164,9 +164,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.calendarContainerPanel.AutoScroll = true;
-            this.calendarContainerPanel.Location = new System.Drawing.Point(0, 71);
+            this.calendarContainerPanel.Location = new System.Drawing.Point(0, 74);
             this.calendarContainerPanel.Name = "calendarContainerPanel";
-            this.calendarContainerPanel.Size = new System.Drawing.Size(752, 425);
+            this.calendarContainerPanel.Size = new System.Drawing.Size(752, 422);
             this.calendarContainerPanel.TabIndex = 1;
             // 
             // ToolbarPanel
@@ -186,43 +186,43 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(280, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(279, 7);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(197, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(482, 3);
+            this.button3.Location = new System.Drawing.Point(482, 6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(24, 23);
+            this.button3.Size = new System.Drawing.Size(24, 20);
             this.button3.TabIndex = 3;
             this.button3.Text = ">";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(249, 4);
+            this.button2.Location = new System.Drawing.Point(249, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 23);
+            this.button2.Size = new System.Drawing.Size(24, 20);
             this.button2.TabIndex = 2;
             this.button2.Text = "<";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 4);
+            this.button1.Location = new System.Drawing.Point(167, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 20);
             this.button1.TabIndex = 1;
             this.button1.Text = "Today";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // AddNewAppoinmentButton
             // 
-            this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 4);
+            this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 6);
             this.AddNewAppoinmentButton.Name = "AddNewAppoinmentButton";
-            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(137, 23);
+            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(137, 20);
             this.AddNewAppoinmentButton.TabIndex = 0;
             this.AddNewAppoinmentButton.Text = "New Appointment";
             this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
