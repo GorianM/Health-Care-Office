@@ -40,7 +40,7 @@
             this.openDocumentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.AppointmentsTabPage = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.calendarContainerPanel = new System.Windows.Forms.Panel();
             this.ToolbarPanel = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
@@ -148,7 +148,7 @@
             // 
             // AppointmentsTabPage
             // 
-            this.AppointmentsTabPage.Controls.Add(this.panel1);
+            this.AppointmentsTabPage.Controls.Add(this.calendarContainerPanel);
             this.AppointmentsTabPage.Controls.Add(this.ToolbarPanel);
             this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 22);
             this.AppointmentsTabPage.Name = "AppointmentsTabPage";
@@ -158,16 +158,16 @@
             this.AppointmentsTabPage.Text = "Appointments";
             this.AppointmentsTabPage.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // calendarContainerPanel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.calendarContainerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(0, 71);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(752, 425);
-            this.panel1.TabIndex = 1;
+            this.calendarContainerPanel.AutoScroll = true;
+            this.calendarContainerPanel.Location = new System.Drawing.Point(0, 71);
+            this.calendarContainerPanel.Name = "calendarContainerPanel";
+            this.calendarContainerPanel.Size = new System.Drawing.Size(752, 425);
+            this.calendarContainerPanel.TabIndex = 1;
             // 
             // ToolbarPanel
             // 
@@ -232,7 +232,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(756, 415);
+            this.tabPage2.Size = new System.Drawing.Size(752, 496);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Petients";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -242,7 +242,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(756, 415);
+            this.tabPage3.Size = new System.Drawing.Size(752, 496);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel ToolbarPanel;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel calendarContainerPanel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

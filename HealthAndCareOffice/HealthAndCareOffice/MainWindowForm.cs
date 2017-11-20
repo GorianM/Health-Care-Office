@@ -14,7 +14,7 @@ namespace HealthAndCareOffice
     {
 
         Label[] daysLabelArray;
-        string[] daysArray = {"", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday ", "Sunday" };
+        string[] daysArray = {"Time", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday ", "Sunday" };
         public MainWindowForm()
         {
             InitializeComponent();
@@ -33,6 +33,8 @@ namespace HealthAndCareOffice
                 day.TextAlign = ContentAlignment.MiddleCenter;
                 daysLabelArray[i] = day;
             }
+
+            AppointmentCalendar appointmentCalendar = new AppointmentCalendar(calendarContainerPanel);
 
         }
 
