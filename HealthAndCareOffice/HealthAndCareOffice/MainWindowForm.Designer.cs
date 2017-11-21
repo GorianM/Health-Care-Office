@@ -49,8 +49,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.AddNewAppoinmentButton = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Patients = new System.Windows.Forms.TabPage();
+            this.Income_Expenses = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -141,8 +141,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.AppointmentsTabPage);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.Patients);
+            this.tabControl1.Controls.Add(this.Income_Expenses);
             this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
@@ -154,10 +154,11 @@
             // 
             this.AppointmentsTabPage.Controls.Add(this.calendarContainerPanel);
             this.AppointmentsTabPage.Controls.Add(this.ToolbarPanel);
-            this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 23);
+            this.AppointmentsTabPage.ImageIndex = 0;
+            this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 32);
             this.AppointmentsTabPage.Name = "AppointmentsTabPage";
             this.AppointmentsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.AppointmentsTabPage.Size = new System.Drawing.Size(752, 495);
+            this.AppointmentsTabPage.Size = new System.Drawing.Size(752, 486);
             this.AppointmentsTabPage.TabIndex = 0;
             this.AppointmentsTabPage.Text = "Appointments";
             this.AppointmentsTabPage.UseVisualStyleBackColor = true;
@@ -170,7 +171,7 @@
             this.calendarContainerPanel.AutoScroll = true;
             this.calendarContainerPanel.Location = new System.Drawing.Point(0, 74);
             this.calendarContainerPanel.Name = "calendarContainerPanel";
-            this.calendarContainerPanel.Size = new System.Drawing.Size(752, 421);
+            this.calendarContainerPanel.Size = new System.Drawing.Size(752, 412);
             this.calendarContainerPanel.TabIndex = 1;
             // 
             // ToolbarPanel
@@ -231,25 +232,27 @@
             this.AddNewAppoinmentButton.Text = "New Appointment";
             this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // Patients
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 23);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(752, 495);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Petients";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Patients.ImageIndex = 1;
+            this.Patients.Location = new System.Drawing.Point(4, 32);
+            this.Patients.Name = "Patients";
+            this.Patients.Padding = new System.Windows.Forms.Padding(3);
+            this.Patients.Size = new System.Drawing.Size(752, 486);
+            this.Patients.TabIndex = 1;
+            this.Patients.Text = "Petients";
+            this.Patients.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // Income_Expenses
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 23);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(752, 495);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Income/Expenses";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Income_Expenses.ImageIndex = 2;
+            this.Income_Expenses.Location = new System.Drawing.Point(4, 32);
+            this.Income_Expenses.Name = "Income_Expenses";
+            this.Income_Expenses.Padding = new System.Windows.Forms.Padding(3);
+            this.Income_Expenses.Size = new System.Drawing.Size(752, 486);
+            this.Income_Expenses.TabIndex = 2;
+            this.Income_Expenses.Text = "Income/Expenses";
+            this.Income_Expenses.UseVisualStyleBackColor = true;
             // 
             // imageList1
             // 
@@ -267,6 +270,7 @@
             this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "MainWindowForm";
@@ -287,9 +291,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage AppointmentsTabPage;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Patients;
         private System.Windows.Forms.Panel ToolbarPanel;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage Income_Expenses;
         private System.Windows.Forms.Panel calendarContainerPanel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button3;
