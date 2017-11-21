@@ -18,8 +18,8 @@ namespace HealthAndCareOffice
         public MainWindowForm()
         {
             InitializeComponent();
-
             
+
             daysLabelArray = new Label[daysArray.Length];
             for(int i = 0; i < daysArray.Length;i++)
             {
