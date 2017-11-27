@@ -42,7 +42,7 @@
             this.AppointmentsTabPage = new System.Windows.Forms.TabPage();
             this.calendarContainerPanel = new System.Windows.Forms.Panel();
             this.ToolbarPanel = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.currentWeekDate = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -148,15 +148,15 @@
             // 
             // AppointmentsTabPage
             // 
-            this.AppointmentsTabPage.Controls.Add(this.calendarContainerPanel);
+            this.AppointmentsTabPage.BackColor = System.Drawing.Color.Transparent;
             this.AppointmentsTabPage.Controls.Add(this.ToolbarPanel);
+            this.AppointmentsTabPage.Controls.Add(this.calendarContainerPanel);
             this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 22);
             this.AppointmentsTabPage.Name = "AppointmentsTabPage";
             this.AppointmentsTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.AppointmentsTabPage.Size = new System.Drawing.Size(752, 496);
             this.AppointmentsTabPage.TabIndex = 0;
             this.AppointmentsTabPage.Text = "Appointments";
-            this.AppointmentsTabPage.UseVisualStyleBackColor = true;
             // 
             // calendarContainerPanel
             // 
@@ -164,7 +164,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.calendarContainerPanel.AutoScroll = true;
-            this.calendarContainerPanel.Location = new System.Drawing.Point(0, 74);
+            this.calendarContainerPanel.BackColor = System.Drawing.Color.Transparent;
+            this.calendarContainerPanel.Location = new System.Drawing.Point(3, 78);
             this.calendarContainerPanel.Name = "calendarContainerPanel";
             this.calendarContainerPanel.Size = new System.Drawing.Size(752, 422);
             this.calendarContainerPanel.TabIndex = 1;
@@ -173,23 +174,24 @@
             // 
             this.ToolbarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ToolbarPanel.Controls.Add(this.dateTimePicker1);
+            this.ToolbarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ToolbarPanel.Controls.Add(this.currentWeekDate);
             this.ToolbarPanel.Controls.Add(this.button3);
             this.ToolbarPanel.Controls.Add(this.button2);
             this.ToolbarPanel.Controls.Add(this.button1);
             this.ToolbarPanel.Controls.Add(this.AddNewAppoinmentButton);
-            this.ToolbarPanel.Location = new System.Drawing.Point(0, 0);
+            this.ToolbarPanel.Location = new System.Drawing.Point(0, 3);
             this.ToolbarPanel.Name = "ToolbarPanel";
             this.ToolbarPanel.Size = new System.Drawing.Size(752, 68);
             this.ToolbarPanel.TabIndex = 0;
             this.ToolbarPanel.Resize += new System.EventHandler(this.ToolbarPanel_Resize);
             // 
-            // dateTimePicker1
+            // currentWeekDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(279, 7);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(197, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.currentWeekDate.Location = new System.Drawing.Point(279, 7);
+            this.currentWeekDate.Name = "currentWeekDate";
+            this.currentWeekDate.Size = new System.Drawing.Size(197, 20);
+            this.currentWeekDate.TabIndex = 4;
             // 
             // button3
             // 
@@ -226,6 +228,7 @@
             this.AddNewAppoinmentButton.TabIndex = 0;
             this.AddNewAppoinmentButton.Text = "New Appointment";
             this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
+            this.AddNewAppoinmentButton.Click += new System.EventHandler(this.AddNewAppoinmentButton_Click);
             // 
             // tabPage2
             // 
@@ -251,6 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
@@ -278,7 +282,7 @@
         private System.Windows.Forms.Panel ToolbarPanel;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel calendarContainerPanel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker currentWeekDate;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

@@ -15,10 +15,13 @@ namespace HealthAndCareOffice
 
         Label[] daysLabelArray;
         string[] daysArray = {"Time", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday ", "Sunday" };
+       
+
         public MainWindowForm()
         {
             InitializeComponent();
 
+           
             
             daysLabelArray = new Label[daysArray.Length];
             for(int i = 0; i < daysArray.Length;i++)
@@ -34,14 +37,13 @@ namespace HealthAndCareOffice
                 daysLabelArray[i] = day;
             }
 
-            AppointmentCalendar appointmentCalendar = new AppointmentCalendar(calendarContainerPanel);
+           
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+       
 
-        }
+       
 
         private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -73,6 +75,9 @@ namespace HealthAndCareOffice
 
         }
 
-       
+        private void AddNewAppoinmentButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
