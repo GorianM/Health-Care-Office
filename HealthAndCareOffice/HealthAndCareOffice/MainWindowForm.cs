@@ -20,9 +20,13 @@ namespace HealthAndCareOffice
         public MainWindowForm()
         {
             InitializeComponent();
+<<<<<<< HEAD
 
            
+=======
+>>>>>>> eac31e132409f729a04bd791d29bbe00e5aa3af9
             
+
             daysLabelArray = new Label[daysArray.Length];
             for(int i = 0; i < daysArray.Length;i++)
             {

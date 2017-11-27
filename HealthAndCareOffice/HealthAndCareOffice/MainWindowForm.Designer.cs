@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindowForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,8 +49,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.AddNewAppoinmentButton = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Patients = new System.Windows.Forms.TabPage();
+            this.Income_Expenses = new System.Windows.Forms.TabPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -79,14 +82,14 @@
             // appointmentToolStripMenuItem
             // 
             this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
-            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.appointmentToolStripMenuItem.Text = "Appointment";
             this.appointmentToolStripMenuItem.Click += new System.EventHandler(this.appointmentToolStripMenuItem_Click);
             // 
             // petientToolStripMenuItem
             // 
             this.petientToolStripMenuItem.Name = "petientToolStripMenuItem";
-            this.petientToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.petientToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.petientToolStripMenuItem.Text = "Petient";
             // 
             // windowToolStripMenuItem
@@ -100,7 +103,7 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // helpToolStripMenuItem
@@ -138,8 +141,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.AppointmentsTabPage);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.Patients);
+            this.tabControl1.Controls.Add(this.Income_Expenses);
+            this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -150,11 +154,16 @@
             // 
             this.AppointmentsTabPage.BackColor = System.Drawing.Color.Transparent;
             this.AppointmentsTabPage.Controls.Add(this.ToolbarPanel);
+<<<<<<< HEAD
             this.AppointmentsTabPage.Controls.Add(this.calendarContainerPanel);
             this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 22);
+=======
+            this.AppointmentsTabPage.ImageIndex = 0;
+            this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 32);
+>>>>>>> eac31e132409f729a04bd791d29bbe00e5aa3af9
             this.AppointmentsTabPage.Name = "AppointmentsTabPage";
             this.AppointmentsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.AppointmentsTabPage.Size = new System.Drawing.Size(752, 496);
+            this.AppointmentsTabPage.Size = new System.Drawing.Size(752, 486);
             this.AppointmentsTabPage.TabIndex = 0;
             this.AppointmentsTabPage.Text = "Appointments";
             // 
@@ -167,7 +176,7 @@
             this.calendarContainerPanel.BackColor = System.Drawing.Color.Transparent;
             this.calendarContainerPanel.Location = new System.Drawing.Point(3, 78);
             this.calendarContainerPanel.Name = "calendarContainerPanel";
-            this.calendarContainerPanel.Size = new System.Drawing.Size(752, 422);
+            this.calendarContainerPanel.Size = new System.Drawing.Size(752, 412);
             this.calendarContainerPanel.TabIndex = 1;
             // 
             // ToolbarPanel
@@ -230,34 +239,50 @@
             this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
             this.AddNewAppoinmentButton.Click += new System.EventHandler(this.AddNewAppoinmentButton_Click);
             // 
-            // tabPage2
+            // Patients
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(752, 496);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Petients";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Patients.ImageIndex = 1;
+            this.Patients.Location = new System.Drawing.Point(4, 32);
+            this.Patients.Name = "Patients";
+            this.Patients.Padding = new System.Windows.Forms.Padding(3);
+            this.Patients.Size = new System.Drawing.Size(752, 486);
+            this.Patients.TabIndex = 1;
+            this.Patients.Text = "Petients";
+            this.Patients.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // Income_Expenses
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(752, 496);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Income_Expenses.ImageIndex = 2;
+            this.Income_Expenses.Location = new System.Drawing.Point(4, 32);
+            this.Income_Expenses.Name = "Income_Expenses";
+            this.Income_Expenses.Padding = new System.Windows.Forms.Padding(3);
+            this.Income_Expenses.Size = new System.Drawing.Size(752, 486);
+            this.Income_Expenses.TabIndex = 2;
+            this.Income_Expenses.Text = "Income/Expenses";
+            this.Income_Expenses.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "event-processing-calendar-appointment-planner-schedule-reminder-374f1aa7463926ff-" +
+        "256x256.png");
+            this.imageList1.Images.SetKeyName(1, "Medical_Supervision__Treatment-512.png");
+            this.imageList1.Images.SetKeyName(2, "wedxnwukiugqjnnfhxmr.png");
             // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 561);
+=======
+            this.ClientSize = new System.Drawing.Size(784, 562);
+>>>>>>> eac31e132409f729a04bd791d29bbe00e5aa3af9
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "MainWindowForm";
@@ -278,9 +303,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage AppointmentsTabPage;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Patients;
         private System.Windows.Forms.Panel ToolbarPanel;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage Income_Expenses;
         private System.Windows.Forms.Panel calendarContainerPanel;
         private System.Windows.Forms.DateTimePicker currentWeekDate;
         private System.Windows.Forms.Button button3;
@@ -296,6 +321,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openDocumentationToolStripMenuItem;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
