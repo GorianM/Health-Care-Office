@@ -154,13 +154,12 @@
             // 
             this.AppointmentsTabPage.BackColor = System.Drawing.Color.Transparent;
             this.AppointmentsTabPage.Controls.Add(this.ToolbarPanel);
-<<<<<<< HEAD
+
             this.AppointmentsTabPage.Controls.Add(this.calendarContainerPanel);
             this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 22);
-=======
             this.AppointmentsTabPage.ImageIndex = 0;
             this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 32);
->>>>>>> eac31e132409f729a04bd791d29bbe00e5aa3af9
+
             this.AppointmentsTabPage.Name = "AppointmentsTabPage";
             this.AppointmentsTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.AppointmentsTabPage.Size = new System.Drawing.Size(752, 486);
@@ -274,12 +273,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 561);
-=======
-            this.ClientSize = new System.Drawing.Size(784, 562);
->>>>>>> eac31e132409f729a04bd791d29bbe00e5aa3af9
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
