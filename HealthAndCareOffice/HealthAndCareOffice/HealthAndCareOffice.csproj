@@ -102,5 +102,14 @@
   <ItemGroup>
     <Content Include="Health_Care_Office.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScedullerControlLibrary\ScedullerControlLibrary.csproj">
+      <Project>{44ddb6aa-c184-47ab-b770-bf29b5901f1a}</Project>
+      <Name>ScedullerControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

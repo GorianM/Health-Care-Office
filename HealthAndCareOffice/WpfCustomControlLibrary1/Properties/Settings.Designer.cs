@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppointmentSceduler.Properties
+namespace WpfCustomControlLibrary1.Properties
 {
     
     

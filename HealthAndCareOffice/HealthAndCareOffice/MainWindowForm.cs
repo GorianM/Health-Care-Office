@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,31 +14,15 @@ namespace HealthAndCareOffice
     public partial class MainWindowForm : Form
     {
 
-        Label[] daysLabelArray;
-        string[] daysArray = {"Time", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday ", "Sunday" };
+       
        
 
         public MainWindowForm()
         {
             InitializeComponent();
+            sceduller1.Height= 2900;
             
-
-            daysLabelArray = new Label[daysArray.Length];
-            for(int i = 0; i < daysArray.Length;i++)
-            {
-                Label day = new Label();
-                day.Text = daysArray[i];
-                day.SetBounds(ToolbarPanel.Width / daysArray.Length * i, ToolbarPanel.Height-20, ToolbarPanel.Width / daysArray.Length, 20);
-                day.Parent = ToolbarPanel;
-                day.Anchor = AnchorStyles.None;
-                day.Visible = true;
-                day.BorderStyle = BorderStyle.FixedSingle;
-                day.TextAlign = ContentAlignment.MiddleCenter;
-                daysLabelArray[i] = day;
-            }
-
-           
-
+            Debug.WriteLine(sceduller1.Location.X);
         }
 
        
@@ -67,11 +52,7 @@ namespace HealthAndCareOffice
 
         private void ToolbarPanel_Resize(object sender, EventArgs e)
         {
-            for(int i = 0; i < daysLabelArray.Length;i++)
-            {
-                daysLabelArray[i].SetBounds(ToolbarPanel.Width / daysArray.Length * i, ToolbarPanel.Height - 20, ToolbarPanel.Width / daysArray.Length, 20);
-            }
-
+            
         }
 
         private void AddNewAppoinmentButton_Click(object sender, EventArgs e)
