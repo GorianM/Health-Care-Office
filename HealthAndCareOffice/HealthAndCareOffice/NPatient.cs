@@ -26,10 +26,10 @@ namespace HealthAndCareOffice
         {
 
         }
-
-        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            const char Delete = (char)8;
+            e.Handled = !Char.IsDigit(e.KeyChar) && e.KeyChar != Delete;
         }
     }
 }
