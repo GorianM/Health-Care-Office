@@ -49,10 +49,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.AddNewAppoinmentButton = new System.Windows.Forms.Button();
             this.calendarContainerPanel = new System.Windows.Forms.Panel();
+            this.sceduller1 = new ScedullerControlLibrary.Sceduller();
             this.Patients = new System.Windows.Forms.TabPage();
             this.Income_Expenses = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.sceduller1 = new ScedullerControlLibrary.Sceduller();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -84,21 +85,24 @@
             // appointmentToolStripMenuItem
             // 
             this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
-            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.appointmentToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.appointmentToolStripMenuItem.Text = "Appointment";
             this.appointmentToolStripMenuItem.Click += new System.EventHandler(this.appointmentToolStripMenuItem_Click);
             // 
             // petientToolStripMenuItem
             // 
             this.petientToolStripMenuItem.Name = "petientToolStripMenuItem";
-            this.petientToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
-            this.petientToolStripMenuItem.Text = "Petient";
+            this.petientToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.petientToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.petientToolStripMenuItem.Text = "Patient";
             // 
             // windowToolStripMenuItem
             // 
             this.windowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem});
             this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
+            this.windowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.windowToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.windowToolStripMenuItem.Text = "Window";
             // 
@@ -121,20 +125,23 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // checkForUpdatesToolStripMenuItem
             // 
             this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.checkForUpdatesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
             // 
             // openDocumentationToolStripMenuItem
             // 
             this.openDocumentationToolStripMenuItem.Name = "openDocumentationToolStripMenuItem";
-            this.openDocumentationToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.openDocumentationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.openDocumentationToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.openDocumentationToolStripMenuItem.Text = "Open Documentation";
             // 
             // tabControl1
@@ -170,6 +177,7 @@
             this.ToolbarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ToolbarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ToolbarPanel.Controls.Add(this.button4);
             this.ToolbarPanel.Controls.Add(this.currentWeekDate);
             this.ToolbarPanel.Controls.Add(this.button3);
             this.ToolbarPanel.Controls.Add(this.button2);
@@ -219,7 +227,7 @@
             // 
             this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 6);
             this.AddNewAppoinmentButton.Name = "AddNewAppoinmentButton";
-            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(137, 20);
+            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(137, 21);
             this.AddNewAppoinmentButton.TabIndex = 0;
             this.AddNewAppoinmentButton.Text = "New Appointment";
             this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
@@ -237,6 +245,18 @@
             this.calendarContainerPanel.Name = "calendarContainerPanel";
             this.calendarContainerPanel.Size = new System.Drawing.Size(752, 412);
             this.calendarContainerPanel.TabIndex = 1;
+            // 
+            // sceduller1
+            // 
+            this.sceduller1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sceduller1.AutoScroll = true;
+            this.sceduller1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.sceduller1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sceduller1.Location = new System.Drawing.Point(3, 3);
+            this.sceduller1.Name = "sceduller1";
+            this.sceduller1.Size = new System.Drawing.Size(743, 399);
+            this.sceduller1.TabIndex = 0;
             // 
             // Patients
             // 
@@ -269,24 +289,21 @@
             this.imageList1.Images.SetKeyName(1, "Medical_Supervision__Treatment-512.png");
             this.imageList1.Images.SetKeyName(2, "wedxnwukiugqjnnfhxmr.png");
             // 
-            // sceduller1
+            // button4
             // 
-            this.sceduller1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sceduller1.AutoScroll = true;
-            this.sceduller1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.sceduller1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sceduller1.Location = new System.Drawing.Point(3, 3);
-            this.sceduller1.Name = "sceduller1";
-            this.sceduller1.Size = new System.Drawing.Size(743, 399);
-            this.sceduller1.TabIndex = 0;
+            this.button4.Location = new System.Drawing.Point(530, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(135, 21);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "New patient";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -331,6 +348,7 @@
         private System.Windows.Forms.ToolStripMenuItem openDocumentationToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
         private ScedullerControlLibrary.Sceduller sceduller1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
