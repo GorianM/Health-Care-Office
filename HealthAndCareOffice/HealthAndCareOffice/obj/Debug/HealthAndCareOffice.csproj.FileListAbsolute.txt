@@ -1,0 +1,14 @@
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\bin\Debug\HealthAndCareOffice.exe.config
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\bin\Debug\HealthAndCareOffice.exe
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\bin\Debug\HealthAndCareOffice.pdb
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\bin\Debug\ScedullerControlLibrary.dll
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\bin\Debug\ScedullerControlLibrary.pdb
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.AboutForm.resources
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.Login.resources
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.MainWindowForm.resources
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.Properties.Resources.resources
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.csproj.GenerateResource.Cache
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.exe
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\obj\Debug\HealthAndCareOffice.pdb

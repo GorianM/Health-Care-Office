@@ -1,0 +1,7 @@
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\ScedullerControlLibrary\bin\Debug\ScedullerControlLibrary.dll
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\ScedullerControlLibrary\bin\Debug\ScedullerControlLibrary.pdb
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\ScedullerControlLibrary\obj\Debug\ScedullerControlLibrary.Sceduller.resources
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\ScedullerControlLibrary\obj\Debug\ScedullerControlLibrary.csproj.GenerateResource.Cache
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\ScedullerControlLibrary\obj\Debug\ScedullerControlLibrary.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\ScedullerControlLibrary\obj\Debug\ScedullerControlLibrary.dll
+C:\Users\User\Documents\GitHub\Health-Care-Office\HealthAndCareOffice\ScedullerControlLibrary\obj\Debug\ScedullerControlLibrary.pdb
