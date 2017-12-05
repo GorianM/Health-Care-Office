@@ -15,6 +15,7 @@ namespace HealthAndCareOffice
         public AboutForm()
         {
             InitializeComponent();
+            CenterToParent();
         }
 
         private void label3_Click(object sender, EventArgs e)

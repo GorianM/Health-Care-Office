@@ -21,7 +21,7 @@ namespace HealthAndCareOffice
         {
             InitializeComponent();
             sceduller1.Height= 2900;
-            
+            CenterToParent();
             Debug.WriteLine(sceduller1.Location.X);
         }
 

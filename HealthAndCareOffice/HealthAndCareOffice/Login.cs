@@ -20,6 +20,7 @@ namespace HealthAndCareOffice
             InitializeComponent();
             textBoxPassword.MaxLength = 15;
             textBoxUser.MaxLength = 15;
+            CenterToParent();
             Init_Data();
         }
 
