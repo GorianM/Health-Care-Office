@@ -136,6 +136,7 @@
             this.checkForUpdatesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
+            this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
             // openDocumentationToolStripMenuItem
             // 
@@ -297,6 +298,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "New patient";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MainWindowForm
             // 

@@ -59,5 +59,18 @@ namespace HealthAndCareOffice
         {
             
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NPatient myForm = new NPatient();
+            //this.Hide();
+            myForm.ShowDialog();
+        }
+
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CheckUpdates myForm = new CheckUpdates();
+            myForm.ShowDialog();
+        }
     }
 }
