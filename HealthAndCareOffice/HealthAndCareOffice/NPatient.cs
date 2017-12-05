@@ -26,5 +26,10 @@ namespace HealthAndCareOffice
         {
 
         }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }
