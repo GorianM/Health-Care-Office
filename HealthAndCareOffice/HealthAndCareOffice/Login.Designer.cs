@@ -44,6 +44,8 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Regbtn = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelRight.SuspendLayout();
@@ -80,6 +82,8 @@
             // panelRight
             // 
             this.panelRight.BackColor = System.Drawing.Color.LightBlue;
+            this.panelRight.Controls.Add(this.Regbtn);
+            this.panelRight.Controls.Add(this.label4);
             this.panelRight.Controls.Add(this.pictureBox4);
             this.panelRight.Controls.Add(this.pictureBox3);
             this.panelRight.Controls.Add(this.label3);
@@ -139,7 +143,7 @@
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPassword.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxPassword.Location = new System.Drawing.Point(54, 301);
+            this.textBoxPassword.Location = new System.Drawing.Point(55, 301);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(189, 25);
@@ -162,7 +166,7 @@
             this.textBoxUser.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxUser.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBoxUser.Location = new System.Drawing.Point(54, 164);
+            this.textBoxUser.Location = new System.Drawing.Point(55, 164);
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(189, 25);
             this.textBoxUser.TabIndex = 1;
@@ -197,6 +201,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.ErrorImage = null;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(28, 164);
             this.pictureBox3.Name = "pictureBox3";
@@ -216,6 +221,26 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 11;
             this.pictureBox4.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 473);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Not a member ?";
+            this.label4.Visible = false;
+            // 
+            // Regbtn
+            // 
+            this.Regbtn.Location = new System.Drawing.Point(101, 468);
+            this.Regbtn.Name = "Regbtn";
+            this.Regbtn.Size = new System.Drawing.Size(75, 23);
+            this.Regbtn.TabIndex = 13;
+            this.Regbtn.Text = "Register";
+            this.Regbtn.UseVisualStyleBackColor = true;
+            this.Regbtn.Visible = false;
             // 
             // Login
             // 
@@ -254,5 +279,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button Regbtn;
+        private System.Windows.Forms.Label label4;
     }
 }

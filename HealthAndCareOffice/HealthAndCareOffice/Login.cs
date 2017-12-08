@@ -16,7 +16,8 @@ namespace HealthAndCareOffice
 
         public Login()
         {
-
+          //  label4.Visible = false;
+           // Regbtn.Visible = false;
             InitializeComponent();
             textBoxPassword.MaxLength = 15;
             textBoxUser.MaxLength = 15;
@@ -42,7 +43,8 @@ namespace HealthAndCareOffice
             else
             {
                 MessageBox.Show("Λαθος στοιχεια", "Aπυτυχια συνδεσης");
-                
+                label4.Visible = true;
+                Regbtn.Visible = true;
 
             }
 
