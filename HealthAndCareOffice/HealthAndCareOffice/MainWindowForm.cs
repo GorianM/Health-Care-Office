@@ -57,7 +57,8 @@ namespace HealthAndCareOffice
 
         private void AddNewAppoinmentButton_Click(object sender, EventArgs e)
         {
-            
+            NewAppointment np = new NewAppointment();
+            np.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
