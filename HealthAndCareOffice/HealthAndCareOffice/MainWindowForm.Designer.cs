@@ -112,6 +112,7 @@
             this.settingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -193,12 +194,13 @@
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.ImageIndex = 4;
             this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(512, 3);
+            this.button4.Location = new System.Drawing.Point(539, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 32);
+            this.button4.Size = new System.Drawing.Size(185, 32);
             this.button4.TabIndex = 5;
             this.button4.Text = "New patient";
             this.button4.UseVisualStyleBackColor = true;
@@ -206,14 +208,14 @@
             // 
             // currentWeekDate
             // 
-            this.currentWeekDate.Location = new System.Drawing.Point(279, 7);
+            this.currentWeekDate.Location = new System.Drawing.Point(306, 7);
             this.currentWeekDate.Name = "currentWeekDate";
             this.currentWeekDate.Size = new System.Drawing.Size(197, 20);
             this.currentWeekDate.TabIndex = 4;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(482, 6);
+            this.button3.Location = new System.Drawing.Point(509, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(24, 20);
             this.button3.TabIndex = 3;
@@ -222,7 +224,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(249, 6);
+            this.button2.Location = new System.Drawing.Point(276, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(24, 20);
             this.button2.TabIndex = 2;
@@ -231,7 +233,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 6);
+            this.button1.Location = new System.Drawing.Point(193, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 20);
             this.button1.TabIndex = 1;
@@ -240,12 +242,13 @@
             // 
             // AddNewAppoinmentButton
             // 
+            this.AddNewAppoinmentButton.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.AddNewAppoinmentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddNewAppoinmentButton.ImageIndex = 3;
             this.AddNewAppoinmentButton.ImageList = this.imageList1;
             this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 6);
             this.AddNewAppoinmentButton.Name = "AddNewAppoinmentButton";
-            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(157, 29);
+            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(183, 29);
             this.AddNewAppoinmentButton.TabIndex = 0;
             this.AddNewAppoinmentButton.Text = "New Appointment";
             this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;

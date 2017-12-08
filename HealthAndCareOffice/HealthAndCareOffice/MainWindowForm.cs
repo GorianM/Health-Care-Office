@@ -72,5 +72,11 @@ namespace HealthAndCareOffice
             CheckUpdates myForm = new CheckUpdates();
             myForm.ShowDialog();
         }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm sf = new SettingsForm();
+            sf.ShowDialog();
+        }
     }
 }
