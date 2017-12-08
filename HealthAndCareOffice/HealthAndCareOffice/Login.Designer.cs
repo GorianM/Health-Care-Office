@@ -241,6 +241,7 @@
             this.Regbtn.Text = "Register";
             this.Regbtn.UseVisualStyleBackColor = true;
             this.Regbtn.Visible = false;
+            this.Regbtn.Click += new System.EventHandler(this.Regbtn_Click);
             // 
             // Login
             // 

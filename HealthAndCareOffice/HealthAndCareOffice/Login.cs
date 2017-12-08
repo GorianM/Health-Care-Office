@@ -168,6 +168,12 @@ namespace HealthAndCareOffice
                 button1.PerformClick();
             }
         }
+
+        private void Regbtn_Click(object sender, EventArgs e)
+        {
+            Register reg = new Register();
+            reg.ShowDialog();
+        }
     }
 }
 
