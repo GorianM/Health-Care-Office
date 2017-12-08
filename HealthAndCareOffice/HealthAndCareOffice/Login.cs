@@ -32,9 +32,10 @@ namespace HealthAndCareOffice
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (textBoxUser.Text == "admin" && textBoxPassword.Text == "123")
             {
-                MessageBox.Show("Συνδεεστε στο συστημα", "Επυτυχια συνδεσης");
+                
                 Save_Data();
                 this.Close();
             }
@@ -140,6 +141,30 @@ namespace HealthAndCareOffice
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void textBoxUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
         }
     }
 }

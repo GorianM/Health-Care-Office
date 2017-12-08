@@ -193,9 +193,12 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(530, 6);
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.ImageIndex = 4;
+            this.button4.ImageList = this.imageList1;
+            this.button4.Location = new System.Drawing.Point(512, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 21);
+            this.button4.Size = new System.Drawing.Size(149, 32);
             this.button4.TabIndex = 5;
             this.button4.Text = "New patient";
             this.button4.UseVisualStyleBackColor = true;
@@ -237,9 +240,12 @@
             // 
             // AddNewAppoinmentButton
             // 
+            this.AddNewAppoinmentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddNewAppoinmentButton.ImageIndex = 3;
+            this.AddNewAppoinmentButton.ImageList = this.imageList1;
             this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 6);
             this.AddNewAppoinmentButton.Name = "AddNewAppoinmentButton";
-            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(137, 21);
+            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(157, 29);
             this.AddNewAppoinmentButton.TabIndex = 0;
             this.AddNewAppoinmentButton.Text = "New Appointment";
             this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
@@ -300,6 +306,8 @@
         "256x256.png");
             this.imageList1.Images.SetKeyName(1, "Medical_Supervision__Treatment-512.png");
             this.imageList1.Images.SetKeyName(2, "wedxnwukiugqjnnfhxmr.png");
+            this.imageList1.Images.SetKeyName(3, "icon_grid_1x_de73ba9d-65eb-40f7-8d4e-4cab9f666ad6.png");
+            this.imageList1.Images.SetKeyName(4, "αρχείο λήψης (2).jpg");
             // 
             // MainWindowForm
             // 
