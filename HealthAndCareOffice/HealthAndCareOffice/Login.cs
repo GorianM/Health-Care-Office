@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace HealthAndCareOffice
 {
     public partial class Login : Form
@@ -17,6 +16,7 @@ namespace HealthAndCareOffice
 
         public Login()
         {
+
             InitializeComponent();
             textBoxPassword.MaxLength = 15;
             textBoxUser.MaxLength = 15;
