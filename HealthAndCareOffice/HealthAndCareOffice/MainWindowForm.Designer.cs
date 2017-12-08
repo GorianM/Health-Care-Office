@@ -278,7 +278,7 @@
             this.Patients.Padding = new System.Windows.Forms.Padding(3);
             this.Patients.Size = new System.Drawing.Size(752, 486);
             this.Patients.TabIndex = 1;
-            this.Patients.Text = "Petients";
+            this.Patients.Text = "Patients";
             this.Patients.UseVisualStyleBackColor = true;
             // 
             // Income_Expenses
