@@ -43,6 +43,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.AppointmentsTabPage = new System.Windows.Forms.TabPage();
             this.ToolbarPanel = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.currentWeekDate = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.Patients = new System.Windows.Forms.TabPage();
             this.Income_Expenses = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -109,7 +109,8 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.settingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // helpToolStripMenuItem
@@ -126,7 +127,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -134,15 +135,15 @@
             // 
             this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
             this.checkForUpdatesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
             this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
             // openDocumentationToolStripMenuItem
             // 
             this.openDocumentationToolStripMenuItem.Name = "openDocumentationToolStripMenuItem";
-            this.openDocumentationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.openDocumentationToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.openDocumentationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.openDocumentationToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.openDocumentationToolStripMenuItem.Text = "Open Documentation";
             // 
             // tabControl1
@@ -189,6 +190,16 @@
             this.ToolbarPanel.Size = new System.Drawing.Size(752, 68);
             this.ToolbarPanel.TabIndex = 0;
             this.ToolbarPanel.Resize += new System.EventHandler(this.ToolbarPanel_Resize);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(530, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(135, 21);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "New patient";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // currentWeekDate
             // 
@@ -289,16 +300,6 @@
         "256x256.png");
             this.imageList1.Images.SetKeyName(1, "Medical_Supervision__Treatment-512.png");
             this.imageList1.Images.SetKeyName(2, "wedxnwukiugqjnnfhxmr.png");
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(530, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 21);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "New patient";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MainWindowForm
             // 
