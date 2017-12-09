@@ -96,6 +96,7 @@
             this.petientToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.petientToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.petientToolStripMenuItem.Text = "Patient";
+            this.petientToolStripMenuItem.Click += new System.EventHandler(this.petientToolStripMenuItem_Click);
             // 
             // windowToolStripMenuItem
             // 

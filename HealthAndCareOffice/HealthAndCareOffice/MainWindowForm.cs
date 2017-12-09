@@ -31,7 +31,8 @@ namespace HealthAndCareOffice
 
         private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            NewAppointment na = new NewAppointment();
+            na.ShowDialog();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,6 +79,12 @@ namespace HealthAndCareOffice
         {
             SettingsForm sf = new SettingsForm();
             sf.ShowDialog();
+        }
+
+        private void petientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NPatient np = new NPatient();
+            np.ShowDialog();
         }
     }
 }
