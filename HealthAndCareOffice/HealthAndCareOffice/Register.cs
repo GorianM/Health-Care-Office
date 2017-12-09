@@ -15,6 +15,7 @@ namespace HealthAndCareOffice
         public Register()
         {
             InitializeComponent();
+            CenterToParent();
         }
 
         private void button1_Click(object sender, EventArgs e)
