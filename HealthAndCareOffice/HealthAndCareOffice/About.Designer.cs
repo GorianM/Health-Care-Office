@@ -75,18 +75,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(66, 230);
+            this.label3.Location = new System.Drawing.Point(71, 230);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 13);
+            this.label3.Size = new System.Drawing.Size(190, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Developers :   Konstantinos Georgiadis ";
+            this.label3.Text = "Developers :  Konstantinos Georgiadis ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(118, 243);
+            this.label4.Location = new System.Drawing.Point(137, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 13);
             this.label4.TabIndex = 4;
@@ -97,11 +97,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(116, 256);
+            this.label5.Location = new System.Drawing.Point(137, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Gorian Makrievski";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button1
             // 
