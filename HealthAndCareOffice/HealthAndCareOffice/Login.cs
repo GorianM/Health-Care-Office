@@ -42,7 +42,7 @@ namespace HealthAndCareOffice
             }
             else
             {
-                MessageBox.Show("Λαθος στοιχεια", "Aπυτυχια συνδεσης");
+                MessageBox.Show("Invalid username username/password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 label4.Visible = true;
                 Regbtn.Visible = true;
 
