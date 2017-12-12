@@ -42,7 +42,7 @@ namespace HealthAndCareOffice
             }
             else
             {
-                MessageBox.Show("Invalid username username/password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid username/password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 label4.Visible = true;
                 Regbtn.Visible = true;
 
