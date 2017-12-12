@@ -307,6 +307,7 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "αρχείο λήψης (2).jpg");
             this.imageList1.Images.SetKeyName(1, "icon_grid_1x_de73ba9d-65eb-40f7-8d4e-4cab9f666ad6.png");
+            this.imageList1.Images.SetKeyName(2, "αρχείο λήψης (1).jpg");
             // 
             // MainWindowForm
             // 

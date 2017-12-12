@@ -14,21 +14,15 @@ namespace HealthAndCareOffice
     public partial class MainWindowForm : Form
     {
 
-       
-       
-
         public MainWindowForm()
         {
             InitializeComponent();
             sceduller1.Height= 2900;
-            this.Size = new Size(1024, 800);
+            this.Size = new Size(1224, 900);
             CenterToParent();
             Debug.WriteLine(sceduller1.Location.X);
         }
 
-       
-
-       
 
         private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
