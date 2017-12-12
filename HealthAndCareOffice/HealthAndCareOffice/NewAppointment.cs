@@ -10,22 +10,12 @@ using System.Windows.Forms;
 
 namespace HealthAndCareOffice
 {
-    public partial class AboutForm : Form
+    public partial class NewAppointment : Form
     {
-        public AboutForm()
+        public NewAppointment()
         {
             InitializeComponent();
             CenterToParent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

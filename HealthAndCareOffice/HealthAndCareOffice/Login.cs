@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace HealthAndCareOffice
 {
     public partial class Login : Form
@@ -17,6 +16,8 @@ namespace HealthAndCareOffice
 
         public Login()
         {
+          //  label4.Visible = false;
+           // Regbtn.Visible = false;
             InitializeComponent();
             textBoxPassword.MaxLength = 15;
             textBoxUser.MaxLength = 15;
@@ -32,16 +33,18 @@ namespace HealthAndCareOffice
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (textBoxUser.Text == "admin" && textBoxPassword.Text == "123")
             {
-                MessageBox.Show("Συνδεεστε στο συστημα", "Επυτυχια συνδεσης");
+                
                 Save_Data();
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Λαθος στοιχεια", "Aπυτυχια συνδεσης");
-                
+                label4.Visible = true;
+                Regbtn.Visible = true;
 
             }
 
@@ -140,6 +143,36 @@ namespace HealthAndCareOffice
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void textBoxUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void Regbtn_Click(object sender, EventArgs e)
+        {
+            Register reg = new Register();
+            reg.ShowDialog();
         }
     }
 }

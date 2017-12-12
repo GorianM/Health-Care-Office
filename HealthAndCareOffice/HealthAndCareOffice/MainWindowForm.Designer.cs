@@ -44,6 +44,7 @@
             this.AppointmentsTabPage = new System.Windows.Forms.TabPage();
             this.ToolbarPanel = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.currentWeekDate = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.sceduller1 = new ScedullerControlLibrary.Sceduller();
             this.Patients = new System.Windows.Forms.TabPage();
             this.Income_Expenses = new System.Windows.Forms.TabPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -96,6 +96,7 @@
             this.petientToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.petientToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.petientToolStripMenuItem.Text = "Patient";
+            this.petientToolStripMenuItem.Click += new System.EventHandler(this.petientToolStripMenuItem_Click);
             // 
             // windowToolStripMenuItem
             // 
@@ -112,6 +113,7 @@
             this.settingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -193,24 +195,39 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(530, 6);
+            this.button4.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.ImageIndex = 4;
+            this.button4.ImageList = this.imageList1;
+            this.button4.Location = new System.Drawing.Point(539, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 21);
+            this.button4.Size = new System.Drawing.Size(185, 32);
             this.button4.TabIndex = 5;
             this.button4.Text = "New patient";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "event-processing-calendar-appointment-planner-schedule-reminder-374f1aa7463926ff-" +
+        "256x256.png");
+            this.imageList1.Images.SetKeyName(1, "Medical_Supervision__Treatment-512.png");
+            this.imageList1.Images.SetKeyName(2, "wedxnwukiugqjnnfhxmr.png");
+            this.imageList1.Images.SetKeyName(3, "icon_grid_1x_de73ba9d-65eb-40f7-8d4e-4cab9f666ad6.png");
+            this.imageList1.Images.SetKeyName(4, "αρχείο λήψης (2).jpg");
+            // 
             // currentWeekDate
             // 
-            this.currentWeekDate.Location = new System.Drawing.Point(279, 7);
+            this.currentWeekDate.Location = new System.Drawing.Point(306, 7);
             this.currentWeekDate.Name = "currentWeekDate";
             this.currentWeekDate.Size = new System.Drawing.Size(197, 20);
             this.currentWeekDate.TabIndex = 4;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(482, 6);
+            this.button3.Location = new System.Drawing.Point(509, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(24, 20);
             this.button3.TabIndex = 3;
@@ -219,7 +236,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(249, 6);
+            this.button2.Location = new System.Drawing.Point(276, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(24, 20);
             this.button2.TabIndex = 2;
@@ -228,7 +245,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 6);
+            this.button1.Location = new System.Drawing.Point(193, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 20);
             this.button1.TabIndex = 1;
@@ -237,9 +254,13 @@
             // 
             // AddNewAppoinmentButton
             // 
+            this.AddNewAppoinmentButton.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.AddNewAppoinmentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddNewAppoinmentButton.ImageIndex = 3;
+            this.AddNewAppoinmentButton.ImageList = this.imageList1;
             this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 6);
             this.AddNewAppoinmentButton.Name = "AddNewAppoinmentButton";
-            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(137, 21);
+            this.AddNewAppoinmentButton.Size = new System.Drawing.Size(183, 29);
             this.AddNewAppoinmentButton.TabIndex = 0;
             this.AddNewAppoinmentButton.Text = "New Appointment";
             this.AddNewAppoinmentButton.UseVisualStyleBackColor = true;
@@ -291,15 +312,6 @@
             this.Income_Expenses.TabIndex = 2;
             this.Income_Expenses.Text = "Income/Expenses";
             this.Income_Expenses.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "event-processing-calendar-appointment-planner-schedule-reminder-374f1aa7463926ff-" +
-        "256x256.png");
-            this.imageList1.Images.SetKeyName(1, "Medical_Supervision__Treatment-512.png");
-            this.imageList1.Images.SetKeyName(2, "wedxnwukiugqjnnfhxmr.png");
             // 
             // MainWindowForm
             // 
