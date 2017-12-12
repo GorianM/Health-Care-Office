@@ -261,3 +261,7 @@ __pycache__/
 *.pyc
 HealthAndCareOffice/HealthAndCareOffice/MainWindowForm.resx
 HealthAndCareOffice/HealthAndCareOffice/MainWindowForm.resx
+HealthAndCareOffice/HealthAndCareOffice/HealthAndCareOffice.csproj
+HealthAndCareOffice/HealthAndCareOffice/MainWindowForm.Designer.cs
+HealthAndCareOffice/HealthAndCareOffice/MainWindowForm.Designer.cs
+HealthAndCareOffice/HealthAndCareOffice/MainWindowForm.resx
