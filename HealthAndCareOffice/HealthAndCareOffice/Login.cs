@@ -16,8 +16,8 @@ namespace HealthAndCareOffice
 
         public Login()
         {
-          //  label4.Visible = false;
-           // Regbtn.Visible = false;
+            System.Drawing.Icon ico = new System.Drawing.Icon("C:\\Users\\User\\Documents\\GitHub\\Health-Care-Office\\HealthAndCareOffice\\HealthAndCareOffice\\bin\\Debug\\Health_Care_Office 2.ico");
+            this.Icon = ico;
             InitializeComponent();
             textBoxPassword.MaxLength = 15;
             textBoxUser.MaxLength = 15;
