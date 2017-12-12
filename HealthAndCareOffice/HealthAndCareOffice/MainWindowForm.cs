@@ -21,6 +21,7 @@ namespace HealthAndCareOffice
         {
             InitializeComponent();
             sceduller1.Height= 2900;
+            this.Size = new Size(1024, 800);
             CenterToParent();
             Debug.WriteLine(sceduller1.Location.X);
         }
@@ -49,6 +50,7 @@ namespace HealthAndCareOffice
             loginForm.BringToFront();
             loginForm.Focus();
             loginForm.ShowDialog();
+            
         }
 
         private void ToolbarPanel_Resize(object sender, EventArgs e)
