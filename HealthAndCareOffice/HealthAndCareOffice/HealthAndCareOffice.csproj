@@ -48,7 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Health_Care_Office.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>219C77CFB3B15ED86850AE193A827908AA0F64EA</ManifestCertificateThumbprint>
@@ -183,7 +184,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Health_Care_Office.ico" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
