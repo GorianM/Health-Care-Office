@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindowForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,7 @@
             this.sceduller1 = new ScedullerControlLibrary.Sceduller();
             this.Patients = new System.Windows.Forms.TabPage();
             this.Income_Expenses = new System.Windows.Forms.TabPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -192,9 +194,10 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button4.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.ImageIndex = 4;
+            this.button4.ImageIndex = 0;
+            this.button4.ImageList = this.imageList1;
             this.button4.Location = new System.Drawing.Point(539, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(185, 32);
@@ -239,9 +242,10 @@
             // 
             // AddNewAppoinmentButton
             // 
-            this.AddNewAppoinmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.AddNewAppoinmentButton.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.AddNewAppoinmentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddNewAppoinmentButton.ImageIndex = 3;
+            this.AddNewAppoinmentButton.ImageIndex = 1;
+            this.AddNewAppoinmentButton.ImageList = this.imageList1;
             this.AddNewAppoinmentButton.Location = new System.Drawing.Point(4, 6);
             this.AddNewAppoinmentButton.Name = "AddNewAppoinmentButton";
             this.AddNewAppoinmentButton.Size = new System.Drawing.Size(183, 29);
@@ -274,7 +278,6 @@
             this.sceduller1.Name = "sceduller1";
             this.sceduller1.Size = new System.Drawing.Size(743, 399);
             this.sceduller1.TabIndex = 0;
-            
             // 
             // Patients
             // 
@@ -297,6 +300,14 @@
             this.Income_Expenses.TabIndex = 2;
             this.Income_Expenses.Text = "Income/Expenses";
             this.Income_Expenses.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "αρχείο λήψης (2).jpg");
+            this.imageList1.Images.SetKeyName(1, "icon_grid_1x_de73ba9d-65eb-40f7-8d4e-4cab9f666ad6.png");
+            this.imageList1.Images.SetKeyName(2, "αρχείο λήψης (1).jpg");
             // 
             // MainWindowForm
             // 
@@ -349,6 +360,7 @@
         //private System.Windows.Forms.ImageList imageList1;
         private ScedullerControlLibrary.Sceduller sceduller1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

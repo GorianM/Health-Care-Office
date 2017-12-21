@@ -40,7 +40,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button1
@@ -160,14 +160,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Sex :";
             // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox6.Location = new System.Drawing.Point(105, 204);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 24);
-            this.textBox6.TabIndex = 13;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -200,7 +192,7 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox8.Location = new System.Drawing.Point(354, 46);
+            this.textBox8.Location = new System.Drawing.Point(414, 44);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(132, 25);
             this.textBox8.TabIndex = 17;
@@ -210,7 +202,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label8.Location = new System.Drawing.Point(251, 45);
+            this.label8.Location = new System.Drawing.Point(311, 43);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 20);
             this.label8.TabIndex = 16;
@@ -219,7 +211,7 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox9.Location = new System.Drawing.Point(354, 87);
+            this.textBox9.Location = new System.Drawing.Point(414, 85);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(132, 25);
             this.textBox9.TabIndex = 19;
@@ -228,7 +220,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label9.Location = new System.Drawing.Point(296, 85);
+            this.label9.Location = new System.Drawing.Point(356, 83);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 18;
@@ -238,7 +230,7 @@
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox10.Location = new System.Drawing.Point(354, 125);
+            this.textBox10.Location = new System.Drawing.Point(414, 127);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(132, 25);
             this.textBox10.TabIndex = 21;
@@ -248,7 +240,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label10.Location = new System.Drawing.Point(269, 125);
+            this.label10.Location = new System.Drawing.Point(329, 127);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 20);
             this.label10.TabIndex = 20;
@@ -258,7 +250,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label13.Location = new System.Drawing.Point(282, 166);
+            this.label13.Location = new System.Drawing.Point(342, 192);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 20);
             this.label13.TabIndex = 24;
@@ -267,7 +259,7 @@
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox13.Location = new System.Drawing.Point(354, 170);
+            this.textBox13.Location = new System.Drawing.Point(414, 196);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(132, 25);
             this.textBox13.TabIndex = 25;
@@ -276,7 +268,7 @@
             // textBox14
             // 
             this.textBox14.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox14.Location = new System.Drawing.Point(354, 208);
+            this.textBox14.Location = new System.Drawing.Point(414, 242);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(132, 25);
             this.textBox14.TabIndex = 27;
@@ -287,7 +279,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label14.Location = new System.Drawing.Point(295, 208);
+            this.label14.Location = new System.Drawing.Point(355, 245);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 20);
             this.label14.TabIndex = 26;
@@ -317,12 +309,20 @@
             this.radioButton2.Text = "Female";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(105, 201);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(202, 20);
+            this.dateTimePicker1.TabIndex = 30;
+            // 
             // NPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(525, 417);
+            this.ClientSize = new System.Drawing.Size(575, 417);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.textBox14);
@@ -337,7 +337,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
@@ -368,7 +367,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
@@ -385,5 +383,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -14,20 +14,15 @@ namespace HealthAndCareOffice
     public partial class MainWindowForm : Form
     {
 
-       
-       
-
         public MainWindowForm()
         {
             InitializeComponent();
-            sceduller1.Height= (24*4+1)*30;
+            sceduller1.Height= 2900;
+            this.Size = new Size(1224, 900);
             CenterToParent();
             Debug.WriteLine(sceduller1.Location.X);
         }
 
-       
-
-       
 
         private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -49,6 +44,7 @@ namespace HealthAndCareOffice
             loginForm.BringToFront();
             loginForm.Focus();
             loginForm.ShowDialog();
+            
         }
 
         private void ToolbarPanel_Resize(object sender, EventArgs e)
@@ -85,11 +81,6 @@ namespace HealthAndCareOffice
         {
             NPatient np = new NPatient();
             np.ShowDialog();
-        }
-
-        private void sceduller1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
