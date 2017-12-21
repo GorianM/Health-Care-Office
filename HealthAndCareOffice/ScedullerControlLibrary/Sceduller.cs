@@ -15,14 +15,21 @@ namespace ScedullerControlLibrary
     {
         public Day[] days = new Day[7];
         ScedullerTable scedullerTable;
-
+        AppointmentManager appointmentManager;
         public Sceduller()
         {
             InitializeComponent();
 
             scedullerTable= new ScedullerTable(Width);
             
-            Height = 2900;
+            Height = scedullerTable.Height;
+            appointmentManager = new AppointmentManager(this, Width, 15);
+            appointmentManager.addNewAppointmentContainer(10);
+            /*Panel p = new Panel();
+            p.SetBounds(10, 10, 100, 100);
+            p.BackColor = Color.Black;
+            p.Parent = this;
+            p.Visible = true;*/
             
         }
 
@@ -39,7 +46,7 @@ namespace ScedullerControlLibrary
         {
             base.OnResize(e);
             if(scedullerTable != null)scedullerTable.SetWidth(Width);
-            
+            if (appointmentManager != null) appointmentManager.resetValues(this, Width, 15);
             
             Invalidate();
 

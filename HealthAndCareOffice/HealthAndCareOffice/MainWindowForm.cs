@@ -20,7 +20,7 @@ namespace HealthAndCareOffice
         public MainWindowForm()
         {
             InitializeComponent();
-            sceduller1.Height= 2900;
+            sceduller1.Height= (24*4+1)*30;
             CenterToParent();
             Debug.WriteLine(sceduller1.Location.X);
         }
@@ -85,6 +85,11 @@ namespace HealthAndCareOffice
         {
             NPatient np = new NPatient();
             np.ShowDialog();
+        }
+
+        private void sceduller1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
