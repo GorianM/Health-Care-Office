@@ -351,6 +351,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NPatient";
             this.Text = "New Patient";
+            this.Load += new System.EventHandler(this.NPatient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

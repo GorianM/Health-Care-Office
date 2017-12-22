@@ -192,10 +192,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label6.Location = new System.Drawing.Point(270, 56);
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label6.Location = new System.Drawing.Point(293, 52);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 18);
+            this.label6.Size = new System.Drawing.Size(99, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Phone Number :";
             // 
@@ -211,10 +211,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label7.Location = new System.Drawing.Point(262, 110);
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label7.Location = new System.Drawing.Point(286, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 18);
+            this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 14;
             this.label7.Text = "Phone Number 2:";
             // 
@@ -230,10 +230,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label8.Location = new System.Drawing.Point(253, 172);
+            this.label8.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label8.Location = new System.Drawing.Point(276, 171);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 18);
+            this.label8.Size = new System.Drawing.Size(116, 20);
             this.label8.TabIndex = 16;
             this.label8.Text = "Medical Speciality :";
             // 
@@ -249,10 +249,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label9.Location = new System.Drawing.Point(307, 227);
+            this.label9.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label9.Location = new System.Drawing.Point(324, 226);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 18);
+            this.label9.Size = new System.Drawing.Size(68, 20);
             this.label9.TabIndex = 18;
             this.label9.Text = "Patient ID :";
             // 

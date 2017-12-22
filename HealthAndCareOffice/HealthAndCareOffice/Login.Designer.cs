@@ -114,7 +114,6 @@
             this.Regbtn.TabIndex = 13;
             this.Regbtn.Text = "Register";
             this.Regbtn.UseVisualStyleBackColor = true;
-            this.Regbtn.Visible = false;
             this.Regbtn.Click += new System.EventHandler(this.Regbtn_Click);
             // 
             // label4
@@ -125,7 +124,6 @@
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Not a member ?";
-            this.label4.Visible = false;
             // 
             // pictureBox4
             // 

@@ -145,5 +145,10 @@ namespace HealthAndCareOffice
                 }
             }
         }
+
+        private void NPatient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
