@@ -150,5 +150,15 @@ namespace HealthAndCareOffice
         {
 
         }
+
+        private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            textBox14.MaxLength = 3;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

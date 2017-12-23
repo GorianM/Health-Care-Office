@@ -272,6 +272,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(132, 25);
             this.textBox14.TabIndex = 27;
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
             this.textBox14.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox14_KeyUp);
             this.textBox14.Leave += new System.EventHandler(this.textBox14_Leave);
             // 
