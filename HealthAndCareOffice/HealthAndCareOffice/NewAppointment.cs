@@ -16,6 +16,8 @@ namespace HealthAndCareOffice
         {
             InitializeComponent();
             CenterToParent();
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd hh:mm:ss";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,6 +43,11 @@ namespace HealthAndCareOffice
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
