@@ -121,15 +121,11 @@ namespace HealthAndCareOffice
 
         private void textBox14_Leave(object sender, EventArgs e)
         {
-            // Regex rg = new Regex(@"^[0-9]([.,][0-9]{1,3})?$");
-            var regex = new Regex(@"^[0-9]*(?:\.[0-9]*)?$");
-            double d = Double.Parse(textBox14.Text);
-            
-            if (!regex.IsMatch(d.ToString()))
-            {
-                MessageBox.Show("Wrong value . Text must be like 1.89 or 1.50","Error ");
-                textBox14.Text = "";
 
+            if(!textBox14.Text.Contains(".") || !textBox14.Text.Substring(1,1).Equals("."))
+            {
+                MessageBox.Show("You forgot to insert dot or wrong validation","Wrong validation");
+                textBox14.Text = "";
             }
         }
 
@@ -153,7 +149,7 @@ namespace HealthAndCareOffice
 
         private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox14.MaxLength = 3;
+            textBox14.MaxLength = 4;
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
         (e.KeyChar != '.'))
             {
