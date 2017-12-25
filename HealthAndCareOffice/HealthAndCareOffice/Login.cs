@@ -22,6 +22,7 @@ namespace HealthAndCareOffice
             textBoxPassword.MaxLength = 15;
             textBoxUser.MaxLength = 15;
             CenterToParent();
+            this.ActiveControl =  textBoxUser;
             Init_Data();
         }
 

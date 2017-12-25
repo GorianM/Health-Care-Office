@@ -17,6 +17,7 @@ namespace HealthAndCareOffice
         {
             InitializeComponent();
             CenterToParent();
+            this.ActiveControl = textBox2;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -144,7 +145,7 @@ namespace HealthAndCareOffice
 
         private void NPatient_Load(object sender, EventArgs e)
         {
-
+            textBox2.Focus();
         }
 
         private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
