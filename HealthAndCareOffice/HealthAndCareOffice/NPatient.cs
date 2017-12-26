@@ -157,5 +157,10 @@ namespace HealthAndCareOffice
                 e.Handled = true;
             }
         }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
