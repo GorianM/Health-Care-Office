@@ -37,12 +37,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.btnBackup = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnBackup);
             this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Name = "panel1";
@@ -100,7 +102,7 @@
             // 
             // btnBackup
             // 
-            this.btnBackup.Location = new System.Drawing.Point(92, 10);
+            this.btnBackup.Location = new System.Drawing.Point(51, 47);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(93, 22);
             this.btnBackup.TabIndex = 1;
@@ -108,11 +110,19 @@
             this.btnBackup.UseVisualStyleBackColor = true;
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 2;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 600);
+            this.ClientSize = new System.Drawing.Size(525, 582);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
@@ -121,6 +131,7 @@
             this.Name = "SettingsForm";
             this.Text = "Settings";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
@@ -135,5 +146,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.Label label1;
     }
 }

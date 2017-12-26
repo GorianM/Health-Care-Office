@@ -17,6 +17,7 @@ namespace HealthAndCareOffice
         {
             InitializeComponent();
             CenterToParent();
+            label1.Text = "Create an empty access file and" + Environment.NewLine + "backup all the content of database";
         }
 
         private void button1_Click(object sender, EventArgs e)
