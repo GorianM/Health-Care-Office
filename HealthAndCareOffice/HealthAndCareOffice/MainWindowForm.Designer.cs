@@ -214,6 +214,8 @@
             this.imageList1.Images.SetKeyName(0, "αρχείο λήψης (2).jpg");
             this.imageList1.Images.SetKeyName(1, "icon_grid_1x_de73ba9d-65eb-40f7-8d4e-4cab9f666ad6.png");
             this.imageList1.Images.SetKeyName(2, "αρχείο λήψης (1).jpg");
+            this.imageList1.Images.SetKeyName(3, "arrow-right-01-512.png");
+            this.imageList1.Images.SetKeyName(4, "left.png");
             // 
             // currentWeekDate
             // 
@@ -224,20 +226,22 @@
             // 
             // button3
             // 
+            this.button3.ImageIndex = 3;
+            this.button3.ImageList = this.imageList1;
             this.button3.Location = new System.Drawing.Point(509, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(24, 20);
             this.button3.TabIndex = 3;
-            this.button3.Text = ">";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
+            this.button2.ImageIndex = 4;
+            this.button2.ImageList = this.imageList1;
             this.button2.Location = new System.Drawing.Point(276, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(24, 20);
             this.button2.TabIndex = 2;
-            this.button2.Text = "<";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
