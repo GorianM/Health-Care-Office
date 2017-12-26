@@ -44,6 +44,7 @@
             this.AppointmentsTabPage = new System.Windows.Forms.TabPage();
             this.ToolbarPanel = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.currentWeekDate = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.sceduller1 = new ScedullerControlLibrary.Sceduller();
             this.Patients = new System.Windows.Forms.TabPage();
             this.Income_Expenses = new System.Windows.Forms.TabPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -147,6 +147,7 @@
             this.openDocumentationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
             this.openDocumentationToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.openDocumentationToolStripMenuItem.Text = "Open Documentation";
+            this.openDocumentationToolStripMenuItem.Click += new System.EventHandler(this.openDocumentationToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -205,6 +206,14 @@
             this.button4.Text = "New patient";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "αρχείο λήψης (2).jpg");
+            this.imageList1.Images.SetKeyName(1, "icon_grid_1x_de73ba9d-65eb-40f7-8d4e-4cab9f666ad6.png");
+            this.imageList1.Images.SetKeyName(2, "αρχείο λήψης (1).jpg");
             // 
             // currentWeekDate
             // 
@@ -300,14 +309,6 @@
             this.Income_Expenses.TabIndex = 2;
             this.Income_Expenses.Text = "Income/Expenses";
             this.Income_Expenses.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "αρχείο λήψης (2).jpg");
-            this.imageList1.Images.SetKeyName(1, "icon_grid_1x_de73ba9d-65eb-40f7-8d4e-4cab9f666ad6.png");
-            this.imageList1.Images.SetKeyName(2, "αρχείο λήψης (1).jpg");
             // 
             // MainWindowForm
             // 

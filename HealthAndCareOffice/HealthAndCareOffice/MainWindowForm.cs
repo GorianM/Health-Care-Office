@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace HealthAndCareOffice
 {
     public partial class MainWindowForm : Form
@@ -81,6 +82,11 @@ namespace HealthAndCareOffice
         {
             NPatient np = new NPatient();
             np.ShowDialog();
+        }
+
+        private void openDocumentationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("C:\\Users\\User\\Documents\\GitHub\\Health-Care-Office\\Διαχείριση ιατρείου.docx");
         }
     }
 }
