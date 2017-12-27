@@ -54,11 +54,49 @@
             this.sceduller1 = new ScedullerControlLibrary.Sceduller();
             this.Patients = new System.Windows.Forms.TabPage();
             this.Income_Expenses = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this._Vasi_Diaxeirisis_IatreiouDataSet = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSet();
+            this.vasiDiaxeirisisIatreiouDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.PatientTableAdapter();
+            this.tableAdapterManager = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.TableAdapterManager();
+            this.patientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registrationNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insuranceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.incomesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.incomesTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.IncomesTableAdapter();
+            this.incomesIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expensesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.expensesTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.ExpensesTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
             this.ToolbarPanel.SuspendLayout();
             this.calendarContainerPanel.SuspendLayout();
+            this.Patients.SuspendLayout();
+            this.Income_Expenses.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -294,6 +332,7 @@
             // 
             // Patients
             // 
+            this.Patients.Controls.Add(this.dataGridView1);
             this.Patients.ImageIndex = 1;
             this.Patients.Location = new System.Drawing.Point(4, 22);
             this.Patients.Name = "Patients";
@@ -305,6 +344,7 @@
             // 
             // Income_Expenses
             // 
+            this.Income_Expenses.Controls.Add(this.dataGridView2);
             this.Income_Expenses.ImageIndex = 2;
             this.Income_Expenses.Location = new System.Drawing.Point(4, 22);
             this.Income_Expenses.Name = "Income_Expenses";
@@ -313,6 +353,203 @@
             this.Income_Expenses.TabIndex = 2;
             this.Income_Expenses.Text = "Income/Expenses";
             this.Income_Expenses.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.patientIdDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.phoneNumber2DataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.amkaDataGridViewTextBoxColumn,
+            this.sexDataGridViewTextBoxColumn,
+            this.birthDateDataGridViewTextBoxColumn,
+            this.adressDataGridViewTextBoxColumn,
+            this.registrationNumberDataGridViewTextBoxColumn,
+            this.debtDataGridViewTextBoxColumn,
+            this.insuranceDataGridViewTextBoxColumn,
+            this.notesDataGridViewTextBoxColumn,
+            this.weightDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.patientBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(-4, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(756, 496);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // _Vasi_Diaxeirisis_IatreiouDataSet
+            // 
+            this._Vasi_Diaxeirisis_IatreiouDataSet.DataSetName = "_Vasi_Diaxeirisis_IatreiouDataSet";
+            this._Vasi_Diaxeirisis_IatreiouDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vasiDiaxeirisisIatreiouDataSetBindingSource
+            // 
+            this.vasiDiaxeirisisIatreiouDataSetBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouDataSet;
+            this.vasiDiaxeirisisIatreiouDataSetBindingSource.Position = 0;
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataMember = "Patient";
+            this.patientBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouDataSet;
+            // 
+            // patientTableAdapter
+            // 
+            this.patientTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AppointmentTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ExpandableProductsTableAdapter = null;
+            this.tableAdapterManager.ExpensesTableAdapter = this.expensesTableAdapter;
+            this.tableAdapterManager.IncomesTableAdapter = this.incomesTableAdapter;
+            this.tableAdapterManager.PatientTableAdapter = this.patientTableAdapter;
+            this.tableAdapterManager.StaffRolesTableAdapter = null;
+            this.tableAdapterManager.StaffTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // patientIdDataGridViewTextBoxColumn
+            // 
+            this.patientIdDataGridViewTextBoxColumn.DataPropertyName = "PatientId";
+            this.patientIdDataGridViewTextBoxColumn.HeaderText = "PatientId";
+            this.patientIdDataGridViewTextBoxColumn.Name = "patientIdDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // phoneNumber2DataGridViewTextBoxColumn
+            // 
+            this.phoneNumber2DataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber2";
+            this.phoneNumber2DataGridViewTextBoxColumn.HeaderText = "PhoneNumber2";
+            this.phoneNumber2DataGridViewTextBoxColumn.Name = "phoneNumber2DataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // amkaDataGridViewTextBoxColumn
+            // 
+            this.amkaDataGridViewTextBoxColumn.DataPropertyName = "Amka";
+            this.amkaDataGridViewTextBoxColumn.HeaderText = "Amka";
+            this.amkaDataGridViewTextBoxColumn.Name = "amkaDataGridViewTextBoxColumn";
+            // 
+            // sexDataGridViewTextBoxColumn
+            // 
+            this.sexDataGridViewTextBoxColumn.DataPropertyName = "Sex";
+            this.sexDataGridViewTextBoxColumn.HeaderText = "Sex";
+            this.sexDataGridViewTextBoxColumn.Name = "sexDataGridViewTextBoxColumn";
+            // 
+            // birthDateDataGridViewTextBoxColumn
+            // 
+            this.birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
+            this.birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
+            this.birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            // 
+            // registrationNumberDataGridViewTextBoxColumn
+            // 
+            this.registrationNumberDataGridViewTextBoxColumn.DataPropertyName = "RegistrationNumber";
+            this.registrationNumberDataGridViewTextBoxColumn.HeaderText = "RegistrationNumber";
+            this.registrationNumberDataGridViewTextBoxColumn.Name = "registrationNumberDataGridViewTextBoxColumn";
+            // 
+            // debtDataGridViewTextBoxColumn
+            // 
+            this.debtDataGridViewTextBoxColumn.DataPropertyName = "Debt";
+            this.debtDataGridViewTextBoxColumn.HeaderText = "Debt";
+            this.debtDataGridViewTextBoxColumn.Name = "debtDataGridViewTextBoxColumn";
+            // 
+            // insuranceDataGridViewTextBoxColumn
+            // 
+            this.insuranceDataGridViewTextBoxColumn.DataPropertyName = "Insurance";
+            this.insuranceDataGridViewTextBoxColumn.HeaderText = "Insurance";
+            this.insuranceDataGridViewTextBoxColumn.Name = "insuranceDataGridViewTextBoxColumn";
+            // 
+            // notesDataGridViewTextBoxColumn
+            // 
+            this.notesDataGridViewTextBoxColumn.DataPropertyName = "Notes";
+            this.notesDataGridViewTextBoxColumn.HeaderText = "Notes";
+            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
+            // 
+            // weightDataGridViewTextBoxColumn
+            // 
+            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
+            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
+            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.incomesIdDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.staffIdDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.incomesBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(-4, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(756, 226);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // incomesBindingSource
+            // 
+            this.incomesBindingSource.DataMember = "Incomes";
+            this.incomesBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouDataSet;
+            // 
+            // incomesTableAdapter
+            // 
+            this.incomesTableAdapter.ClearBeforeFill = true;
+            // 
+            // incomesIdDataGridViewTextBoxColumn
+            // 
+            this.incomesIdDataGridViewTextBoxColumn.DataPropertyName = "IncomesId";
+            this.incomesIdDataGridViewTextBoxColumn.HeaderText = "IncomesId";
+            this.incomesIdDataGridViewTextBoxColumn.Name = "incomesIdDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // staffIdDataGridViewTextBoxColumn
+            // 
+            this.staffIdDataGridViewTextBoxColumn.DataPropertyName = "StaffId";
+            this.staffIdDataGridViewTextBoxColumn.HeaderText = "StaffId";
+            this.staffIdDataGridViewTextBoxColumn.Name = "staffIdDataGridViewTextBoxColumn";
+            // 
+            // expensesBindingSource
+            // 
+            this.expensesBindingSource.DataMember = "Expenses";
+            this.expensesBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouDataSet;
+            // 
+            // expensesTableAdapter
+            // 
+            this.expensesTableAdapter.ClearBeforeFill = true;
             // 
             // MainWindowForm
             // 
@@ -334,6 +571,15 @@
             this.AppointmentsTabPage.ResumeLayout(false);
             this.ToolbarPanel.ResumeLayout(false);
             this.calendarContainerPanel.ResumeLayout(false);
+            this.Patients.ResumeLayout(false);
+            this.Income_Expenses.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,6 +612,35 @@
         private ScedullerControlLibrary.Sceduller sceduller1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource vasiDiaxeirisisIatreiouDataSetBindingSource;
+        private _Vasi_Diaxeirisis_IatreiouDataSet _Vasi_Diaxeirisis_IatreiouDataSet;
+        private System.Windows.Forms.BindingSource patientBindingSource;
+        private _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.PatientTableAdapter patientTableAdapter;
+        private _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registrationNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn debtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insuranceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.IncomesTableAdapter incomesTableAdapter;
+        private System.Windows.Forms.BindingSource incomesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn incomesIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn staffIdDataGridViewTextBoxColumn;
+        private _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.ExpensesTableAdapter expensesTableAdapter;
+        private System.Windows.Forms.BindingSource expensesBindingSource;
     }
 }
 

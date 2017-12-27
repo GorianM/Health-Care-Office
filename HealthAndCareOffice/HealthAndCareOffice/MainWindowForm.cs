@@ -41,6 +41,16 @@ namespace HealthAndCareOffice
 
         private void MainWindowForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Expenses' table. You can move, or remove it, as needed.
+            this.expensesTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Expenses);
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Incomes' table. You can move, or remove it, as needed.
+            this.incomesTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes);
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Patient' table. You can move, or remove it, as needed.
+            this.patientTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Patient);
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Patient' table. You can move, or remove it, as needed.
+            this.patientTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Patient);
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Patient' table. You can move, or remove it, as needed.
+            this.patientTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Patient);
             Login loginForm = new Login();
             loginForm.BringToFront();
             loginForm.Focus();
@@ -87,6 +97,22 @@ namespace HealthAndCareOffice
         private void openDocumentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("C:\\Users\\User\\Documents\\GitHub\\Health-Care-Office\\Διαχείριση ιατρείου.docx");
+        }
+
+        private void patientBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.patientBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this._Vasi_Diaxeirisis_IatreiouDataSet);
+
+        }
+
+        private void patientBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.patientBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this._Vasi_Diaxeirisis_IatreiouDataSet);
+
         }
     }
 }
