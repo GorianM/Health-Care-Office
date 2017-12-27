@@ -202,6 +202,7 @@
             this.textBoxPassword.Size = new System.Drawing.Size(189, 25);
             this.textBoxPassword.TabIndex = 3;
             this.textBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPassword_KeyDown);
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             // 
             // label2
             // 
@@ -224,6 +225,7 @@
             this.textBoxUser.Size = new System.Drawing.Size(189, 25);
             this.textBoxUser.TabIndex = 1;
             this.textBoxUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUser_KeyDown);
+            this.textBoxUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUser_KeyPress);
             // 
             // label1
             // 

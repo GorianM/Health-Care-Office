@@ -46,6 +46,19 @@ namespace HealthAndCareOffice
                 MessageBox.Show("Invalid username/password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+            try
+            {
+                _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter user = new _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter();
+                _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable sdt = user.GetDataUsernamePassword(textBoxUser.Text, textBoxPassword.Text);
+                if(sdt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Log in completed");
+                    this.Close();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Wrong input");
+            }
 
         }
         private void Init_Data()
@@ -172,6 +185,16 @@ namespace HealthAndCareOffice
         {
             Register reg = new Register();
             reg.ShowDialog();
+        }
+
+        private void textBoxUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

@@ -45,7 +45,7 @@ namespace HealthAndCareOffice
             try
             {
                 SaveFileDialog SaveFD1 = new SaveFileDialog();
-                string FileName = "";
+                string FileName = "Vasi-Diaxeirisis-Iatreiou.accdb";
                 SaveFD1.InitialDirectory = "D:";
                 SaveFD1.FileName = "";
                 SaveFD1.Title = "Backup ";

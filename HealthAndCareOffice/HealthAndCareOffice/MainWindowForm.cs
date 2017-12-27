@@ -20,6 +20,8 @@ namespace HealthAndCareOffice
             InitializeComponent();
             sceduller1.Height= 2900;
             this.Size = new Size(1224, 900);
+            dataGridView1.Width = 1180;
+            dataGridView1.Height = 790;
             CenterToParent();
             Debug.WriteLine(sceduller1.Location.X);
         }
@@ -41,6 +43,12 @@ namespace HealthAndCareOffice
 
         private void MainWindowForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Expenses' table. You can move, or remove it, as needed.
+            this.expensesTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Expenses);
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Incomes' table. You can move, or remove it, as needed.
+            this.incomesTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes);
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Patient' table. You can move, or remove it, as needed.
+            this.patientTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Patient);
             Login loginForm = new Login();
             loginForm.BringToFront();
             loginForm.Focus();
@@ -87,6 +95,39 @@ namespace HealthAndCareOffice
         private void openDocumentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("C:\\Users\\User\\Documents\\GitHub\\Health-Care-Office\\Διαχείριση ιατρείου.docx");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+             
+                this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes.AddIncomesRow(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes.NewIncomesRow());
+                incomesBindingSource.MoveLast();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                incomesBindingSource.ResetBindings(false);
+            }
+
+        }
+
+        private void btnSaveIncome_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                incomesBindingSource.EndEdit();
+                incomesTableAdapter.Update(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes);
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                incomesBindingSource.ResetBindings(false);
+            }
         }
     }
 }
