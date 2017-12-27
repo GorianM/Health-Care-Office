@@ -140,11 +140,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_Vasi_Diaxeirisis_IatreiouDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet1.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,17 +193,6 @@
     </None>
     <None Include="_Vasi_Diaxeirisis_IatreiouDataSet.xss">
       <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_Vasi_Diaxeirisis_IatreiouDataSet1.xsc">
-      <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="_Vasi_Diaxeirisis_IatreiouDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Vasi_Diaxeirisis_IatreiouDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_Vasi_Diaxeirisis_IatreiouDataSet1.xss">
-      <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
