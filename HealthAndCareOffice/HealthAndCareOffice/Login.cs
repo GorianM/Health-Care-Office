@@ -23,8 +23,7 @@ namespace HealthAndCareOffice
             textBoxUser.MaxLength = 15;
             CenterToParent();
             this.ActiveControl =  textBoxUser;
-            Init_Data();
-            
+            Init_Data();   
         }
         
         private void label3_Click(object sender, EventArgs e)
@@ -35,11 +34,24 @@ namespace HealthAndCareOffice
         DataTable dt = new DataTable();
         private void button1_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter sta = new _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter();
-                _Vasi_Diaxeirisis_IatreiouDataSet dt = sta.GetDataUsernamePassword(textBoxUser.Text, textBoxPassword.Text);
+                _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable dt = sta.GetDataByUsernamePassword(textBoxUser.Text, textBoxPassword.Text);
 
+                if (dt.Rows.Count > 0)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong username/password","Error");
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("");
             }
 
         }
