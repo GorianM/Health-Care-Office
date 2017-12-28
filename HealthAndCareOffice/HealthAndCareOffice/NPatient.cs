@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -141,6 +142,48 @@ namespace HealthAndCareOffice
                     break;
                 }
             }
+            System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
+
+            try
+            {
+                String sex = "";
+                if (radioButton1.Checked)
+                {
+                    sex = "male";
+                }
+                else
+                {
+                    sex = "female";
+                }
+                conn.Open();
+                String amka = textBox2.Text.ToString();
+                String lastname = textBox3.Text.ToString();
+                String firstname = textBox4.Text.ToString();
+                String phonenum1 = textBox7.Text.ToString();
+                String phonenum2 = textBox8.Text.ToString();
+                String address = textBox9.Text.ToString();
+                String regnum = textBox10.Text.ToString();
+                String insurance = textBox13.Text.ToString();
+                String weight = textBox14.Text.ToString();
+                String notes = textBox1.Text.ToString();
+                String dept = textBox5.Text.ToString();
+                String theDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                String my_querry = "INSERT INTO Patient(PatientId,PhoneNumber,PhoneNumber2,FirstName,LastName,Amka,Sex,BirthDate,Adress,Registration,Debt,Insurance,Notes,Weight) VALUES('" +phonenum1 + "','" + phonenum2 + "','" + firstname + "',' "+lastname+ "',' "+amka+ "',' " +sex+ "',' " +theDate+ "',' " +address+ "',' " +regnum+ "',' " +dept + "',' "+insurance + "',' "+notes+ "',' "+weight+ "')";
+
+                OleDbCommand cmd = new OleDbCommand(my_querry, conn);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Data saved successfuly...!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed due to" + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void NPatient_Load(object sender, EventArgs e)
@@ -159,6 +202,11 @@ namespace HealthAndCareOffice
         }
 
         private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }

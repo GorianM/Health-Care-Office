@@ -58,6 +58,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -339,12 +341,33 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Notes :";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial Narrow", 11.25F);
+            this.label11.Location = new System.Drawing.Point(65, 354);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 20);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Debt :";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.textBox5.Location = new System.Drawing.Point(113, 353);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(170, 24);
+            this.textBox5.TabIndex = 34;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
             // NPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(658, 514);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
@@ -412,5 +435,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
