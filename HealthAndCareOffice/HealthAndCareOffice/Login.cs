@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace HealthAndCareOffice
 
         public Login()
         {
-            System.Drawing.Icon ico = new System.Drawing.Icon("C:\\Users\\User\\Documents\\GitHub\\Health-Care-Office\\HealthAndCareOffice\\HealthAndCareOffice\\bin\\Debug\\Health_Care_Office 2.ico");
+            System.Drawing.Icon ico = new System.Drawing.Icon("C:\\Users\\User\\source\\repos\\Health-Care-Office2\\HealthAndCareOffice\\HealthAndCareOffice\\bin\\Debug\\Health_Care_Office 2.ico");
             this.Icon = ico;
             InitializeComponent();
             textBoxPassword.MaxLength = 15;
@@ -25,7 +26,7 @@ namespace HealthAndCareOffice
             this.ActiveControl =  textBoxUser;
             Init_Data();
         }
-
+        OleDbConnection con = new OleDbConnection();
         private void label3_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -35,30 +36,61 @@ namespace HealthAndCareOffice
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (textBoxUser.Text == "admin" && textBoxPassword.Text == "123")
+            /* if (textBoxUser.Text == "admin" && textBoxPassword.Text == "123")
+             {
+
+                 Save_Data();
+                 this.Close();
+             }
+             else
+             {
+                 MessageBox.Show("Invalid username/password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+             }
+             */
+            if (CheckFunction() == true)
             {
-                
-                Save_Data();
+                MessageBox.Show("Congradulations! Now you are logged in!");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Invalid username/password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sorry, your login information is not correct. Please try again.");
+            }
+        
 
-            }
-            try
+    }
+        public bool CheckFunction()
+        {
+
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
+            con.Open();
+
+
+            //1st ATTEMPT FAILED---BEG
+            DataTable dt = new DataTable();
+            DataSet ds = new DataSet();
+            ds.Tables.Add(dt);
+
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT Username, Password FROM Staff", con);
+            da.Fill(dt);
+
+            foreach (DataRow r in dt.Rows)
             {
-                _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter user = new _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter();
-                _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable sdt = user.GetDataUsernamePassword(textBoxUser.Text, textBoxPassword.Text);
-                if(sdt.Rows.Count > 0)
+                if (r[0].ToString() == textBoxUser.Text && r[1].ToString() == textBoxPassword.Text)
                 {
-                    MessageBox.Show("Log in completed");
-                    this.Close();
+                    return true;
                 }
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Wrong input");
+                else
+                {
+                    return false;
+                }
             }
+
+            con.Close();
+
+            return false;
+            //*1st ATTEMPT FAILED---END */
 
         }
         private void Init_Data()
