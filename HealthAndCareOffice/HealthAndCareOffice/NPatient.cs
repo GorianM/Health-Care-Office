@@ -130,60 +130,12 @@ namespace HealthAndCareOffice
                 textBox14.Text = "";
             }
         }
-
+        string dbName = @"C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (Control c in this.Controls)
-            {
-                TextBox tb = c as TextBox;
-                if (null != tb)
-                {
-                    MessageBox.Show("Empty text , be carefull");
-                    break;
-                }
-            }
-            System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
-
-            try
-            {
-                String sex = "";
-                if (radioButton1.Checked)
-                {
-                    sex = "male";
-                }
-                else
-                {
-                    sex = "female";
-                }
-                conn.Open();
-                String amka = textBox2.Text.ToString();
-                String lastname = textBox3.Text.ToString();
-                String firstname = textBox4.Text.ToString();
-                String phonenum1 = textBox7.Text.ToString();
-                String phonenum2 = textBox8.Text.ToString();
-                String address = textBox9.Text.ToString();
-                String regnum = textBox10.Text.ToString();
-                String insurance = textBox13.Text.ToString();
-                String weight = textBox14.Text.ToString();
-                String notes = textBox1.Text.ToString();
-                String dept =textBox5.Text.ToString();
-                String theDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                String my_querry = "INSERT INTO Patient(PatientId,PhoneNumber,PhoneNumber2,FirstName,LastName,Amka,Sex,BirthDate,Adress,RegistrationNumber,Debt,Insurance,Notes,Weight) VALUES('" +phonenum1 + "','" + phonenum2 + "','" + firstname + "',' "+lastname+ "',' "+amka+ "',' " +sex+ "',' " +theDate+ "',' " +address+ "',' " +1+ "',' " +2 + "',' "+insurance + "',' "+notes+ "',' "+weight+ "')";
-
-                OleDbCommand cmd = new OleDbCommand(my_querry, conn);
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Data saved successfuly...!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed due to" + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            OleDbConnection dbConnection = new OleDbConnection(dbName);
+            OleDbCommand commandStatement = dbConnection.CreateCommand();
+            commandStatement.Parameters.Add("dsads",);
         }
 
         private void NPatient_Load(object sender, EventArgs e)
