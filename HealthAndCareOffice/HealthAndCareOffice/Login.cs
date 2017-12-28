@@ -36,26 +36,13 @@ namespace HealthAndCareOffice
         private void button1_Click(object sender, EventArgs e)
         {
 
-            /* if (textBoxUser.Text == "admin" && textBoxPassword.Text == "123")
-             {
-
-                 Save_Data();
-                 this.Close();
-             }
-             else
-             {
-                 MessageBox.Show("Invalid username/password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-             }
-             */
             if (CheckFunction() == true)
-            {
-                MessageBox.Show("Congradulations! Now you are logged in!");
+            {  
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Sorry, your login information is not correct. Please try again.");
+                MessageBox.Show("Sorry, your login information is not correct. Please try again.","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         
 
@@ -67,7 +54,6 @@ namespace HealthAndCareOffice
             con.Open();
 
 
-            //1st ATTEMPT FAILED---BEG
             DataTable dt = new DataTable();
             DataSet ds = new DataSet();
             ds.Tables.Add(dt);
@@ -90,8 +76,6 @@ namespace HealthAndCareOffice
             con.Close();
 
             return false;
-            //*1st ATTEMPT FAILED---END */
-
         }
         private void Init_Data()
         {
