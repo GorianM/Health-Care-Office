@@ -14,7 +14,6 @@ namespace HealthAndCareOffice
     {
         private bool mouseDown;
         private Point lastLocation;
-
         public Login()
         {
             System.Drawing.Icon ico = new System.Drawing.Icon("C:\\Users\\User\\source\\repos\\Health-Care-Office2\\HealthAndCareOffice\\HealthAndCareOffice\\bin\\Debug\\Health_Care_Office 2.ico");
@@ -25,58 +24,26 @@ namespace HealthAndCareOffice
             CenterToParent();
             this.ActiveControl =  textBoxUser;
             Init_Data();
+            
         }
-        OleDbConnection con = new OleDbConnection();
+        
         private void label3_Click(object sender, EventArgs e)
         {
             this.Dispose();
             Application.Exit();
         }
-
+        DataTable dt = new DataTable();
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if (CheckFunction() == true)
-            {  
-                this.Close();
-            }
-            else
+            try
             {
-                MessageBox.Show("Sorry, your login information is not correct. Please try again.","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        
+                _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter sta = new _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter();
+                _Vasi_Diaxeirisis_IatreiouDataSet dt = sta.GetDataUsernamePassword(textBoxUser.Text, textBoxPassword.Text);
 
-    }
-        public bool CheckFunction()
-        {
-
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
-            con.Open();
-
-
-            DataTable dt = new DataTable();
-            DataSet ds = new DataSet();
-            ds.Tables.Add(dt);
-
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT Username, Password FROM Staff", con);
-            da.Fill(dt);
-
-            foreach (DataRow r in dt.Rows)
-            {
-                if (r[0].ToString() == textBoxUser.Text && r[1].ToString() == textBoxPassword.Text)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
             }
 
-            con.Close();
-
-            return false;
         }
+        
         private void Init_Data()
         {
             if (Properties.Settings.Default.Username != string.Empty)

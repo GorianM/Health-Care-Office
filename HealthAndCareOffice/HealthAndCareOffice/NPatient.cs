@@ -167,9 +167,9 @@ namespace HealthAndCareOffice
                 String insurance = textBox13.Text.ToString();
                 String weight = textBox14.Text.ToString();
                 String notes = textBox1.Text.ToString();
-                String dept = textBox5.Text.ToString();
+                String dept =textBox5.Text.ToString();
                 String theDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                String my_querry = "INSERT INTO Patient(PatientId,PhoneNumber,PhoneNumber2,FirstName,LastName,Amka,Sex,BirthDate,Adress,Registration,Debt,Insurance,Notes,Weight) VALUES('" +phonenum1 + "','" + phonenum2 + "','" + firstname + "',' "+lastname+ "',' "+amka+ "',' " +sex+ "',' " +theDate+ "',' " +address+ "',' " +regnum+ "',' " +dept + "',' "+insurance + "',' "+notes+ "',' "+weight+ "')";
+                String my_querry = "INSERT INTO Patient(PatientId,PhoneNumber,PhoneNumber2,FirstName,LastName,Amka,Sex,BirthDate,Adress,RegistrationNumber,Debt,Insurance,Notes,Weight) VALUES('" +phonenum1 + "','" + phonenum2 + "','" + firstname + "',' "+lastname+ "',' "+amka+ "',' " +sex+ "',' " +theDate+ "',' " +address+ "',' " +1+ "',' " +2 + "',' "+insurance + "',' "+notes+ "',' "+weight+ "')";
 
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
                 cmd.ExecuteNonQuery();
