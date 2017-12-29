@@ -35,7 +35,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Name = "Sceduller";
-            this.Size = new System.Drawing.Size(148, 148);
+            //this.Size = new System.Drawing.Size(148, 148);
             this.ResumeLayout(false);
 
         }
