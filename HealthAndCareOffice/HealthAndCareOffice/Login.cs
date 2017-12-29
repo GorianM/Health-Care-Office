@@ -156,7 +156,7 @@ namespace HealthAndCareOffice
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1.PerformClick();
+                btnLogin.PerformClick();
             }
         }
 
@@ -164,7 +164,7 @@ namespace HealthAndCareOffice
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1.PerformClick();
+                btnLogin.PerformClick();
             }
         }
 
@@ -172,7 +172,7 @@ namespace HealthAndCareOffice
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1.PerformClick();
+                btnLogin.PerformClick();
             }
         }
 

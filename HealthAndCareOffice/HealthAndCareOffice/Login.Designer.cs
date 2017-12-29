@@ -40,7 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.checkRemmer = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxUser = new System.Windows.Forms.TextBox();
@@ -90,7 +90,7 @@
             this.panelRight.Controls.Add(this.label3);
             this.panelRight.Controls.Add(this.pictureBox2);
             this.panelRight.Controls.Add(this.checkRemmer);
-            this.panelRight.Controls.Add(this.button1);
+            this.panelRight.Controls.Add(this.btnLogin);
             this.panelRight.Controls.Add(this.textBoxPassword);
             this.panelRight.Controls.Add(this.label2);
             this.panelRight.Controls.Add(this.textBoxUser);
@@ -179,17 +179,17 @@
             this.checkRemmer.Text = "Remember me?";
             this.checkRemmer.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button1.Location = new System.Drawing.Point(219, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Log in";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
+            this.btnLogin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnLogin.Location = new System.Drawing.Point(219, 388);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(97, 30);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Log in";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
             // 
             // textBoxPassword
             // 
@@ -275,7 +275,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.CheckBox checkRemmer;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ImageList imageList1;
