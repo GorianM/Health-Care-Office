@@ -133,9 +133,39 @@ namespace HealthAndCareOffice
         string dbName = @"C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
         private void button2_Click(object sender, EventArgs e)
         {
-            OleDbConnection dbConnection = new OleDbConnection(dbName);
-            OleDbCommand commandStatement = dbConnection.CreateCommand();
-           // commandStatement.Parameters.Add("dsads",);
+            OleDbConnection connect = new OleDbConnection();
+            try
+            {
+                string sqlQuery = "INSERT INTO [Patient] (`PatientId`,`PhoneNumber`,`PhoneNumber2`,`FirstName`,`LastName`,`Amka`,`Sex`,`BirthDate`,`Adress`,`RegistrationNumber`,`Debt`,`Insurance`,`Notes`,`Weight`) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                using (OleDbConnection conn = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source=C:\\Users\\User\\source\\repos\\Health-Care-Office2\\HealthAndCareOffice\\HealthAndCareOffice\\Vasi-Diaxeirisis-Iatreiou.accdb")) 
+                using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@PatientId", 53);
+                    cmd.Parameters.AddWithValue("@Phonenumber", 12214241);
+                    cmd.Parameters.AddWithValue("@Phonenumber2", 5323132);
+                    cmd.Parameters.AddWithValue("@FirstName", textBoxFirstName.Text);
+                    cmd.Parameters.AddWithValue("@LastName", textBoxLastName.Text);
+                    cmd.Parameters.AddWithValue("@Amka", textBoxAmka.Text);
+                    cmd.Parameters.AddWithValue("@Sex", "male");
+                    cmd.Parameters.AddWithValue("@BirthDate", "29/11/96");
+                    cmd.Parameters.AddWithValue("@Adress", "eirinis 7");
+                    cmd.Parameters.AddWithValue("@RegistrationNumber", 253);
+                    cmd.Parameters.AddWithValue("@Dept", 20);
+                    cmd.Parameters.AddWithValue("@Insurance", "IKA");
+                    cmd.Parameters.AddWithValue("@Notes", "blabla");
+                    cmd.Parameters.AddWithValue("@Weight", 1.60);
+
+                    cmd.ExecuteNonQuery();
+                    connect.Close();
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                connect.Close();
+            }
+        
+    
         }
 
         private void NPatient_Load(object sender, EventArgs e)

@@ -99,18 +99,28 @@ namespace HealthAndCareOffice
 
         private void button5_Click(object sender, EventArgs e)
         {
+            OleDbConnection connect = new OleDbConnection();
             try
             {
-               
-             
-                this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes.AddIncomesRow(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes.NewIncomesRow());
-                incomesBindingSource.MoveLast();
-                
+                string sqlQuery = "INSERT INTO [Incomes] (IncomesId,Description,Amount,StaffId) values (?,?,?,?)";
+                using (OleDbConnection conn = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source=C:\\Users\\User\\source\\repos\\Health-Care-Office2\\HealthAndCareOffice\\HealthAndCareOffice\\Vasi-Diaxeirisis-Iatreiou.accdb"))
+                using (OleDbCommand cmd = new OleDbCommand(sqlQuery, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@IncomesId", 53);
+                    cmd.Parameters.AddWithValue("@Description","Επισκεψη για γενικη εξεταση ");
+                    cmd.Parameters.AddWithValue("@Amount", 50);
+                    cmd.Parameters.AddWithValue("@StaffId", 2);
+
+
+                    cmd.ExecuteNonQuery();
+                    connect.Close();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                incomesBindingSource.ResetBindings(false);
+                MessageBox.Show(ex.Message);
+                connect.Close();
             }
 
         }
@@ -119,14 +129,14 @@ namespace HealthAndCareOffice
         {
             try
             {
-                incomesBindingSource.EndEdit();
-                incomesTableAdapter.Update(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes);
-               
+                this.Validate();
+                this.incomesBindingSource.EndEdit();
+                this.incomesTableAdapter.Update(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes);
+                MessageBox.Show("Update successful");
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                incomesBindingSource.ResetBindings(false);
+                MessageBox.Show("Update failed");
             }
         }
     }

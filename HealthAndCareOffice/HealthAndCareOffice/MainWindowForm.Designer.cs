@@ -93,6 +93,7 @@
             this.incomesTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.IncomesTableAdapter();
             this.ButtonSave = new System.Windows.Forms.Button();
             this.btnSaveExpenses = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -343,6 +344,7 @@
             // 
             // Patients
             // 
+            this.Patients.Controls.Add(this.btnDelete);
             this.Patients.Controls.Add(this.ButtonSave);
             this.Patients.Controls.Add(this.dataGridView1);
             this.Patients.ImageIndex = 1;
@@ -666,6 +668,15 @@
             this.btnSaveExpenses.Text = "Save";
             this.btnSaveExpenses.UseVisualStyleBackColor = true;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(254, 489);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(80, 24);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,6 +778,7 @@
         private System.Windows.Forms.Button btnSaveIncome;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Button btnSaveExpenses;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
