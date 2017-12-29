@@ -18,7 +18,7 @@ namespace HealthAndCareOffice
         {
             InitializeComponent();
             CenterToParent();
-            this.ActiveControl = textBox2;
+            this.ActiveControl = textBoxAmka;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -124,10 +124,10 @@ namespace HealthAndCareOffice
         private void textBox14_Leave(object sender, EventArgs e)
         {
 
-            if(!textBox14.Text.Contains(".") || !textBox14.Text.Substring(1,1).Equals("."))
+            if(!textBoxWeight.Text.Contains(".") || !textBoxWeight.Text.Substring(1,1).Equals("."))
             {
                 MessageBox.Show("You forgot to insert dot or wrong validation","Wrong validation");
-                textBox14.Text = "";
+                textBoxWeight.Text = "";
             }
         }
         string dbName = @"C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
@@ -135,17 +135,17 @@ namespace HealthAndCareOffice
         {
             OleDbConnection dbConnection = new OleDbConnection(dbName);
             OleDbCommand commandStatement = dbConnection.CreateCommand();
-            commandStatement.Parameters.Add("dsads",);
+           // commandStatement.Parameters.Add("dsads",);
         }
 
         private void NPatient_Load(object sender, EventArgs e)
         {
-            textBox2.Focus();
+            textBoxAmka.Focus();
         }
 
         private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox14.MaxLength = 4;
+            textBoxWeight.MaxLength = 4;
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
         (e.KeyChar != '.'))
             {

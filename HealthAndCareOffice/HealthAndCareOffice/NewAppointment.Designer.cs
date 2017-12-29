@@ -39,11 +39,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxPatientId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
@@ -130,13 +130,13 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Treatment :";
             // 
-            // textBox6
+            // textBoxPatientId
             // 
-            this.textBox6.Location = new System.Drawing.Point(185, 70);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(199, 20);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.textBoxPatientId.Location = new System.Drawing.Point(185, 70);
+            this.textBoxPatientId.Name = "textBoxPatientId";
+            this.textBoxPatientId.Size = new System.Drawing.Size(199, 20);
+            this.textBoxPatientId.TabIndex = 11;
+            this.textBoxPatientId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label6
             // 
@@ -148,18 +148,18 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Patient ID :";
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 1;
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(118, 389);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 34);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.ImageIndex = 1;
+            this.btnCancel.ImageList = this.imageList1;
+            this.btnCancel.Location = new System.Drawing.Point(118, 389);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(82, 34);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.button1_Click);
             // 
             // imageList1
             // 
@@ -168,17 +168,17 @@
             this.imageList1.Images.SetKeyName(0, "add.png");
             this.imageList1.Images.SetKeyName(1, "remove-remove-exit-icone-7195-128.png");
             // 
-            // button2
+            // btnAdd
             // 
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 0;
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(319, 389);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 34);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.ImageIndex = 0;
+            this.btnAdd.ImageList = this.imageList1;
+            this.btnAdd.Location = new System.Drawing.Point(319, 389);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(82, 34);
+            this.btnAdd.TabIndex = 13;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -196,9 +196,9 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(514, 459);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.textBoxPatientId);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
@@ -229,10 +229,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxPatientId;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }

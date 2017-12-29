@@ -94,7 +94,7 @@ namespace HealthAndCareOffice
 
         private void openDocumentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("C:\\Users\\User\\Documents\\GitHub\\Health-Care-Office\\Διαχείριση ιατρείου.docx");
+            System.Diagnostics.Process.Start(@"C:\Users\User\source\repos\Health-Care-Office2\Health & Care Office Documentation.docx");
         }
 
         private void button5_Click(object sender, EventArgs e)
