@@ -23,7 +23,12 @@ namespace HealthAndCareOffice
             textBoxUser.MaxLength = 15;
             CenterToParent();
             this.ActiveControl =  textBoxUser;
-            Init_Data();   
+            Init_Data();
+            if (Properties.Settings.Default.Username != string.Empty)
+            {
+                textBoxUser.Text = Properties.Settings.Default.Username;
+                textBoxPassword.Text = Properties.Settings.Default.Password;
+            }
         }
         
         private void label3_Click(object sender, EventArgs e)
@@ -34,7 +39,12 @@ namespace HealthAndCareOffice
         DataTable dt = new DataTable();
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (checkRemmer.Checked)
+            {
+                Properties.Settings.Default.Username = textBoxUser.Text;
+                Properties.Settings.Default.Password = textBoxPassword.Text;
+                Properties.Settings.Default.Save();
+            }
             try
             {
                 _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter sta = new _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter();

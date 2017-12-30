@@ -18,13 +18,11 @@ namespace ScedullerControlLibrary
         AppointmentManager appointmentManager;
         public Sceduller()
         {
-            
             InitializeComponent();
-            
+
             scedullerTable= new ScedullerTable(Width);
             
-            
-            this.Height = scedullerTable.Height;
+            Height = scedullerTable.Height;
             appointmentManager = new AppointmentManager(this, Width, 15);
             appointmentManager.addNewAppointmentContainer(10);
             /*Panel p = new Panel();
