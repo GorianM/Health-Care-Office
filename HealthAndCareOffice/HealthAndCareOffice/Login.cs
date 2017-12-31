@@ -47,8 +47,8 @@ namespace HealthAndCareOffice
             }
             try
             {
-                _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter sta = new _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.StaffTableAdapter();
-                _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable dt = sta.GetDataByUsernamePassword(textBoxUser.Text.ToString(), textBoxPassword.Text.ToString());
+                _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter sta = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter();
+                _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable dt = sta.GetDataByUsernamePassword(textBoxUser.Text, textBoxPassword.Text);
 
                 if (dt.Rows.Count > 0)
                 {
