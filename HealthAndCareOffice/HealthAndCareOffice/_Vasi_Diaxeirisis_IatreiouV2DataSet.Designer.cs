@@ -20,9 +20,9 @@ namespace HealthAndCareOffice {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("_Vasi_Diaxeirisis_IatreiouDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("_Vasi_Diaxeirisis_IatreiouV2DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class _Vasi_Diaxeirisis_IatreiouDataSet : global::System.Data.DataSet {
+    public partial class _Vasi_Diaxeirisis_IatreiouV2DataSet : global::System.Data.DataSet {
         
         private AppointmentDataTable tableAppointment;
         
@@ -54,7 +54,7 @@ namespace HealthAndCareOffice {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public _Vasi_Diaxeirisis_IatreiouDataSet() {
+        public _Vasi_Diaxeirisis_IatreiouV2DataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -65,7 +65,7 @@ namespace HealthAndCareOffice {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected _Vasi_Diaxeirisis_IatreiouDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected _Vasi_Diaxeirisis_IatreiouV2DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -229,7 +229,7 @@ namespace HealthAndCareOffice {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            _Vasi_Diaxeirisis_IatreiouDataSet cln = ((_Vasi_Diaxeirisis_IatreiouDataSet)(base.Clone()));
+            _Vasi_Diaxeirisis_IatreiouV2DataSet cln = ((_Vasi_Diaxeirisis_IatreiouV2DataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -361,9 +361,9 @@ namespace HealthAndCareOffice {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "_Vasi_Diaxeirisis_IatreiouDataSet";
+            this.DataSetName = "_Vasi_Diaxeirisis_IatreiouV2DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/_Vasi_Diaxeirisis_IatreiouDataSet.xsd";
+            this.Namespace = "http://tempuri.org/_Vasi_Diaxeirisis_IatreiouV2DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAppointment = new AppointmentDataTable();
@@ -459,7 +459,7 @@ namespace HealthAndCareOffice {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            _Vasi_Diaxeirisis_IatreiouDataSet ds = new _Vasi_Diaxeirisis_IatreiouDataSet();
+            _Vasi_Diaxeirisis_IatreiouV2DataSet ds = new _Vasi_Diaxeirisis_IatreiouV2DataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -845,7 +845,7 @@ namespace HealthAndCareOffice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Vasi_Diaxeirisis_IatreiouDataSet ds = new _Vasi_Diaxeirisis_IatreiouDataSet();
+                _Vasi_Diaxeirisis_IatreiouV2DataSet ds = new _Vasi_Diaxeirisis_IatreiouV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1163,7 +1163,7 @@ namespace HealthAndCareOffice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Vasi_Diaxeirisis_IatreiouDataSet ds = new _Vasi_Diaxeirisis_IatreiouDataSet();
+                _Vasi_Diaxeirisis_IatreiouV2DataSet ds = new _Vasi_Diaxeirisis_IatreiouV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1339,7 +1339,7 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ExpensesRow AddExpensesRow(int ExpensesId, int Description, int Amount, StaffRow parentStaffRowByStaffExpenses) {
+            public ExpensesRow AddExpensesRow(int ExpensesId, string Description, int Amount, StaffRow parentStaffRowByStaffExpenses) {
                 ExpensesRow rowExpensesRow = ((ExpensesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ExpensesId,
@@ -1389,7 +1389,7 @@ namespace HealthAndCareOffice {
             private void InitClass() {
                 this.columnExpensesId = new global::System.Data.DataColumn("ExpensesId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpensesId);
-                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
                 this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount);
@@ -1399,6 +1399,7 @@ namespace HealthAndCareOffice {
                                 this.columnExpensesId}, true));
                 this.columnExpensesId.AllowDBNull = false;
                 this.columnExpensesId.Unique = true;
+                this.columnDescription.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1466,7 +1467,7 @@ namespace HealthAndCareOffice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Vasi_Diaxeirisis_IatreiouDataSet ds = new _Vasi_Diaxeirisis_IatreiouDataSet();
+                _Vasi_Diaxeirisis_IatreiouV2DataSet ds = new _Vasi_Diaxeirisis_IatreiouV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1642,7 +1643,7 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public IncomesRow AddIncomesRow(int IncomesId, int Description, int Amount, StaffRow parentStaffRowByStaffIncomes) {
+            public IncomesRow AddIncomesRow(int IncomesId, string Description, int Amount, StaffRow parentStaffRowByStaffIncomes) {
                 IncomesRow rowIncomesRow = ((IncomesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IncomesId,
@@ -1692,7 +1693,7 @@ namespace HealthAndCareOffice {
             private void InitClass() {
                 this.columnIncomesId = new global::System.Data.DataColumn("IncomesId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIncomesId);
-                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
                 this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount);
@@ -1702,6 +1703,7 @@ namespace HealthAndCareOffice {
                                 this.columnIncomesId}, true));
                 this.columnIncomesId.AllowDBNull = false;
                 this.columnIncomesId.Unique = true;
+                this.columnDescription.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1769,7 +1771,7 @@ namespace HealthAndCareOffice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Vasi_Diaxeirisis_IatreiouDataSet ds = new _Vasi_Diaxeirisis_IatreiouDataSet();
+                _Vasi_Diaxeirisis_IatreiouV2DataSet ds = new _Vasi_Diaxeirisis_IatreiouV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1851,7 +1853,7 @@ namespace HealthAndCareOffice {
             
             private global::System.Data.DataColumn columnBirthDate;
             
-            private global::System.Data.DataColumn columnAdress;
+            private global::System.Data.DataColumn columnAddress;
             
             private global::System.Data.DataColumn columnRegistrationNumber;
             
@@ -1962,9 +1964,9 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AdressColumn {
+            public global::System.Data.DataColumn AddressColumn {
                 get {
-                    return this.columnAdress;
+                    return this.columnAddress;
                 }
             }
             
@@ -2045,7 +2047,7 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PatientRow AddPatientRow(int PatientId, int PhoneNumber, int PhoneNumber2, string FirstName, string LastName, int Amka, string Sex, System.DateTime BirthDate, string Adress, string RegistrationNumber, int Debt, string Insurance, string Notes, int Weight) {
+            public PatientRow AddPatientRow(int PatientId, string PhoneNumber, string PhoneNumber2, string FirstName, string LastName, int Amka, string Sex, System.DateTime BirthDate, string Address, string RegistrationNumber, int Debt, string Insurance, string Notes, int Weight) {
                 PatientRow rowPatientRow = ((PatientRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PatientId,
@@ -2056,7 +2058,7 @@ namespace HealthAndCareOffice {
                         Amka,
                         Sex,
                         BirthDate,
-                        Adress,
+                        Address,
                         RegistrationNumber,
                         Debt,
                         Insurance,
@@ -2099,7 +2101,7 @@ namespace HealthAndCareOffice {
                 this.columnAmka = base.Columns["Amka"];
                 this.columnSex = base.Columns["Sex"];
                 this.columnBirthDate = base.Columns["BirthDate"];
-                this.columnAdress = base.Columns["Adress"];
+                this.columnAddress = base.Columns["Address"];
                 this.columnRegistrationNumber = base.Columns["RegistrationNumber"];
                 this.columnDebt = base.Columns["Debt"];
                 this.columnInsurance = base.Columns["Insurance"];
@@ -2112,9 +2114,9 @@ namespace HealthAndCareOffice {
             private void InitClass() {
                 this.columnPatientId = new global::System.Data.DataColumn("PatientId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPatientId);
-                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber);
-                this.columnPhoneNumber2 = new global::System.Data.DataColumn("PhoneNumber2", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnPhoneNumber2 = new global::System.Data.DataColumn("PhoneNumber2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber2);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
@@ -2126,8 +2128,8 @@ namespace HealthAndCareOffice {
                 base.Columns.Add(this.columnSex);
                 this.columnBirthDate = new global::System.Data.DataColumn("BirthDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBirthDate);
-                this.columnAdress = new global::System.Data.DataColumn("Adress", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAdress);
+                this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddress);
                 this.columnRegistrationNumber = new global::System.Data.DataColumn("RegistrationNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRegistrationNumber);
                 this.columnDebt = new global::System.Data.DataColumn("Debt", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2142,10 +2144,12 @@ namespace HealthAndCareOffice {
                                 this.columnPatientId}, true));
                 this.columnPatientId.AllowDBNull = false;
                 this.columnPatientId.Unique = true;
+                this.columnPhoneNumber.MaxLength = 255;
+                this.columnPhoneNumber2.MaxLength = 255;
                 this.columnFirstName.MaxLength = 255;
                 this.columnLastName.MaxLength = 255;
                 this.columnSex.MaxLength = 255;
-                this.columnAdress.MaxLength = 255;
+                this.columnAddress.MaxLength = 255;
                 this.columnRegistrationNumber.MaxLength = 255;
                 this.columnInsurance.MaxLength = 255;
                 this.columnNotes.MaxLength = 255;
@@ -2216,7 +2220,7 @@ namespace HealthAndCareOffice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Vasi_Diaxeirisis_IatreiouDataSet ds = new _Vasi_Diaxeirisis_IatreiouDataSet();
+                _Vasi_Diaxeirisis_IatreiouV2DataSet ds = new _Vasi_Diaxeirisis_IatreiouV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2596,7 +2600,7 @@ namespace HealthAndCareOffice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Vasi_Diaxeirisis_IatreiouDataSet ds = new _Vasi_Diaxeirisis_IatreiouDataSet();
+                _Vasi_Diaxeirisis_IatreiouV2DataSet ds = new _Vasi_Diaxeirisis_IatreiouV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2869,7 +2873,7 @@ namespace HealthAndCareOffice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Vasi_Diaxeirisis_IatreiouDataSet ds = new _Vasi_Diaxeirisis_IatreiouDataSet();
+                _Vasi_Diaxeirisis_IatreiouV2DataSet ds = new _Vasi_Diaxeirisis_IatreiouV2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3377,10 +3381,10 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Description {
+            public string Description {
                 get {
                     try {
-                        return ((int)(this[this.tableExpenses.DescriptionColumn]));
+                        return ((string)(this[this.tableExpenses.DescriptionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'Expenses\' is DBNull.", e);
@@ -3498,10 +3502,10 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Description {
+            public string Description {
                 get {
                     try {
-                        return ((int)(this[this.tableIncomes.DescriptionColumn]));
+                        return ((string)(this[this.tableIncomes.DescriptionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'Incomes\' is DBNull.", e);
@@ -3619,10 +3623,10 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int PhoneNumber {
+            public string PhoneNumber {
                 get {
                     try {
-                        return ((int)(this[this.tablePatient.PhoneNumberColumn]));
+                        return ((string)(this[this.tablePatient.PhoneNumberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'Patient\' is DBNull.", e);
@@ -3635,10 +3639,10 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int PhoneNumber2 {
+            public string PhoneNumber2 {
                 get {
                     try {
-                        return ((int)(this[this.tablePatient.PhoneNumber2Column]));
+                        return ((string)(this[this.tablePatient.PhoneNumber2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber2\' in table \'Patient\' is DBNull.", e);
@@ -3731,17 +3735,17 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Adress {
+            public string Address {
                 get {
                     try {
-                        return ((string)(this[this.tablePatient.AdressColumn]));
+                        return ((string)(this[this.tablePatient.AddressColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Adress\' in table \'Patient\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address\' in table \'Patient\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePatient.AdressColumn] = value;
+                    this[this.tablePatient.AddressColumn] = value;
                 }
             }
             
@@ -3911,14 +3915,14 @@ namespace HealthAndCareOffice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAdressNull() {
-                return this.IsNull(this.tablePatient.AdressColumn);
+            public bool IsAddressNull() {
+                return this.IsNull(this.tablePatient.AddressColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAdressNull() {
-                this[this.tablePatient.AdressColumn] = global::System.Convert.DBNull;
+            public void SetAddressNull() {
+                this[this.tablePatient.AddressColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4602,7 +4606,7 @@ namespace HealthAndCareOffice {
         }
     }
 }
-namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
+namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters {
     
     
     /// <summary>
@@ -4808,7 +4812,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouConnectionString;
+            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4826,7 +4830,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouDataSet.AppointmentDataTable dataTable) {
+        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4839,9 +4843,9 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Vasi_Diaxeirisis_IatreiouDataSet.AppointmentDataTable GetData() {
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Vasi_Diaxeirisis_IatreiouDataSet.AppointmentDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouDataSet.AppointmentDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4849,14 +4853,14 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet.AppointmentDataTable dataTable) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet dataSet) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Appointment");
         }
         
@@ -5404,7 +5408,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouConnectionString;
+            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5422,7 +5426,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouDataSet.ExpandableProductsDataTable dataTable) {
+        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5435,9 +5439,9 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Vasi_Diaxeirisis_IatreiouDataSet.ExpandableProductsDataTable GetData() {
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Vasi_Diaxeirisis_IatreiouDataSet.ExpandableProductsDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouDataSet.ExpandableProductsDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5445,14 +5449,14 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet.ExpandableProductsDataTable dataTable) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet dataSet) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "ExpandableProducts");
         }
         
@@ -5813,7 +5817,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ExpensesId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ExpensesId", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Original, true, null));
@@ -5824,7 +5828,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
                 "(?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ExpensesId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ExpensesId", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
@@ -5832,12 +5836,12 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.UpdateCommand.CommandText = @"UPDATE `Expenses` SET `ExpensesId` = ?, `Description` = ?, `Amount` = ?, `StaffId` = ? WHERE ((`ExpensesId` = ?) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)) AND ((? = 1 AND `Amount` IS NULL) OR (`Amount` = ?)) AND ((? = 1 AND `StaffId` IS NULL) OR (`StaffId` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ExpensesId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ExpensesId", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ExpensesId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ExpensesId", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Original, true, null));
@@ -5848,7 +5852,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouConnectionString;
+            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5865,7 +5869,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouDataSet.ExpensesDataTable dataTable) {
+        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5878,9 +5882,9 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Vasi_Diaxeirisis_IatreiouDataSet.ExpensesDataTable GetData() {
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Vasi_Diaxeirisis_IatreiouDataSet.ExpensesDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouDataSet.ExpensesDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5888,14 +5892,14 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet.ExpensesDataTable dataTable) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet dataSet) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Expenses");
         }
         
@@ -5918,20 +5922,20 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_ExpensesId, global::System.Nullable<int> Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
+        public virtual int Delete(global::System.Nullable<int> Original_ExpensesId, string Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
             if ((Original_ExpensesId.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ExpensesId.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Original_Description.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Description.Value));
-            }
-            else {
+            if ((Original_Description == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Description));
             }
             if ((Original_Amount.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
@@ -5969,18 +5973,18 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> ExpensesId, global::System.Nullable<int> Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId) {
+        public virtual int Insert(global::System.Nullable<int> ExpensesId, string Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId) {
             if ((ExpensesId.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ExpensesId.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Description.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Description.Value));
+            if ((Description == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Description));
             }
             if ((Amount.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Amount.Value));
@@ -6014,18 +6018,18 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> ExpensesId, global::System.Nullable<int> Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId, global::System.Nullable<int> Original_ExpensesId, global::System.Nullable<int> Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
+        public virtual int Update(global::System.Nullable<int> ExpensesId, string Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId, global::System.Nullable<int> Original_ExpensesId, string Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
             if ((ExpensesId.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ExpensesId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Description.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Description.Value));
+            if ((Description == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Description));
             }
             if ((Amount.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Amount.Value));
@@ -6045,13 +6049,13 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_Description.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Description.Value));
-            }
-            else {
+            if ((Original_Description == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Description));
             }
             if ((Original_Amount.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
@@ -6089,7 +6093,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId, global::System.Nullable<int> Original_ExpensesId, global::System.Nullable<int> Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
+        public virtual int Update(string Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId, global::System.Nullable<int> Original_ExpensesId, string Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
             return this.Update(Original_ExpensesId, Description, Amount, StaffId, Original_ExpensesId, Original_Description, Original_Amount, Original_StaffId);
         }
     }
@@ -6228,7 +6232,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_IncomesId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IncomesId", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Original, true, null));
@@ -6239,7 +6243,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
                 ", ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IncomesId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IncomesId", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
@@ -6247,12 +6251,12 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.UpdateCommand.CommandText = @"UPDATE `Incomes` SET `IncomesId` = ?, `Description` = ?, `Amount` = ?, `StaffId` = ? WHERE ((`IncomesId` = ?) AND ((? = 1 AND `Description` IS NULL) OR (`Description` = ?)) AND ((? = 1 AND `Amount` IS NULL) OR (`Amount` = ?)) AND ((? = 1 AND `StaffId` IS NULL) OR (`StaffId` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IncomesId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IncomesId", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_IncomesId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IncomesId", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Description", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Amount", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amount", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Original, true, null));
@@ -6263,7 +6267,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouConnectionString;
+            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6280,7 +6284,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouDataSet.IncomesDataTable dataTable) {
+        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6293,9 +6297,9 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Vasi_Diaxeirisis_IatreiouDataSet.IncomesDataTable GetData() {
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Vasi_Diaxeirisis_IatreiouDataSet.IncomesDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouDataSet.IncomesDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6303,14 +6307,14 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet.IncomesDataTable dataTable) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet dataSet) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Incomes");
         }
         
@@ -6333,20 +6337,20 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_IncomesId, global::System.Nullable<int> Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
+        public virtual int Delete(global::System.Nullable<int> Original_IncomesId, string Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
             if ((Original_IncomesId.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IncomesId.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Original_Description.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Description.Value));
-            }
-            else {
+            if ((Original_Description == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Description));
             }
             if ((Original_Amount.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
@@ -6384,18 +6388,18 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> IncomesId, global::System.Nullable<int> Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId) {
+        public virtual int Insert(global::System.Nullable<int> IncomesId, string Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId) {
             if ((IncomesId.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(IncomesId.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Description.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Description.Value));
+            if ((Description == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Description));
             }
             if ((Amount.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Amount.Value));
@@ -6429,18 +6433,18 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> IncomesId, global::System.Nullable<int> Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId, global::System.Nullable<int> Original_IncomesId, global::System.Nullable<int> Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
+        public virtual int Update(global::System.Nullable<int> IncomesId, string Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId, global::System.Nullable<int> Original_IncomesId, string Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
             if ((IncomesId.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(IncomesId.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Description.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Description.Value));
+            if ((Description == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Description));
             }
             if ((Amount.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Amount.Value));
@@ -6460,13 +6464,13 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_Description.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Description.Value));
-            }
-            else {
+            if ((Original_Description == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Description));
             }
             if ((Original_Amount.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
@@ -6504,7 +6508,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId, global::System.Nullable<int> Original_IncomesId, global::System.Nullable<int> Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
+        public virtual int Update(string Description, global::System.Nullable<int> Amount, global::System.Nullable<int> StaffId, global::System.Nullable<int> Original_IncomesId, string Original_Description, global::System.Nullable<int> Original_Amount, global::System.Nullable<int> Original_StaffId) {
             return this.Update(Original_IncomesId, Description, Amount, StaffId, Original_IncomesId, Original_Description, Original_Amount, Original_StaffId);
         }
     }
@@ -6638,7 +6642,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Amka", "Amka");
             tableMapping.ColumnMappings.Add("Sex", "Sex");
             tableMapping.ColumnMappings.Add("BirthDate", "BirthDate");
-            tableMapping.ColumnMappings.Add("Adress", "Adress");
+            tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("RegistrationNumber", "RegistrationNumber");
             tableMapping.ColumnMappings.Add("Debt", "Debt");
             tableMapping.ColumnMappings.Add("Insurance", "Insurance");
@@ -6647,13 +6651,13 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Patient` WHERE ((`PatientId` = ?) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `PhoneNumber2` IS NULL) OR (`PhoneNumber2` = ?)) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `Amka` IS NULL) OR (`Amka` = ?)) AND ((? = 1 AND `Sex` IS NULL) OR (`Sex` = ?)) AND ((? = 1 AND `BirthDate` IS NULL) OR (`BirthDate` = ?)) AND ((? = 1 AND `Adress` IS NULL) OR (`Adress` = ?)) AND ((? = 1 AND `RegistrationNumber` IS NULL) OR (`RegistrationNumber` = ?)) AND ((? = 1 AND `Debt` IS NULL) OR (`Debt` = ?)) AND ((? = 1 AND `Insurance` IS NULL) OR (`Insurance` = ?)) AND ((? = 1 AND `Notes` IS NULL) OR (`Notes` = ?)) AND ((? = 1 AND `Weight` IS NULL) OR (`Weight` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Patient` WHERE ((`PatientId` = ?) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `PhoneNumber2` IS NULL) OR (`PhoneNumber2` = ?)) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `Amka` IS NULL) OR (`Amka` = ?)) AND ((? = 1 AND `Sex` IS NULL) OR (`Sex` = ?)) AND ((? = 1 AND `BirthDate` IS NULL) OR (`BirthDate` = ?)) AND ((? = 1 AND `Address` IS NULL) OR (`Address` = ?)) AND ((? = 1 AND `RegistrationNumber` IS NULL) OR (`RegistrationNumber` = ?)) AND ((? = 1 AND `Debt` IS NULL) OR (`Debt` = ?)) AND ((? = 1 AND `Insurance` IS NULL) OR (`Insurance` = ?)) AND ((? = 1 AND `Notes` IS NULL) OR (`Notes` = ?)) AND ((? = 1 AND `Weight` IS NULL) OR (`Weight` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PatientId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PatientId", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_PhoneNumber", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_PhoneNumber2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_FirstName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_LastName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Original, true, null));
@@ -6664,8 +6668,8 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Sex", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sex", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_BirthDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_BirthDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Adress", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Adress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Address", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RegistrationNumber", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RegistrationNumber", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RegistrationNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RegistrationNumber", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Debt", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Debt", global::System.Data.DataRowVersion.Original, true, null));
@@ -6679,19 +6683,19 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Patient` (`PatientId`, `PhoneNumber`, `PhoneNumber2`, `FirstName`, `" +
-                "LastName`, `Amka`, `Sex`, `BirthDate`, `Adress`, `RegistrationNumber`, `Debt`, `" +
-                "Insurance`, `Notes`, `Weight`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" +
-                "";
+                "LastName`, `Amka`, `Sex`, `BirthDate`, `Address`, `RegistrationNumber`, `Debt`, " +
+                "`Insurance`, `Notes`, `Weight`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PatientId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PatientId", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amka", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Sex", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sex", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BirthDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Adress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RegistrationNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RegistrationNumber", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Debt", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Debt", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Insurance", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Insurance", global::System.Data.DataRowVersion.Current, false, null));
@@ -6699,17 +6703,17 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weight", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Patient` SET `PatientId` = ?, `PhoneNumber` = ?, `PhoneNumber2` = ?, `FirstName` = ?, `LastName` = ?, `Amka` = ?, `Sex` = ?, `BirthDate` = ?, `Adress` = ?, `RegistrationNumber` = ?, `Debt` = ?, `Insurance` = ?, `Notes` = ?, `Weight` = ? WHERE ((`PatientId` = ?) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `PhoneNumber2` IS NULL) OR (`PhoneNumber2` = ?)) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `Amka` IS NULL) OR (`Amka` = ?)) AND ((? = 1 AND `Sex` IS NULL) OR (`Sex` = ?)) AND ((? = 1 AND `BirthDate` IS NULL) OR (`BirthDate` = ?)) AND ((? = 1 AND `Adress` IS NULL) OR (`Adress` = ?)) AND ((? = 1 AND `RegistrationNumber` IS NULL) OR (`RegistrationNumber` = ?)) AND ((? = 1 AND `Debt` IS NULL) OR (`Debt` = ?)) AND ((? = 1 AND `Insurance` IS NULL) OR (`Insurance` = ?)) AND ((? = 1 AND `Notes` IS NULL) OR (`Notes` = ?)) AND ((? = 1 AND `Weight` IS NULL) OR (`Weight` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Patient` SET `PatientId` = ?, `PhoneNumber` = ?, `PhoneNumber2` = ?, `FirstName` = ?, `LastName` = ?, `Amka` = ?, `Sex` = ?, `BirthDate` = ?, `Address` = ?, `RegistrationNumber` = ?, `Debt` = ?, `Insurance` = ?, `Notes` = ?, `Weight` = ? WHERE ((`PatientId` = ?) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `PhoneNumber2` IS NULL) OR (`PhoneNumber2` = ?)) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `Amka` IS NULL) OR (`Amka` = ?)) AND ((? = 1 AND `Sex` IS NULL) OR (`Sex` = ?)) AND ((? = 1 AND `BirthDate` IS NULL) OR (`BirthDate` = ?)) AND ((? = 1 AND `Address` IS NULL) OR (`Address` = ?)) AND ((? = 1 AND `RegistrationNumber` IS NULL) OR (`RegistrationNumber` = ?)) AND ((? = 1 AND `Debt` IS NULL) OR (`Debt` = ?)) AND ((? = 1 AND `Insurance` IS NULL) OR (`Insurance` = ?)) AND ((? = 1 AND `Notes` IS NULL) OR (`Notes` = ?)) AND ((? = 1 AND `Weight` IS NULL) OR (`Weight` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PatientId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PatientId", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amka", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Sex", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sex", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BirthDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Adress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RegistrationNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RegistrationNumber", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Debt", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Debt", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Insurance", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Insurance", global::System.Data.DataRowVersion.Current, false, null));
@@ -6717,9 +6721,9 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weight", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PatientId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PatientId", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_PhoneNumber", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_PhoneNumber2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber2", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_FirstName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_LastName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Original, true, null));
@@ -6730,8 +6734,8 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Sex", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sex", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_BirthDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_BirthDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Adress", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Adress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Address", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RegistrationNumber", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RegistrationNumber", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RegistrationNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RegistrationNumber", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Debt", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Debt", global::System.Data.DataRowVersion.Original, true, null));
@@ -6748,7 +6752,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouConnectionString;
+            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6758,7 +6762,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PatientId, PhoneNumber, PhoneNumber2, FirstName, LastName, Amka, Sex, Birt" +
-                "hDate, Adress, RegistrationNumber, Debt, Insurance, Notes, Weight FROM Patient";
+                "hDate, Address, RegistrationNumber, Debt, Insurance, Notes, Weight FROM Patient";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6766,7 +6770,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouDataSet.PatientDataTable dataTable) {
+        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6779,9 +6783,9 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Vasi_Diaxeirisis_IatreiouDataSet.PatientDataTable GetData() {
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Vasi_Diaxeirisis_IatreiouDataSet.PatientDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouDataSet.PatientDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6789,14 +6793,14 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet.PatientDataTable dataTable) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet dataSet) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Patient");
         }
         
@@ -6819,28 +6823,28 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_PatientId, global::System.Nullable<int> Original_PhoneNumber, global::System.Nullable<int> Original_PhoneNumber2, string Original_FirstName, string Original_LastName, global::System.Nullable<int> Original_Amka, string Original_Sex, global::System.Nullable<global::System.DateTime> Original_BirthDate, string Original_Adress, string Original_RegistrationNumber, global::System.Nullable<int> Original_Debt, string Original_Insurance, string Original_Notes, global::System.Nullable<int> Original_Weight) {
+        public virtual int Delete(global::System.Nullable<int> Original_PatientId, string Original_PhoneNumber, string Original_PhoneNumber2, string Original_FirstName, string Original_LastName, global::System.Nullable<int> Original_Amka, string Original_Sex, global::System.Nullable<global::System.DateTime> Original_BirthDate, string Original_Address, string Original_RegistrationNumber, global::System.Nullable<int> Original_Debt, string Original_Insurance, string Original_Notes, global::System.Nullable<int> Original_Weight) {
             if ((Original_PatientId.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_PatientId.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Original_PhoneNumber.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_PhoneNumber.Value));
-            }
-            else {
+            if ((Original_PhoneNumber == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_PhoneNumber2.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_PhoneNumber2.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_PhoneNumber));
+            }
+            if ((Original_PhoneNumber2 == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_PhoneNumber2));
             }
             if ((Original_FirstName == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -6882,13 +6886,13 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_Adress == null)) {
+            if ((Original_Address == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Adress));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Address));
             }
             if ((Original_RegistrationNumber == null)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
@@ -6950,24 +6954,24 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> PatientId, global::System.Nullable<int> PhoneNumber, global::System.Nullable<int> PhoneNumber2, string FirstName, string LastName, global::System.Nullable<int> Amka, string Sex, global::System.Nullable<global::System.DateTime> BirthDate, string Adress, string RegistrationNumber, global::System.Nullable<int> Debt, string Insurance, string Notes, global::System.Nullable<int> Weight) {
+        public virtual int Insert(global::System.Nullable<int> PatientId, string PhoneNumber, string PhoneNumber2, string FirstName, string LastName, global::System.Nullable<int> Amka, string Sex, global::System.Nullable<global::System.DateTime> BirthDate, string Address, string RegistrationNumber, global::System.Nullable<int> Debt, string Insurance, string Notes, global::System.Nullable<int> Weight) {
             if ((PatientId.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(PatientId.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((PhoneNumber.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(PhoneNumber.Value));
-            }
-            else {
+            if ((PhoneNumber == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((PhoneNumber2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PhoneNumber2.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(PhoneNumber));
+            }
+            if ((PhoneNumber2 == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(PhoneNumber2));
             }
             if ((FirstName == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -6999,11 +7003,11 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Adress == null)) {
+            if ((Address == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Adress));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Address));
             }
             if ((RegistrationNumber == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
@@ -7057,28 +7061,28 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     global::System.Nullable<int> PatientId, 
-                    global::System.Nullable<int> PhoneNumber, 
-                    global::System.Nullable<int> PhoneNumber2, 
+                    string PhoneNumber, 
+                    string PhoneNumber2, 
                     string FirstName, 
                     string LastName, 
                     global::System.Nullable<int> Amka, 
                     string Sex, 
                     global::System.Nullable<global::System.DateTime> BirthDate, 
-                    string Adress, 
+                    string Address, 
                     string RegistrationNumber, 
                     global::System.Nullable<int> Debt, 
                     string Insurance, 
                     string Notes, 
                     global::System.Nullable<int> Weight, 
                     global::System.Nullable<int> Original_PatientId, 
-                    global::System.Nullable<int> Original_PhoneNumber, 
-                    global::System.Nullable<int> Original_PhoneNumber2, 
+                    string Original_PhoneNumber, 
+                    string Original_PhoneNumber2, 
                     string Original_FirstName, 
                     string Original_LastName, 
                     global::System.Nullable<int> Original_Amka, 
                     string Original_Sex, 
                     global::System.Nullable<global::System.DateTime> Original_BirthDate, 
-                    string Original_Adress, 
+                    string Original_Address, 
                     string Original_RegistrationNumber, 
                     global::System.Nullable<int> Original_Debt, 
                     string Original_Insurance, 
@@ -7090,17 +7094,17 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((PhoneNumber.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(PhoneNumber.Value));
-            }
-            else {
+            if ((PhoneNumber == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((PhoneNumber2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(PhoneNumber2.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(PhoneNumber));
+            }
+            if ((PhoneNumber2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(PhoneNumber2));
             }
             if ((FirstName == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -7132,11 +7136,11 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Adress == null)) {
+            if ((Address == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Adress));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Address));
             }
             if ((RegistrationNumber == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
@@ -7174,21 +7178,21 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_PhoneNumber.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_PhoneNumber.Value));
-            }
-            else {
+            if ((Original_PhoneNumber == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_PhoneNumber2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_PhoneNumber2.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_PhoneNumber));
+            }
+            if ((Original_PhoneNumber2 == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_PhoneNumber2));
             }
             if ((Original_FirstName == null)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
@@ -7230,13 +7234,13 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((Original_Adress == null)) {
+            if ((Original_Address == null)) {
                 this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_Adress));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_Address));
             }
             if ((Original_RegistrationNumber == null)) {
                 this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
@@ -7299,34 +7303,34 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<int> PhoneNumber, 
-                    global::System.Nullable<int> PhoneNumber2, 
+                    string PhoneNumber, 
+                    string PhoneNumber2, 
                     string FirstName, 
                     string LastName, 
                     global::System.Nullable<int> Amka, 
                     string Sex, 
                     global::System.Nullable<global::System.DateTime> BirthDate, 
-                    string Adress, 
+                    string Address, 
                     string RegistrationNumber, 
                     global::System.Nullable<int> Debt, 
                     string Insurance, 
                     string Notes, 
                     global::System.Nullable<int> Weight, 
                     global::System.Nullable<int> Original_PatientId, 
-                    global::System.Nullable<int> Original_PhoneNumber, 
-                    global::System.Nullable<int> Original_PhoneNumber2, 
+                    string Original_PhoneNumber, 
+                    string Original_PhoneNumber2, 
                     string Original_FirstName, 
                     string Original_LastName, 
                     global::System.Nullable<int> Original_Amka, 
                     string Original_Sex, 
                     global::System.Nullable<global::System.DateTime> Original_BirthDate, 
-                    string Original_Adress, 
+                    string Original_Address, 
                     string Original_RegistrationNumber, 
                     global::System.Nullable<int> Original_Debt, 
                     string Original_Insurance, 
                     string Original_Notes, 
                     global::System.Nullable<int> Original_Weight) {
-            return this.Update(Original_PatientId, PhoneNumber, PhoneNumber2, FirstName, LastName, Amka, Sex, BirthDate, Adress, RegistrationNumber, Debt, Insurance, Notes, Weight, Original_PatientId, Original_PhoneNumber, Original_PhoneNumber2, Original_FirstName, Original_LastName, Original_Amka, Original_Sex, Original_BirthDate, Original_Adress, Original_RegistrationNumber, Original_Debt, Original_Insurance, Original_Notes, Original_Weight);
+            return this.Update(Original_PatientId, PhoneNumber, PhoneNumber2, FirstName, LastName, Amka, Sex, BirthDate, Address, RegistrationNumber, Debt, Insurance, Notes, Weight, Original_PatientId, Original_PhoneNumber, Original_PhoneNumber2, Original_FirstName, Original_LastName, Original_Amka, Original_Sex, Original_BirthDate, Original_Address, Original_RegistrationNumber, Original_Debt, Original_Insurance, Original_Notes, Original_Weight);
         }
     }
     
@@ -7533,31 +7537,25 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouConnectionString;
+            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT StaffId, Username, [Password], MedicalSpecialty, FirstName, LastName, Phon" +
                 "eNumber, PhoneNumber2, StaffRole FROM Staff";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT [Username],[Password] FROM [Staff] WHERE [Username]=? AND [Password]=? ";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Username", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Username", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable dataTable) {
+        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7570,9 +7568,9 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable GetData() {
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7580,37 +7578,14 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable GetDataByUsernamePassword(string Username, string Password) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Username == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Username));
-            }
-            if ((Password == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Password));
-            }
-            _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet.StaffDataTable dataTable) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet dataSet) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Staff");
         }
         
@@ -8139,7 +8114,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouConnectionString;
+            this._connection.ConnectionString = global::HealthAndCareOffice.Properties.Settings.Default.Vasi_Diaxeirisis_IatreiouV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8156,7 +8131,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouDataSet.StaffRolesDataTable dataTable) {
+        public virtual int Fill(_Vasi_Diaxeirisis_IatreiouV2DataSet.StaffRolesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8169,9 +8144,9 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Vasi_Diaxeirisis_IatreiouDataSet.StaffRolesDataTable GetData() {
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffRolesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Vasi_Diaxeirisis_IatreiouDataSet.StaffRolesDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouDataSet.StaffRolesDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffRolesDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffRolesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8179,14 +8154,14 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet.StaffRolesDataTable dataTable) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.StaffRolesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Vasi_Diaxeirisis_IatreiouDataSet dataSet) {
+        public virtual int Update(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "StaffRoles");
         }
         
@@ -8558,7 +8533,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(_Vasi_Diaxeirisis_IatreiouDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._staffRolesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.StaffRoles.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -8631,7 +8606,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(_Vasi_Diaxeirisis_IatreiouDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._staffRolesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.StaffRoles.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -8697,7 +8672,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(_Vasi_Diaxeirisis_IatreiouDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._incomesTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Incomes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -8787,7 +8762,7 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(_Vasi_Diaxeirisis_IatreiouDataSet dataSet) {
+        public virtual int UpdateAll(_Vasi_Diaxeirisis_IatreiouV2DataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

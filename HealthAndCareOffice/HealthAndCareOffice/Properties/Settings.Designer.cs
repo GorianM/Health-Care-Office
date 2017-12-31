@@ -69,5 +69,16 @@ namespace HealthAndCareOffice.Properties {
                 return ((string)(this["Vasi_Diaxeirisis_IatreiouConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Vasi-Diaxeirisis-Ia" +
+            "treiouV2.accdb")]
+        public string Vasi_Diaxeirisis_IatreiouV2ConnectionString {
+            get {
+                return ((string)(this["Vasi_Diaxeirisis_IatreiouV2ConnectionString"]));
+            }
+        }
     }
 }

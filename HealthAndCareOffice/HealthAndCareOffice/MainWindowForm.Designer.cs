@@ -53,7 +53,9 @@
             this.calendarContainerPanel = new System.Windows.Forms.Panel();
             this.sceduller1 = new ScedullerControlLibrary.Sceduller();
             this.Patients = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.ButtonSave = new System.Windows.Forms.Button();
+            this.dataGridViewPatients = new System.Windows.Forms.DataGridView();
             this.patientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumber2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,9 +70,11 @@
             this.insuranceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vasiDiaxeirisisIatreiouDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Vasi_Diaxeirisis_IatreiouDataSet = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSet();
             this.Income_Expenses = new System.Windows.Forms.TabPage();
+            this.btnSaveExpenses = new System.Windows.Forms.Button();
             this.btnSaveIncome = new System.Windows.Forms.Button();
             this.InsertExpenses = new System.Windows.Forms.Button();
             this.btnInsertIncome = new System.Windows.Forms.Button();
@@ -80,34 +84,36 @@
             this.amountDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staffIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expensesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vasiDiaxeirisisIatreiouDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.incomesIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staffIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incomesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.PatientTableAdapter();
             this.tableAdapterManager = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.TableAdapterManager();
             this.expensesTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.ExpensesTableAdapter();
             this.incomesTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.IncomesTableAdapter();
-            this.ButtonSave = new System.Windows.Forms.Button();
-            this.btnSaveExpenses = new System.Windows.Forms.Button();
+            this.patientAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appointmentTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.AppointmentTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
             this.ToolbarPanel.SuspendLayout();
             this.calendarContainerPanel.SuspendLayout();
             this.Patients.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouDataSet)).BeginInit();
             this.Income_Expenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientAppointmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -118,7 +124,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(833, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(861, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -209,7 +215,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(809, 549);
+            this.tabControl1.Size = new System.Drawing.Size(837, 552);
             this.tabControl1.TabIndex = 1;
             // 
             // AppointmentsTabPage
@@ -221,7 +227,7 @@
             this.AppointmentsTabPage.Location = new System.Drawing.Point(4, 22);
             this.AppointmentsTabPage.Name = "AppointmentsTabPage";
             this.AppointmentsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.AppointmentsTabPage.Size = new System.Drawing.Size(801, 523);
+            this.AppointmentsTabPage.Size = new System.Drawing.Size(829, 526);
             this.AppointmentsTabPage.TabIndex = 0;
             this.AppointmentsTabPage.Text = "Appointments";
             // 
@@ -238,7 +244,7 @@
             this.ToolbarPanel.Controls.Add(this.AddNewAppoinmentButton);
             this.ToolbarPanel.Location = new System.Drawing.Point(0, 3);
             this.ToolbarPanel.Name = "ToolbarPanel";
-            this.ToolbarPanel.Size = new System.Drawing.Size(801, 68);
+            this.ToolbarPanel.Size = new System.Drawing.Size(829, 68);
             this.ToolbarPanel.TabIndex = 0;
             this.ToolbarPanel.Resize += new System.EventHandler(this.ToolbarPanel_Resize);
             // 
@@ -326,7 +332,7 @@
             this.calendarContainerPanel.Controls.Add(this.sceduller1);
             this.calendarContainerPanel.Location = new System.Drawing.Point(3, 78);
             this.calendarContainerPanel.Name = "calendarContainerPanel";
-            this.calendarContainerPanel.Size = new System.Drawing.Size(801, 439);
+            this.calendarContainerPanel.Size = new System.Drawing.Size(829, 442);
             this.calendarContainerPanel.TabIndex = 1;
             // 
             // sceduller1
@@ -338,13 +344,14 @@
             this.sceduller1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sceduller1.Location = new System.Drawing.Point(3, 3);
             this.sceduller1.Name = "sceduller1";
-            this.sceduller1.Size = new System.Drawing.Size(792, 399);
+            this.sceduller1.Size = new System.Drawing.Size(820, 399);
             this.sceduller1.TabIndex = 0;
             // 
             // Patients
             // 
+            this.Patients.Controls.Add(this.btnDelete);
             this.Patients.Controls.Add(this.ButtonSave);
-            this.Patients.Controls.Add(this.dataGridView1);
+            this.Patients.Controls.Add(this.dataGridViewPatients);
             this.Patients.ImageIndex = 1;
             this.Patients.Location = new System.Drawing.Point(4, 22);
             this.Patients.Name = "Patients";
@@ -354,12 +361,31 @@
             this.Patients.Text = "Patients";
             this.Patients.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // btnDelete
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnDelete.Location = new System.Drawing.Point(269, 489);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // ButtonSave
+            // 
+            this.ButtonSave.Location = new System.Drawing.Point(173, 490);
+            this.ButtonSave.Name = "ButtonSave";
+            this.ButtonSave.Size = new System.Drawing.Size(89, 23);
+            this.ButtonSave.TabIndex = 1;
+            this.ButtonSave.Text = "Save";
+            this.ButtonSave.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewPatients
+            // 
+            this.dataGridViewPatients.AutoGenerateColumns = false;
+            this.dataGridViewPatients.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.patientIdDataGridViewTextBoxColumn,
             this.phoneNumberDataGridViewTextBoxColumn,
             this.phoneNumber2DataGridViewTextBoxColumn,
@@ -374,11 +400,11 @@
             this.insuranceDataGridViewTextBoxColumn,
             this.notesDataGridViewTextBoxColumn,
             this.weightDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.patientBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-4, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(805, 484);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewPatients.DataSource = this.patientBindingSource1;
+            this.dataGridViewPatients.Location = new System.Drawing.Point(-4, 0);
+            this.dataGridViewPatients.Name = "dataGridViewPatients";
+            this.dataGridViewPatients.Size = new System.Drawing.Size(805, 484);
+            this.dataGridViewPatients.TabIndex = 0;
             // 
             // patientIdDataGridViewTextBoxColumn
             // 
@@ -464,10 +490,15 @@
             this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
             this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
             // 
-            // patientBindingSource
+            // patientBindingSource1
             // 
-            this.patientBindingSource.DataMember = "Patient";
-            this.patientBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouDataSet;
+            this.patientBindingSource1.DataMember = "Patient";
+            this.patientBindingSource1.DataSource = this.vasiDiaxeirisisIatreiouDataSetBindingSource;
+            // 
+            // vasiDiaxeirisisIatreiouDataSetBindingSource
+            // 
+            this.vasiDiaxeirisisIatreiouDataSetBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouDataSet;
+            this.vasiDiaxeirisisIatreiouDataSetBindingSource.Position = 0;
             // 
             // _Vasi_Diaxeirisis_IatreiouDataSet
             // 
@@ -490,6 +521,15 @@
             this.Income_Expenses.Size = new System.Drawing.Size(801, 523);
             this.Income_Expenses.TabIndex = 2;
             this.Income_Expenses.Text = "Income/Expenses";
+            // 
+            // btnSaveExpenses
+            // 
+            this.btnSaveExpenses.Location = new System.Drawing.Point(685, 343);
+            this.btnSaveExpenses.Name = "btnSaveExpenses";
+            this.btnSaveExpenses.Size = new System.Drawing.Size(110, 23);
+            this.btnSaveExpenses.TabIndex = 5;
+            this.btnSaveExpenses.Text = "Save";
+            this.btnSaveExpenses.UseVisualStyleBackColor = true;
             // 
             // btnSaveIncome
             // 
@@ -572,11 +612,6 @@
             this.expensesBindingSource.DataMember = "Expenses";
             this.expensesBindingSource.DataSource = this.vasiDiaxeirisisIatreiouDataSetBindingSource;
             // 
-            // vasiDiaxeirisisIatreiouDataSetBindingSource
-            // 
-            this.vasiDiaxeirisisIatreiouDataSetBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouDataSet;
-            this.vasiDiaxeirisisIatreiouDataSetBindingSource.Position = 0;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -624,6 +659,11 @@
             this.incomesBindingSource.DataMember = "Incomes";
             this.incomesBindingSource.DataSource = this.vasiDiaxeirisisIatreiouDataSetBindingSource;
             // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataMember = "Patient";
+            this.patientBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouDataSet;
+            // 
             // patientTableAdapter
             // 
             this.patientTableAdapter.ClearBeforeFill = true;
@@ -648,30 +688,21 @@
             // 
             this.incomesTableAdapter.ClearBeforeFill = true;
             // 
-            // ButtonSave
+            // patientAppointmentBindingSource
             // 
-            this.ButtonSave.Location = new System.Drawing.Point(100, 490);
-            this.ButtonSave.Name = "ButtonSave";
-            this.ButtonSave.Size = new System.Drawing.Size(89, 23);
-            this.ButtonSave.TabIndex = 1;
-            this.ButtonSave.Text = "Save";
-            this.ButtonSave.UseVisualStyleBackColor = true;
+            this.patientAppointmentBindingSource.DataMember = "PatientAppointment";
+            this.patientAppointmentBindingSource.DataSource = this.patientBindingSource;
             // 
-            // btnSaveExpenses
+            // appointmentTableAdapter
             // 
-            this.btnSaveExpenses.Location = new System.Drawing.Point(685, 343);
-            this.btnSaveExpenses.Name = "btnSaveExpenses";
-            this.btnSaveExpenses.Size = new System.Drawing.Size(110, 23);
-            this.btnSaveExpenses.TabIndex = 5;
-            this.btnSaveExpenses.Text = "Save";
-            this.btnSaveExpenses.UseVisualStyleBackColor = true;
+            this.appointmentTableAdapter.ClearBeforeFill = true;
             // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(833, 589);
+            this.ClientSize = new System.Drawing.Size(861, 592);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -687,15 +718,17 @@
             this.ToolbarPanel.ResumeLayout(false);
             this.calendarContainerPanel.ResumeLayout(false);
             this.Patients.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouDataSet)).EndInit();
             this.Income_Expenses.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientAppointmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -728,26 +761,12 @@
         private ScedullerControlLibrary.Sceduller sceduller1;
         private System.Windows.Forms.Button AddPatientButton;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewPatients;
         private System.Windows.Forms.BindingSource vasiDiaxeirisisIatreiouDataSetBindingSource;
         private _Vasi_Diaxeirisis_IatreiouDataSet _Vasi_Diaxeirisis_IatreiouDataSet;
         private System.Windows.Forms.BindingSource patientBindingSource;
         private _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.PatientTableAdapter patientTableAdapter;
         private _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amkaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn registrationNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn debtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn insuranceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.IncomesTableAdapter incomesTableAdapter;
         private System.Windows.Forms.BindingSource incomesBindingSource;
@@ -767,6 +786,24 @@
         private System.Windows.Forms.Button btnSaveIncome;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Button btnSaveExpenses;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.BindingSource patientAppointmentBindingSource;
+        private _Vasi_Diaxeirisis_IatreiouDataSetTableAdapters.AppointmentTableAdapter appointmentTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registrationNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn debtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insuranceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource patientBindingSource1;
     }
 }
 

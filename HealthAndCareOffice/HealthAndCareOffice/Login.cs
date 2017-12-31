@@ -52,6 +52,7 @@ namespace HealthAndCareOffice
 
                 if (dt.Rows.Count > 0)
                 {
+                    MessageBox.Show("SUCCESS");
                     this.Close();
                 }
                 else
