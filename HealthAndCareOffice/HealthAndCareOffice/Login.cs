@@ -16,7 +16,7 @@ namespace HealthAndCareOffice
         private Point lastLocation;
         public Login()
         {
-            System.Drawing.Icon ico = new System.Drawing.Icon("C:\\Users\\User\\source\\repos\\Health-Care-Office2\\HealthAndCareOffice\\HealthAndCareOffice\\bin\\Debug\\Health_Care_Office 2.ico");
+            System.Drawing.Icon ico = new System.Drawing.Icon("C:\\Users\\User\\source\\repos\\Health-Care-Office2\\HealthAndCareOffice\\HealthAndCareOffice\\Health_Care_Office 2.ico");
             this.Icon = ico;
             InitializeComponent();
             textBoxPassword.MaxLength = 15;
