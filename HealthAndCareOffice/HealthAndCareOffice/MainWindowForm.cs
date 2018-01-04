@@ -14,7 +14,9 @@ namespace HealthAndCareOffice
 {
     public partial class MainWindowForm : Form
     {
-
+        DataTable dt = new DataTable();
+        static string connection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Vasi-Diaxeirisis-IatreiouV2.accdb";
+        OleDbConnection conn = new OleDbConnection(connection);
         public MainWindowForm()
         {
             InitializeComponent();
@@ -25,8 +27,7 @@ namespace HealthAndCareOffice
             CenterToParent();
             Debug.WriteLine(sceduller1.Location.X);
         }
-
-
+        
         private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewAppointment na = new NewAppointment();
@@ -43,6 +44,10 @@ namespace HealthAndCareOffice
 
         private void MainWindowForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Appointment' table. You can move, or remove it, as needed.
+            this.appointmentTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Appointment);
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Patient' table. You can move, or remove it, as needed.
+            this.patientTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Patient);
             // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Appointment' table. You can move, or remove it, as needed.
             this.appointmentTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Appointment);
             // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Expenses' table. You can move, or remove it, as needed.
@@ -101,19 +106,7 @@ namespace HealthAndCareOffice
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try
-            {
-               
-             
-                this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes.AddIncomesRow(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes.NewIncomesRow());
-                incomesBindingSource.MoveLast();
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                incomesBindingSource.ResetBindings(false);
-            }
+        
 
         }
 
@@ -134,8 +127,8 @@ namespace HealthAndCareOffice
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            /*try
-            {
+            try {
+            
                 int selectedIndex = dataGridViewPatients.CurrentCell.RowIndex;
                 if (selectedIndex > -1)
                 {
@@ -146,12 +139,37 @@ namespace HealthAndCareOffice
             catch (InvalidOperationException ex)
             {
                 MessageBox.Show("Unable to remove selected row at this time");
-            }*/
-            foreach (DataGridViewRow row in dataGridViewPatients.SelectedRows)
-            {
-                if (!row.IsNewRow)
-                    dataGridViewPatients.Rows.Remove(row);
             }
+            
+          
+        }
+
+        private void ButtonSave_Click(object sender, EventArgs e)
+        {
+         
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter asd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
+            int p = Convert.ToInt32(txtSearch.Text);
+            asd.FillByLastName(patient,txtSearch.Text, p);
+            dataGridViewPatients.DataSource = patient;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter asd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
+            asd.FillByPatients(patient);
+            dataGridViewPatients.DataSource = patient;
         }
     }
 }
