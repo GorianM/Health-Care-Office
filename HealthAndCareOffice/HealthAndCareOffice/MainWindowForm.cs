@@ -44,6 +44,10 @@ namespace HealthAndCareOffice
 
         private void MainWindowForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Expenses' table. You can move, or remove it, as needed.
+            this.expensesTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Expenses);
+            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Incomes' table. You can move, or remove it, as needed.
+            this.incomesTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Incomes);
             // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Appointment' table. You can move, or remove it, as needed.
             this.appointmentTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Appointment);
             // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Patient' table. You can move, or remove it, as needed.
@@ -159,7 +163,9 @@ namespace HealthAndCareOffice
         {
             _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
             _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter asd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
-            int p = Convert.ToInt32(txtSearch.Text);
+            int p = 0;
+            if(!txtSearch.Text.ToString().Equals(""))
+               p =  Convert.ToInt32(txtSearch.Text);
             asd.FillByLastName(patient,txtSearch.Text, p);
             dataGridViewPatients.DataSource = patient;
         }
