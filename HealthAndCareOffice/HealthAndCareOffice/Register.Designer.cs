@@ -34,23 +34,23 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxFullName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxPhonenumber = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxPhonenumber2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxMedicalSpeciality = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxRole = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -84,6 +84,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "  Register";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -95,23 +96,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Username :";
             // 
-            // textBox1
+            // textBoxUsername
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox1.Location = new System.Drawing.Point(118, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBoxUsername.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxUsername.Location = new System.Drawing.Point(118, 39);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(109, 22);
+            this.textBoxUsername.TabIndex = 3;
+            this.textBoxUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // textBox2
+            // textBoxPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox2.Location = new System.Drawing.Point(118, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(109, 22);
-            this.textBox2.TabIndex = 5;
+            this.textBoxPassword.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxPassword.Location = new System.Drawing.Point(118, 94);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(109, 22);
+            this.textBoxPassword.TabIndex = 5;
             // 
             // label2
             // 
@@ -123,14 +124,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Password :";
             // 
-            // textBox3
+            // textBoxFullName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox3.Location = new System.Drawing.Point(118, 155);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(109, 22);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.textBoxFullName.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxFullName.Location = new System.Drawing.Point(118, 155);
+            this.textBoxFullName.Name = "textBoxFullName";
+            this.textBoxFullName.Size = new System.Drawing.Size(109, 22);
+            this.textBoxFullName.TabIndex = 7;
+            this.textBoxFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // label3
             // 
@@ -142,14 +143,14 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Staff Full Name :";
             // 
-            // textBox4
+            // textBoxName
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox4.Location = new System.Drawing.Point(118, 208);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(109, 22);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.textBoxName.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxName.Location = new System.Drawing.Point(118, 208);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(109, 22);
+            this.textBoxName.TabIndex = 9;
+            this.textBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // label4
             // 
@@ -161,14 +162,14 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Name :";
             // 
-            // textBox5
+            // textBoxLastName
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox5.Location = new System.Drawing.Point(118, 255);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(109, 22);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.textBoxLastName.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxLastName.Location = new System.Drawing.Point(118, 255);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(109, 22);
+            this.textBoxLastName.TabIndex = 11;
+            this.textBoxLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label5
             // 
@@ -180,14 +181,14 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Last Name :";
             // 
-            // textBox6
+            // textBoxPhonenumber
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox6.Location = new System.Drawing.Point(387, 39);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 25);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.textBoxPhonenumber.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxPhonenumber.Location = new System.Drawing.Point(387, 39);
+            this.textBoxPhonenumber.Name = "textBoxPhonenumber";
+            this.textBoxPhonenumber.Size = new System.Drawing.Size(125, 25);
+            this.textBoxPhonenumber.TabIndex = 13;
+            this.textBoxPhonenumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label6
             // 
@@ -199,14 +200,14 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Phone Number :";
             // 
-            // textBox7
+            // textBoxPhonenumber2
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox7.Location = new System.Drawing.Point(387, 94);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(125, 25);
-            this.textBox7.TabIndex = 15;
-            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
+            this.textBoxPhonenumber2.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxPhonenumber2.Location = new System.Drawing.Point(387, 94);
+            this.textBoxPhonenumber2.Name = "textBoxPhonenumber2";
+            this.textBoxPhonenumber2.Size = new System.Drawing.Size(125, 25);
+            this.textBoxPhonenumber2.TabIndex = 15;
+            this.textBoxPhonenumber2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // label7
             // 
@@ -218,14 +219,14 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Phone Number 2:";
             // 
-            // textBox8
+            // textBoxMedicalSpeciality
             // 
-            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox8.Location = new System.Drawing.Point(387, 155);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(125, 25);
-            this.textBox8.TabIndex = 17;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            this.textBoxMedicalSpeciality.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxMedicalSpeciality.Location = new System.Drawing.Point(387, 155);
+            this.textBoxMedicalSpeciality.Name = "textBoxMedicalSpeciality";
+            this.textBoxMedicalSpeciality.Size = new System.Drawing.Size(125, 25);
+            this.textBoxMedicalSpeciality.TabIndex = 17;
+            this.textBoxMedicalSpeciality.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // label8
             // 
@@ -247,14 +248,14 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Stuff Role :";
             // 
-            // textBox9
+            // textBoxRole
             // 
-            this.textBox9.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.textBox9.Location = new System.Drawing.Point(387, 208);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(125, 25);
-            this.textBox9.TabIndex = 19;
-            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
+            this.textBoxRole.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.textBoxRole.Location = new System.Drawing.Point(387, 208);
+            this.textBoxRole.Name = "textBoxRole";
+            this.textBoxRole.Size = new System.Drawing.Size(125, 25);
+            this.textBoxRole.TabIndex = 19;
+            this.textBoxRole.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
             // 
             // Register
             // 
@@ -262,23 +263,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(535, 409);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBoxRole);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxMedicalSpeciality);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBoxPhonenumber2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxPhonenumber);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxFullName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -297,22 +298,22 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxFullName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxPhonenumber;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxPhonenumber2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxMedicalSpeciality;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxRole;
     }
 }

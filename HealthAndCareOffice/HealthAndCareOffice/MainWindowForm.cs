@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-
+using HealthAndCareOffice.Properties;
 namespace HealthAndCareOffice
 {
     public partial class MainWindowForm : Form
@@ -176,6 +176,53 @@ namespace HealthAndCareOffice
             _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter asd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
             asd.FillByPatients(patient);
             dataGridViewPatients.DataSource = patient;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to save changes?", "Message", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+            if(dr == DialogResult.Yes)
+            {
+                this.patientTableAdapter1.Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.Patient);
+                dataGridViewPatients.Refresh();
+                MessageBox.Show("Copmpleted");
+            }
+        }
+
+        private void btnDeleteIncomes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int selectedIndex = dataGridViewIncome.CurrentCell.RowIndex;
+                if (selectedIndex > -1)
+                {
+                    dataGridViewIncome.Rows.RemoveAt(selectedIndex);
+                    dataGridViewIncome.Refresh(); // if needed
+                }
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("Unable to remove selected row at this time");
+            }
+        }
+
+        private void btnDeleteExpenses_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int selectedIndex = dataGridViewExpenses.CurrentCell.RowIndex;
+                if (selectedIndex > -1)
+                {
+                    dataGridViewExpenses.Rows.RemoveAt(selectedIndex);
+                    dataGridViewExpenses.Refresh(); // if needed
+                }
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("Unable to remove selected row at this time");
+            }
         }
     }
 }

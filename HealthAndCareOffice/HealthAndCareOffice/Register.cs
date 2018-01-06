@@ -62,5 +62,35 @@ namespace HealthAndCareOffice
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable staff = new _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter std = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter();
+            // Int32 count = std.GetDataByCountStaff();
+            foreach (TextBox t in this.Controls)
+            {
+                if (t.Text.CompareTo("") > 0)
+                {
+                    MessageBox.Show("You have empty textboxes ","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+            }
+            int role = 0;
+            if (!textBoxFullName.Text.Equals(""))
+            {
+                if (textBoxFullName.Text.Equals("1") | textBoxFullName.Text.Equals("2"))
+                {
+                    role = Convert.ToInt32(textBoxFullName.Text);
+                }
+                else
+                {
+                    textBoxFullName.Text = "";
+                }
+            }
+
+            std.InsertQueryStaff(11, textBoxUsername.Text, textBoxPassword.Text, textBoxMedicalSpeciality.Text, textBoxName.Text, textBoxLastName.Text, textBoxPhonenumber.Text, textBoxPhonenumber2.Text, role);
+
+
+        }
     }
 }
