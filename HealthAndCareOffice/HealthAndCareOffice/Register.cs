@@ -67,7 +67,7 @@ namespace HealthAndCareOffice
         {
             _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable staff = new _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable();
             _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter std = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter();
-            // Int32 count = std.GetDataByCountStaff();
+            //Int32 count = std.GetDataByCountStaff();
             foreach (TextBox t in this.Controls)
             {
                 if (t.Text.CompareTo("") > 0)
@@ -88,7 +88,7 @@ namespace HealthAndCareOffice
                 }
             }
 
-            std.InsertQueryStaff(11, textBoxUsername.Text, textBoxPassword.Text, textBoxMedicalSpeciality.Text, textBoxName.Text, textBoxLastName.Text, textBoxPhonenumber.Text, textBoxPhonenumber2.Text, role);
+            //std.InsertQueryStaff(11, textBoxUsername.Text, textBoxPassword.Text, textBoxMedicalSpeciality.Text, textBoxName.Text, textBoxLastName.Text, textBoxPhonenumber.Text, textBoxPhonenumber2.Text, role);
 
 
         }

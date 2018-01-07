@@ -31,6 +31,7 @@ namespace ScedullerControlLibrary
             timeRanges = trh.getTimeRanges();
             timeslotCount = timeRanges.Count;
             Height = (timeslotCount + 1) * timeslotHight;
+           
             
         }
         public void onPaint(PaintEventArgs e, Font font)

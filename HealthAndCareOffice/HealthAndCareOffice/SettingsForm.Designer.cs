@@ -95,7 +95,7 @@
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.IncludeSubdirectories = true;
-            this.fileSystemWatcher1.Path = "C:\\Users\\User\\Documents";
+            //this.fileSystemWatcher1.Path = "C:\\Users\\User\\Documents";
             this.fileSystemWatcher1.SynchronizingObject = this;
             this.fileSystemWatcher1.Changed += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Changed);
             this.fileSystemWatcher1.Created += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Created);

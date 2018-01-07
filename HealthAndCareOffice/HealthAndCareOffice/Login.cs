@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,8 +18,8 @@ namespace HealthAndCareOffice
         private Point lastLocation;
         public Login()
         {
-            System.Drawing.Icon ico = new System.Drawing.Icon(@"C:\Users\user\Source\Repos\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\Health_Care_Office 2.ico");
-            this.Icon = ico;
+            //System.Drawing.Icon ico = new System.Drawing.Icon(@"C:\Users\user\Source\Repos\Health-Care-Office\HealthAndCareOffice\HealthAndCareOffice\Health_Care_Office 2.ico");
+            //this.Icon = ico;
             InitializeComponent();
             textBoxPassword.MaxLength = 15;
             textBoxUser.MaxLength = 15;
@@ -45,26 +47,19 @@ namespace HealthAndCareOffice
                 Properties.Settings.Default.Password = textBoxPassword.Text;
                 Properties.Settings.Default.Save();
             }
-            try
-            {
-                _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter sta = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter();
-                _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable dt = sta.GetDataByUsernamePassword(textBoxUser.Text, textBoxPassword.Text);
+            DataBaseManagement dbm = new DataBaseManagement();
+            Staff staff =  dbm.getStaffByUserNameAndPassWord(textBoxUser.Text, textBoxPassword.Text);
 
-                if (dt.Rows.Count > 0)
-                {
-                    
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Wrong username/password","Error");
-                }
-
-            }catch(Exception ex)
+            
+            if (staff != null)
             {
+                GlobalConfig.User = staff;
                 this.Close();
             }
-
+            else
+            {
+                MessageBox.Show("Wrong username/password","Error");
+            }
         }
         
         private void Init_Data()

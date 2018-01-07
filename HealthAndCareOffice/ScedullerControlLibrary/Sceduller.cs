@@ -21,22 +21,14 @@ namespace ScedullerControlLibrary
             InitializeComponent();
 
             scedullerTable= new ScedullerTable(Width);
-            
             Height = scedullerTable.Height;
             appointmentManager = new AppointmentManager(this, Width, 15);
             appointmentManager.addNewAppointmentContainer(10);
-            /*Panel p = new Panel();
-            p.SetBounds(10, 10, 100, 100);
-            p.BackColor = Color.Black;
-            p.Parent = this;
-            p.Visible = true;*/
-            
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            //e.Graphics.Clip = new Region(new Rectangle(new Point(0, this.VerticalScroll.Value), new Size(Width, 800)));
             SuspendLayout();
             scedullerTable.onPaint(e,Font);
             ResumeLayout();
@@ -45,7 +37,8 @@ namespace ScedullerControlLibrary
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            if(scedullerTable != null)scedullerTable.SetWidth(Width);
+            if(scedullerTable!= null)Height = scedullerTable.Height;
+            if (scedullerTable != null)scedullerTable.SetWidth(Width);
             if (appointmentManager != null) appointmentManager.resetValues(this, Width, 15);
             
             Invalidate();

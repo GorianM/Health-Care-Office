@@ -31,7 +31,7 @@ namespace ScedullerControlLibrary
             int y = 30 + (60 / minsPerHour * 30 * ac.Hour) + (ac.Mins / minsPerHour * 30);
             ac.Height = (estimatedTime / 15 +1) * 30;
             ac.SetBounds(width/8*1,y,width/8,ac.Height);
-            ac.BackColor = Color.Blue;
+            ac.BackColor = Color.AliceBlue;
             ac.Parent = sceduller;
             visibleAppointments.Add(ac);
             ac = null;
@@ -48,6 +48,7 @@ namespace ScedullerControlLibrary
                 
                 int y = 30 + (60 / minsPerHour * 30 * ac.Hour) + (ac.Mins / minsPerHour * 30);
                 ac.SetBounds(width / 8 * 3, y, width / 8, ac.Height);
+                ac.refreshValues();
             }
         }
     }

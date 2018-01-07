@@ -124,18 +124,46 @@ namespace HealthAndCareOffice
         private void textBox14_Leave(object sender, EventArgs e)
         {
 
-            if(!textBoxWeight.Text.Contains(".") || !textBoxWeight.Text.Substring(1,1).Equals("."))
+            /*if(!textBoxWeight.Text.Contains(".") || !textBoxWeight.Text.Substring(1,1).Equals("."))
             {
                 MessageBox.Show("You forgot to insert dot or wrong validation","Wrong validation");
                 textBoxWeight.Text = "";
-            }
+            }*/
         }
         string dbName = @"C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
         private void button2_Click(object sender, EventArgs e)
         {
-            OleDbConnection dbConnection = new OleDbConnection(dbName);
-            OleDbCommand commandStatement = dbConnection.CreateCommand();
-           // commandStatement.Parameters.Add("dsads",);
+            int amka = Convert.ToInt32(textBoxAmka.Text);
+            string lastName = textBoxLastName.Text;
+            string firstName = textBoxFirstName.Text;
+            string sex;
+            if (radioButtonMale.Checked) sex = "m";
+            else sex = "f";
+            string phoneNumber = textBoxPhoneNumber1.Text;
+            string phoneNumber2 = textBoxPhoneNumber2.Text;
+            string address = textBoxAddress.Text;
+            string regNumber = textBoxRegNumber.Text;
+            string insurance = textBoxInsurance.Text;
+            int weight = Convert.ToInt32(textBoxWeight.Text);
+
+            Patient patient = new Patient();
+            patient.Amka = amka;
+            patient.LastName = lastName;
+            patient.FirstName = firstName;
+            patient.Sex = sex;
+            patient.BirthDate = dateTimePicker1.Value;
+            patient.PhoneNumber = phoneNumber;
+            patient.PhoneNumber2 = phoneNumber2;
+            patient.Address = address;
+            patient.RegistrationNumber = regNumber;
+            patient.Insurance = insurance;
+            patient.Weight = weight;
+
+            DataBaseManagement dbm = new DataBaseManagement();
+            dbm.addPatient(patient);
+
+
+
         }
 
         private void NPatient_Load(object sender, EventArgs e)

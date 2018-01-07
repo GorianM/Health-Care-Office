@@ -16,7 +16,7 @@ namespace ScedullerControlLibrary
             addTimeRange(17, 21, 15);
         }
 
-        private void addTimeRange(int startTime,int endTime,int minsPerHour)
+        public void addTimeRange(int startTime,int endTime,int minsPerHour)
         {
             int time = startTime;
             int mins = 0;
@@ -45,6 +45,7 @@ namespace ScedullerControlLibrary
             else { stringTime += " : " + mins; }
 
             timeRanges.Add(stringTime);
+
         }
 
         public List<string> getTimeRanges()

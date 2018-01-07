@@ -76,6 +76,7 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -94,18 +95,22 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Appointment.cs" />
     <Compile Include="CheckUpdates.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CheckUpdates.Designer.cs">
       <DependentUpon>CheckUpdates.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBaseManagement.cs" />
+    <Compile Include="GlobalConfig.cs" />
     <Compile Include="NewAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewAppointment.Designer.cs">
       <DependentUpon>NewAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,14 +143,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_Vasi_Diaxeirisis_IatreiouDataSet.cs">
-      <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_Vasi_Diaxeirisis_IatreiouDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="Staff.cs" />
     <Compile Include="_Vasi_Diaxeirisis_IatreiouV2DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,17 +192,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_Vasi_Diaxeirisis_IatreiouDataSet.xsc">
-      <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_Vasi_Diaxeirisis_IatreiouDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Vasi_Diaxeirisis_IatreiouDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_Vasi_Diaxeirisis_IatreiouDataSet.xss">
-      <DependentUpon>_Vasi_Diaxeirisis_IatreiouDataSet.xsd</DependentUpon>
-    </None>
     <None Include="_Vasi_Diaxeirisis_IatreiouV2DataSet.xsc">
       <DependentUpon>_Vasi_Diaxeirisis_IatreiouV2DataSet.xsd</DependentUpon>
     </None>
@@ -227,7 +214,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Vasi-Diaxeirisis-IatreiouV2.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

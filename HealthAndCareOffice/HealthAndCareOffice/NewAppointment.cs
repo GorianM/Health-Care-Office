@@ -12,12 +12,23 @@ namespace HealthAndCareOffice
 {
     public partial class NewAppointment : Form
     {
+        List<Patient> patientList;
+        Patient selectedPatient = null;
+
         public NewAppointment()
         {
             InitializeComponent();
             CenterToParent();
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+            newAppointmentDatePicker.Format = DateTimePickerFormat.Custom;
+            newAppointmentDatePicker.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+
+            DataBaseManagement dbm = new DataBaseManagement();
+            patientList = dbm.getPatientsForSelection();
+            foreach(Patient patient in patientList)
+            {
+                PatientListBox.Items.Add(patient.getShortString());
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,7 +63,49 @@ namespace HealthAndCareOffice
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            DateTime date = newAppointmentDatePicker.Value;
+            DateTime time = newAppointmentTimePicker.Value;
+            string reason = textBoxReasonOfAppointment.Text;
+            Patient patient = selectedPatient;
+            int duration = Convert.ToInt32(textBoxEstimatedDuration.Text);
 
+            bool validated = validateInput();
+            if(validated)
+            {
+                Appointment appointment = new Appointment();
+                appointment.AppontmentDateTime = new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute,time.Second);
+                appointment.Reason = reason;
+                appointment.EstimatedDurationMinutes = duration;
+                appointment.patient = patient;
+                appointment.staff = GlobalConfig.User;
+
+                MessageBox.Show("DateTime: " + appointment.AppontmentDateTime.ToLongDateString() + "\n" +
+                    "Estimated duration: "+appointment.EstimatedDurationMinutes+"\n"+
+                    "Reason: " + appointment.Reason+"\n"+
+                    "Patient id: "+appointment.patient.PatientID+"\n"+
+                    "Staff id: "+ appointment.staff.StaffId);
+
+                DataBaseManagement dbm = new DataBaseManagement();
+                dbm.addAppointment(appointment);
+            }
+        }
+
+        private bool validateInput()
+        {
+            bool validation = true;
+            if(selectedPatient == null)
+            {
+                validation = false;
+                selectedPatientLabel.Text = "You must have a selected Patient";
+            }
+
+            return validation;
+        }
+
+        private void OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedPatient = patientList.ElementAt(PatientListBox.SelectedIndex);
+            selectedPatientLabel.Text = selectedPatient.getShortString();
         }
     }
 }

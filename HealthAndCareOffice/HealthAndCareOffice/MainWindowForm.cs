@@ -22,10 +22,10 @@ namespace HealthAndCareOffice
             InitializeComponent();
             sceduller1.Height= 2900;
             this.Size = new Size(1224, 900);
-            dataGridViewPatients.Width = 1180;
-            dataGridViewPatients.Height = 790;
             CenterToParent();
-            Debug.WriteLine(sceduller1.Location.X);
+            
+            DataBaseManagement dataBase = new DataBaseManagement();
+            dataBase.getPatients(PatientsGridView);
         }
         
         private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,29 +37,14 @@ namespace HealthAndCareOffice
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm myForm = new AboutForm();
-            //this.Hide();
+           
             myForm.ShowDialog();
             
         }
 
         private void MainWindowForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Expenses' table. You can move, or remove it, as needed.
-            this.expensesTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Expenses);
-            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Incomes' table. You can move, or remove it, as needed.
-            this.incomesTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Incomes);
-            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Appointment' table. You can move, or remove it, as needed.
-            this.appointmentTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Appointment);
-            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouV2DataSet.Patient' table. You can move, or remove it, as needed.
-            this.patientTableAdapter1.Fill(this._Vasi_Diaxeirisis_IatreiouV2DataSet.Patient);
-            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Appointment' table. You can move, or remove it, as needed.
-            this.appointmentTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Appointment);
-            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Expenses' table. You can move, or remove it, as needed.
-            this.expensesTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Expenses);
-            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Incomes' table. You can move, or remove it, as needed.
-            this.incomesTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes);
-            // TODO: This line of code loads data into the '_Vasi_Diaxeirisis_IatreiouDataSet.Patient' table. You can move, or remove it, as needed.
-            this.patientTableAdapter.Fill(this._Vasi_Diaxeirisis_IatreiouDataSet.Patient);
+           
             Login loginForm = new Login();
             loginForm.BringToFront();
             loginForm.Focus();
@@ -78,7 +63,7 @@ namespace HealthAndCareOffice
             np.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void AddPatientButton_Click(object sender, EventArgs e)
         {
             NPatient myForm = new NPatient();
             //this.Hide();
@@ -116,41 +101,17 @@ namespace HealthAndCareOffice
 
         private void btnSaveIncome_Click(object sender, EventArgs e)
         {
-            try
-            {
-                incomesBindingSource.EndEdit();
-                incomesTableAdapter.Update(this._Vasi_Diaxeirisis_IatreiouDataSet.Incomes);
-               
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                incomesBindingSource.ResetBindings(false);
-            }
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            try {
-            
-                int selectedIndex = dataGridViewPatients.CurrentCell.RowIndex;
-                if (selectedIndex > -1)
-                {
-                    dataGridViewPatients.Rows.RemoveAt(selectedIndex);
-                    dataGridViewPatients.Refresh(); // if needed
-                }
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show("Unable to remove selected row at this time");
-            }
-            
-          
+           
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-         
+            
 
         }
 
@@ -161,68 +122,32 @@ namespace HealthAndCareOffice
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
-            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter asd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
-            int p = 0;
-            if(!txtSearch.Text.ToString().Equals(""))
-               p =  Convert.ToInt32(txtSearch.Text);
-            asd.FillByLastName(patient,txtSearch.Text, p);
-            dataGridViewPatients.DataSource = patient;
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadButton_Click(object sender, EventArgs e)
         {
-            _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
-            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter asd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
-            asd.FillByPatients(patient);
-            dataGridViewPatients.DataSource = patient;
+            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure you want to save changes?", "Message", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
-            if(dr == DialogResult.Yes)
-            {
-                this.patientTableAdapter1.Update(_Vasi_Diaxeirisis_IatreiouV2DataSet.Patient);
-                dataGridViewPatients.Refresh();
-                MessageBox.Show("Copmpleted");
-            }
+           
         }
 
         private void btnDeleteIncomes_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                int selectedIndex = dataGridViewIncome.CurrentCell.RowIndex;
-                if (selectedIndex > -1)
-                {
-                    dataGridViewIncome.Rows.RemoveAt(selectedIndex);
-                    dataGridViewIncome.Refresh(); // if needed
-                }
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show("Unable to remove selected row at this time");
-            }
+           
         }
 
         private void btnDeleteExpenses_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
+        }
 
-                int selectedIndex = dataGridViewExpenses.CurrentCell.RowIndex;
-                if (selectedIndex > -1)
-                {
-                    dataGridViewExpenses.Rows.RemoveAt(selectedIndex);
-                    dataGridViewExpenses.Refresh(); // if needed
-                }
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show("Unable to remove selected row at this time");
-            }
+        private void OnResize(object sender, EventArgs e)
+        {
+            
         }
     }
 }
