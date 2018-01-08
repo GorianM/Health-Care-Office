@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HealthAndCareOffice
+namespace ModelProject
 {
-    class Appointment
+    public class Appointment
     {
         public int AppointmentID { get; set; }
         public DateTime AppontmentDateTime { get; set; }

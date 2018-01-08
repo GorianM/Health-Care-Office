@@ -1,4 +1,5 @@
 ﻿
+using ModelProject;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -144,7 +145,7 @@ namespace HealthAndCareOffice
                 patient.PhoneNumber2 = reader[2].ToString();
                 patient.FirstName = reader[3].ToString();
                 patient.LastName = reader[4].ToString();
-                patient.Amka = (int)reader[5];
+                patient.Amka = reader[5].ToString();
                 patient.Sex = reader[6].ToString();
                 //skip one for birthDate 7
                 patient.Address = reader[8].ToString();
@@ -176,7 +177,7 @@ namespace HealthAndCareOffice
                 patient.PhoneNumber2 = reader[2].ToString();
                 patient.FirstName = reader[3].ToString();
                 patient.LastName = reader[4].ToString();
-                patient.Amka = (int)reader[5];
+                patient.Amka = reader[5].ToString();
                 patient.Sex = reader[6].ToString();
                 patient.BirthDate = reader.GetDateTime(7);
                 patient.Address = reader[8].ToString();
@@ -260,12 +261,14 @@ namespace HealthAndCareOffice
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText = @"Insert into Appointment (AppointmentID,DateTime,EstimatedDurationMinutes,Reason,PatientId,StaffId) values (?,?,?,?,?,?)";
-                command.CommandText = @"Insert into Appointment (AppointmentID,DateTime,EstimatedDurationMinutes,Reason,PatientId,StaffId) values (?,?,?,?,?,?)";
+                command.CommandText = @"INSERT INTO Appointment
+                         (AppointmentID, [DateTime], ExactTime, EstimatedDurationMinutes, Reason, Diagnosis, Treatment, Notes, PatientId, StaffId)
+VALUES        (?, ?, ?, ?, ?, '', '', '', ?, ?)";
+                
                 
                 command.Parameters.AddWithValue("AppointmentID", appointments.Last().AppointmentID+1);
-                command.Parameters.AddWithValue("DateTime", appointment.AppontmentDateTime);
-                //command.Parameters.AddWithValue("ExactTime", appointment.AppontmentDateTime);
+                command.Parameters.AddWithValue("[DateTime]", appointment.AppontmentDateTime);
+                command.Parameters.AddWithValue("ExactTime", appointment.AppontmentDateTime);
                 command.Parameters.AddWithValue("EstimatedDurationMinutes", appointment.EstimatedDurationMinutes);
                 command.Parameters.AddWithValue("Reason", appointment.Reason);
                 command.Parameters.AddWithValue("PatientId", appointment.patient.PatientID);

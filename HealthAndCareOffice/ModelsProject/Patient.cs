@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HealthAndCareOffice
+namespace ModelProject
 {
-    class Patient
+    public class Patient
     {
         public int PatientID { get; set; }
         public string PhoneNumber { get; set; }
         public string PhoneNumber2 { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Amka { get; set; }
+        public string Amka { get; set; }
         public string Sex { get; set; }
         public DateTime BirthDate { get; set; }
         public string Address { get; set; }

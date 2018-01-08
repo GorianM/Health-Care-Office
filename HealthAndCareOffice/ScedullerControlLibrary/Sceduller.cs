@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using ModelProject;
 
 namespace ScedullerControlLibrary
 {
@@ -23,7 +24,7 @@ namespace ScedullerControlLibrary
             scedullerTable= new ScedullerTable(Width);
             Height = scedullerTable.Height;
             appointmentManager = new AppointmentManager(this, Width, 15);
-            appointmentManager.addNewAppointmentContainer(10);
+            
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -44,5 +45,12 @@ namespace ScedullerControlLibrary
             Invalidate();
 
         }
+
+        public void SetDataBase(List<Appointment> appointments)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }

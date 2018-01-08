@@ -19,6 +19,13 @@ namespace ScedullerControlLibrary
             this.sceduller = sceduller;
             this.width = width;
             this.minsPerHour = minsPerHour;
+
+            initAppoinmets();
+        }
+
+        private void initAppoinmets()
+        {
+            
         }
 
         public void addNewAppointmentContainer(int estimatedTime)

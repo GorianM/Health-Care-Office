@@ -53,6 +53,7 @@
             this.calendarContainerPanel = new System.Windows.Forms.Panel();
             this.sceduller1 = new ScedullerControlLibrary.Sceduller();
             this.Patients = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.PatientsGridView = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -60,38 +61,25 @@
             this.textBoxSearchExpenses = new System.Windows.Forms.TextBox();
             this.textBoxSearchIncome = new System.Windows.Forms.TextBox();
             this.expensesDataGridView = new System.Windows.Forms.DataGridView();
-            this.incomesDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnDeleteExpenses = new System.Windows.Forms.Button();
-            this.btnDeleteIncomes = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBoxAppointment = new System.Windows.Forms.TextBox();
-            this.btnDeleteAppointment = new System.Windows.Forms.Button();
-            this.appointmentDataGridView = new System.Windows.Forms.DataGridView();
-            this.patientBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.expensesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.incomesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.expensesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vasiDiaxeirisisIatreiouDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.incomesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.patientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.patientAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridViewExpendables = new System.Windows.Forms.DataGridView();
-            this.btnDeleteExpendables = new System.Windows.Forms.Button();
-            this.textBoxSearchExpendables = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expensesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this._Vasi_Diaxeirisis_IatreiouV2DataSet1 = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSet();
+            this.incomesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incomesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDeleteExpenses = new System.Windows.Forms.Button();
+            this.btnDeleteIncomes = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxAppointment = new System.Windows.Forms.TextBox();
+            this.btnDeleteAppointment = new System.Windows.Forms.Button();
+            this.appointmentDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,14 +91,29 @@
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appointmentBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBoxSearchExpendables = new System.Windows.Forms.TextBox();
+            this.searchLabel = new System.Windows.Forms.Label();
+            this.btnDeleteExpendables = new System.Windows.Forms.Button();
+            this.dataGridViewExpendables = new System.Windows.Forms.DataGridView();
             this.expandableProductsIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.minimumThresholdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staffIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expandableProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.vasiDiaxeirisisIatreiouV2DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Vasi_Diaxeirisis_IatreiouV2DataSet = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSet();
+            this.expensesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.incomesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.expensesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vasiDiaxeirisisIatreiouDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.incomesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.patientAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientTableAdapter1 = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
             this.appointmentTableAdapter1 = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter();
             this.incomesTableAdapter1 = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.IncomesTableAdapter();
@@ -120,6 +123,8 @@
             this.expensesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.appointmentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.expandableProductsTableAdapter = new HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpandableProductsTableAdapter();
+            this.incomesSearchLabel = new System.Windows.Forms.Label();
+            this.expensesSearchLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControlAppointment.SuspendLayout();
             this.AppointmentsTabPage.SuspendLayout();
@@ -129,10 +134,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.PatientsGridView)).BeginInit();
             this.Income_Expenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expensesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouV2DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource3)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource2)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExpendables)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expandableProductsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouV2DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouV2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
@@ -142,15 +156,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientAppointmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExpendables)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouV2DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expandableProductsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouV2DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouV2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource1)).BeginInit();
@@ -386,12 +391,13 @@
             this.sceduller1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sceduller1.Location = new System.Drawing.Point(3, 3);
             this.sceduller1.Name = "sceduller1";
-            this.sceduller1.Size = new System.Drawing.Size(1028, 1290);
+            this.sceduller1.Size = new System.Drawing.Size(994, 1290);
             this.sceduller1.TabIndex = 0;
             // 
             // Patients
             // 
             this.Patients.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Patients.Controls.Add(this.label2);
             this.Patients.Controls.Add(this.PatientsGridView);
             this.Patients.Controls.Add(this.txtSearch);
             this.Patients.Controls.Add(this.btnDelete);
@@ -402,6 +408,16 @@
             this.Patients.Size = new System.Drawing.Size(1054, 587);
             this.Patients.TabIndex = 1;
             this.Patients.Text = "Patients";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(6, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Search";
             // 
             // PatientsGridView
             // 
@@ -423,7 +439,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(6, 71);
+            this.txtSearch.Location = new System.Drawing.Point(6, 29);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(109, 20);
             this.txtSearch.TabIndex = 4;
@@ -431,11 +447,11 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(25, 32);
+            this.btnDelete.Location = new System.Drawing.Point(6, 55);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(109, 23);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "Delete Selected";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -443,11 +459,13 @@
             // 
             this.Income_Expenses.AutoScroll = true;
             this.Income_Expenses.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Income_Expenses.Controls.Add(this.btnDeleteExpenses);
+            this.Income_Expenses.Controls.Add(this.expensesSearchLabel);
+            this.Income_Expenses.Controls.Add(this.incomesSearchLabel);
             this.Income_Expenses.Controls.Add(this.textBoxSearchExpenses);
             this.Income_Expenses.Controls.Add(this.textBoxSearchIncome);
             this.Income_Expenses.Controls.Add(this.expensesDataGridView);
             this.Income_Expenses.Controls.Add(this.incomesDataGridView);
-            this.Income_Expenses.Controls.Add(this.btnDeleteExpenses);
             this.Income_Expenses.Controls.Add(this.btnDeleteIncomes);
             this.Income_Expenses.ImageIndex = 2;
             this.Income_Expenses.Location = new System.Drawing.Point(4, 22);
@@ -460,22 +478,26 @@
             // 
             // textBoxSearchExpenses
             // 
-            this.textBoxSearchExpenses.Location = new System.Drawing.Point(600, 388);
+            this.textBoxSearchExpenses.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxSearchExpenses.Location = new System.Drawing.Point(937, 297);
             this.textBoxSearchExpenses.Name = "textBoxSearchExpenses";
-            this.textBoxSearchExpenses.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearchExpenses.Size = new System.Drawing.Size(111, 20);
             this.textBoxSearchExpenses.TabIndex = 9;
             this.textBoxSearchExpenses.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // textBoxSearchIncome
             // 
-            this.textBoxSearchIncome.Location = new System.Drawing.Point(596, 35);
+            this.textBoxSearchIncome.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxSearchIncome.Location = new System.Drawing.Point(946, 35);
             this.textBoxSearchIncome.Name = "textBoxSearchIncome";
-            this.textBoxSearchIncome.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearchIncome.Size = new System.Drawing.Size(102, 20);
             this.textBoxSearchIncome.TabIndex = 8;
             this.textBoxSearchIncome.TextChanged += new System.EventHandler(this.textBoxSearchIncome_TextChanged);
             // 
             // expensesDataGridView
             // 
+            this.expensesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.expensesDataGridView.AutoGenerateColumns = false;
             this.expensesDataGridView.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.expensesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -486,184 +508,13 @@
             this.dataGridViewTextBoxColumn8});
             this.expensesDataGridView.DataSource = this.expensesBindingSource3;
             this.expensesDataGridView.GridColor = System.Drawing.Color.LightSteelBlue;
-            this.expensesDataGridView.Location = new System.Drawing.Point(3, 226);
+            this.expensesDataGridView.Location = new System.Drawing.Point(3, 274);
             this.expensesDataGridView.Name = "expensesDataGridView";
-            this.expensesDataGridView.Size = new System.Drawing.Size(587, 297);
+            this.expensesDataGridView.Size = new System.Drawing.Size(928, 310);
             this.expensesDataGridView.TabIndex = 7;
             this.expensesDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.expensesDataGridView_CellEndEdit);
             this.expensesDataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.expensesDataGridView_RowLeave);
             this.expensesDataGridView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.expensesDataGridView_UserAddedRow);
-            // 
-            // incomesDataGridView
-            // 
-            this.incomesDataGridView.AutoGenerateColumns = false;
-            this.incomesDataGridView.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.incomesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.incomesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.incomesDataGridView.DataSource = this.incomesBindingSource3;
-            this.incomesDataGridView.Location = new System.Drawing.Point(3, 0);
-            this.incomesDataGridView.Name = "incomesDataGridView";
-            this.incomesDataGridView.Size = new System.Drawing.Size(587, 229);
-            this.incomesDataGridView.TabIndex = 7;
-            this.incomesDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.incomesDataGridView_CellEndEdit);
-            this.incomesDataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.incomesDataGridView_RowLeave);
-            this.incomesDataGridView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.incomesDataGridView_UserAddedRow);
-            // 
-            // btnDeleteExpenses
-            // 
-            this.btnDeleteExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteExpenses.Location = new System.Drawing.Point(606, 359);
-            this.btnDeleteExpenses.Name = "btnDeleteExpenses";
-            this.btnDeleteExpenses.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteExpenses.TabIndex = 7;
-            this.btnDeleteExpenses.Text = "Delete";
-            this.btnDeleteExpenses.UseVisualStyleBackColor = true;
-            this.btnDeleteExpenses.Click += new System.EventHandler(this.btnDeleteExpenses_Click);
-            // 
-            // btnDeleteIncomes
-            // 
-            this.btnDeleteIncomes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteIncomes.Location = new System.Drawing.Point(606, 6);
-            this.btnDeleteIncomes.Name = "btnDeleteIncomes";
-            this.btnDeleteIncomes.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteIncomes.TabIndex = 6;
-            this.btnDeleteIncomes.Text = "Delete";
-            this.btnDeleteIncomes.UseVisualStyleBackColor = true;
-            this.btnDeleteIncomes.Click += new System.EventHandler(this.btnDeleteIncomes_Click);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage1.Controls.Add(this.textBoxAppointment);
-            this.tabPage1.Controls.Add(this.btnDeleteAppointment);
-            this.tabPage1.Controls.Add(this.appointmentDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1054, 587);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "Appointment";
-            // 
-            // textBoxAppointment
-            // 
-            this.textBoxAppointment.Location = new System.Drawing.Point(944, 119);
-            this.textBoxAppointment.Name = "textBoxAppointment";
-            this.textBoxAppointment.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAppointment.TabIndex = 2;
-            this.textBoxAppointment.TextChanged += new System.EventHandler(this.textBoxAppointment_TextChanged);
-            // 
-            // btnDeleteAppointment
-            // 
-            this.btnDeleteAppointment.Location = new System.Drawing.Point(957, 90);
-            this.btnDeleteAppointment.Name = "btnDeleteAppointment";
-            this.btnDeleteAppointment.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteAppointment.TabIndex = 1;
-            this.btnDeleteAppointment.Text = "Delete";
-            this.btnDeleteAppointment.UseVisualStyleBackColor = true;
-            this.btnDeleteAppointment.Click += new System.EventHandler(this.btnDeleteAppointment_Click);
-            // 
-            // appointmentDataGridView
-            // 
-            this.appointmentDataGridView.AutoGenerateColumns = false;
-            this.appointmentDataGridView.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.appointmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.appointmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18});
-            this.appointmentDataGridView.DataSource = this.appointmentBindingSource2;
-            this.appointmentDataGridView.GridColor = System.Drawing.SystemColors.Control;
-            this.appointmentDataGridView.Location = new System.Drawing.Point(-4, 0);
-            this.appointmentDataGridView.Name = "appointmentDataGridView";
-            this.appointmentDataGridView.Size = new System.Drawing.Size(945, 587);
-            this.appointmentDataGridView.TabIndex = 0;
-            this.appointmentDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.appointmentDataGridView_CellEndEdit);
-            // 
-            // patientBindingSource2
-            // 
-            this.patientBindingSource2.DataMember = "Patient";
-            this.patientBindingSource2.DataSource = this.vasiDiaxeirisisIatreiouV2DataSetBindingSource;
-            // 
-            // expensesBindingSource1
-            // 
-            this.expensesBindingSource1.DataMember = "Expenses";
-            this.expensesBindingSource1.DataSource = this.vasiDiaxeirisisIatreiouV2DataSetBindingSource;
-            // 
-            // incomesBindingSource1
-            // 
-            this.incomesBindingSource1.DataMember = "Incomes";
-            this.incomesBindingSource1.DataSource = this.vasiDiaxeirisisIatreiouV2DataSetBindingSource;
-            // 
-            // appointmentBindingSource
-            // 
-            this.appointmentBindingSource.DataMember = "Appointment";
-            this.appointmentBindingSource.DataSource = this.vasiDiaxeirisisIatreiouV2DataSetBindingSource;
-            // 
-            // expensesBindingSource
-            // 
-            this.expensesBindingSource.DataMember = "Expenses";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage2.Controls.Add(this.textBoxSearchExpendables);
-            this.tabPage2.Controls.Add(this.btnDeleteExpendables);
-            this.tabPage2.Controls.Add(this.dataGridViewExpendables);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1054, 587);
-            this.tabPage2.TabIndex = 4;
-            this.tabPage2.Text = "Expendable Products";
-            // 
-            // dataGridViewExpendables
-            // 
-            this.dataGridViewExpendables.AutoGenerateColumns = false;
-            this.dataGridViewExpendables.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridViewExpendables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExpendables.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.expandableProductsIdDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.minimumThresholdDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn,
-            this.staffIdDataGridViewTextBoxColumn});
-            this.dataGridViewExpendables.DataSource = this.expandableProductsBindingSource;
-            this.dataGridViewExpendables.Location = new System.Drawing.Point(-4, 0);
-            this.dataGridViewExpendables.Name = "dataGridViewExpendables";
-            this.dataGridViewExpendables.Size = new System.Drawing.Size(1058, 510);
-            this.dataGridViewExpendables.TabIndex = 0;
-            this.dataGridViewExpendables.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExpendables_CellEndEdit);
-            this.dataGridViewExpendables.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExpendables_RowLeave);
-            this.dataGridViewExpendables.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewExpendables_UserAddedRow);
-            // 
-            // btnDeleteExpendables
-            // 
-            this.btnDeleteExpendables.Location = new System.Drawing.Point(94, 531);
-            this.btnDeleteExpendables.Name = "btnDeleteExpendables";
-            this.btnDeleteExpendables.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteExpendables.TabIndex = 1;
-            this.btnDeleteExpendables.Text = "Delete";
-            this.btnDeleteExpendables.UseVisualStyleBackColor = true;
-            this.btnDeleteExpendables.Click += new System.EventHandler(this.btnDeleteExpendables_Click);
-            // 
-            // textBoxSearchExpendables
-            // 
-            this.textBoxSearchExpendables.Location = new System.Drawing.Point(175, 533);
-            this.textBoxSearchExpendables.Name = "textBoxSearchExpendables";
-            this.textBoxSearchExpendables.Size = new System.Drawing.Size(136, 20);
-            this.textBoxSearchExpendables.TabIndex = 2;
-            this.textBoxSearchExpendables.TextChanged += new System.EventHandler(this.textBoxSearchExpendables_TextChanged);
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -699,6 +550,27 @@
             this._Vasi_Diaxeirisis_IatreiouV2DataSet1.DataSetName = "_Vasi_Diaxeirisis_IatreiouV2DataSet";
             this._Vasi_Diaxeirisis_IatreiouV2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // incomesDataGridView
+            // 
+            this.incomesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.incomesDataGridView.AutoGenerateColumns = false;
+            this.incomesDataGridView.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.incomesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.incomesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.incomesDataGridView.DataSource = this.incomesBindingSource3;
+            this.incomesDataGridView.Location = new System.Drawing.Point(3, 0);
+            this.incomesDataGridView.Name = "incomesDataGridView";
+            this.incomesDataGridView.Size = new System.Drawing.Size(928, 276);
+            this.incomesDataGridView.TabIndex = 7;
+            this.incomesDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.incomesDataGridView_CellEndEdit);
+            this.incomesDataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.incomesDataGridView_RowLeave);
+            this.incomesDataGridView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.incomesDataGridView_UserAddedRow);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "IncomesId";
@@ -727,6 +599,100 @@
             // 
             this.incomesBindingSource3.DataMember = "Incomes";
             this.incomesBindingSource3.DataSource = this._Vasi_Diaxeirisis_IatreiouV2DataSet1;
+            // 
+            // btnDeleteExpenses
+            // 
+            this.btnDeleteExpenses.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDeleteExpenses.Location = new System.Drawing.Point(937, 323);
+            this.btnDeleteExpenses.Name = "btnDeleteExpenses";
+            this.btnDeleteExpenses.Size = new System.Drawing.Size(111, 23);
+            this.btnDeleteExpenses.TabIndex = 7;
+            this.btnDeleteExpenses.Text = "Delete Selected";
+            this.btnDeleteExpenses.UseVisualStyleBackColor = true;
+            this.btnDeleteExpenses.Click += new System.EventHandler(this.btnDeleteExpenses_Click);
+            // 
+            // btnDeleteIncomes
+            // 
+            this.btnDeleteIncomes.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDeleteIncomes.Location = new System.Drawing.Point(946, 61);
+            this.btnDeleteIncomes.Name = "btnDeleteIncomes";
+            this.btnDeleteIncomes.Size = new System.Drawing.Size(102, 23);
+            this.btnDeleteIncomes.TabIndex = 6;
+            this.btnDeleteIncomes.Text = "Delete Selected";
+            this.btnDeleteIncomes.UseVisualStyleBackColor = true;
+            this.btnDeleteIncomes.Click += new System.EventHandler(this.btnDeleteIncomes_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.textBoxAppointment);
+            this.tabPage1.Controls.Add(this.btnDeleteAppointment);
+            this.tabPage1.Controls.Add(this.appointmentDataGridView);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1054, 587);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Appointment";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(943, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Search";
+            // 
+            // textBoxAppointment
+            // 
+            this.textBoxAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxAppointment.Location = new System.Drawing.Point(947, 28);
+            this.textBoxAppointment.Name = "textBoxAppointment";
+            this.textBoxAppointment.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAppointment.TabIndex = 2;
+            this.textBoxAppointment.TextChanged += new System.EventHandler(this.textBoxAppointment_TextChanged);
+            // 
+            // btnDeleteAppointment
+            // 
+            this.btnDeleteAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteAppointment.Location = new System.Drawing.Point(947, 54);
+            this.btnDeleteAppointment.Name = "btnDeleteAppointment";
+            this.btnDeleteAppointment.Size = new System.Drawing.Size(101, 23);
+            this.btnDeleteAppointment.TabIndex = 1;
+            this.btnDeleteAppointment.Text = "Delete Selected";
+            this.btnDeleteAppointment.UseVisualStyleBackColor = true;
+            this.btnDeleteAppointment.Click += new System.EventHandler(this.btnDeleteAppointment_Click);
+            // 
+            // appointmentDataGridView
+            // 
+            this.appointmentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.appointmentDataGridView.AutoGenerateColumns = false;
+            this.appointmentDataGridView.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.appointmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.appointmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
+            this.appointmentDataGridView.DataSource = this.appointmentBindingSource2;
+            this.appointmentDataGridView.GridColor = System.Drawing.SystemColors.Control;
+            this.appointmentDataGridView.Location = new System.Drawing.Point(-4, 0);
+            this.appointmentDataGridView.Name = "appointmentDataGridView";
+            this.appointmentDataGridView.Size = new System.Drawing.Size(945, 587);
+            this.appointmentDataGridView.TabIndex = 0;
+            this.appointmentDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.appointmentDataGridView_CellEndEdit);
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -793,6 +759,74 @@
             this.appointmentBindingSource2.DataMember = "Appointment";
             this.appointmentBindingSource2.DataSource = this._Vasi_Diaxeirisis_IatreiouV2DataSet1;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage2.Controls.Add(this.textBoxSearchExpendables);
+            this.tabPage2.Controls.Add(this.searchLabel);
+            this.tabPage2.Controls.Add(this.btnDeleteExpendables);
+            this.tabPage2.Controls.Add(this.dataGridViewExpendables);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1054, 587);
+            this.tabPage2.TabIndex = 4;
+            this.tabPage2.Text = "Expendable Products";
+            // 
+            // textBoxSearchExpendables
+            // 
+            this.textBoxSearchExpendables.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxSearchExpendables.Location = new System.Drawing.Point(6, 561);
+            this.textBoxSearchExpendables.Name = "textBoxSearchExpendables";
+            this.textBoxSearchExpendables.Size = new System.Drawing.Size(136, 20);
+            this.textBoxSearchExpendables.TabIndex = 2;
+            this.textBoxSearchExpendables.TextChanged += new System.EventHandler(this.textBoxSearchExpendables_TextChanged);
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.searchLabel.AutoSize = true;
+            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.searchLabel.Location = new System.Drawing.Point(6, 542);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(60, 20);
+            this.searchLabel.TabIndex = 3;
+            this.searchLabel.Text = "Search";
+            // 
+            // btnDeleteExpendables
+            // 
+            this.btnDeleteExpendables.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDeleteExpendables.Location = new System.Drawing.Point(148, 558);
+            this.btnDeleteExpendables.Name = "btnDeleteExpendables";
+            this.btnDeleteExpendables.Size = new System.Drawing.Size(119, 23);
+            this.btnDeleteExpendables.TabIndex = 1;
+            this.btnDeleteExpendables.Text = "Delete Selected";
+            this.btnDeleteExpendables.UseVisualStyleBackColor = true;
+            this.btnDeleteExpendables.Click += new System.EventHandler(this.btnDeleteExpendables_Click);
+            // 
+            // dataGridViewExpendables
+            // 
+            this.dataGridViewExpendables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewExpendables.AutoGenerateColumns = false;
+            this.dataGridViewExpendables.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridViewExpendables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewExpendables.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.expandableProductsIdDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.minimumThresholdDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.staffIdDataGridViewTextBoxColumn});
+            this.dataGridViewExpendables.DataSource = this.expandableProductsBindingSource;
+            this.dataGridViewExpendables.Location = new System.Drawing.Point(-4, 0);
+            this.dataGridViewExpendables.Name = "dataGridViewExpendables";
+            this.dataGridViewExpendables.Size = new System.Drawing.Size(1058, 510);
+            this.dataGridViewExpendables.TabIndex = 0;
+            this.dataGridViewExpendables.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExpendables_CellEndEdit);
+            this.dataGridViewExpendables.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExpendables_RowLeave);
+            this.dataGridViewExpendables.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewExpendables_UserAddedRow);
+            // 
             // expandableProductsIdDataGridViewTextBoxColumn
             // 
             this.expandableProductsIdDataGridViewTextBoxColumn.DataPropertyName = "ExpandableProductsId";
@@ -828,6 +862,11 @@
             this.expandableProductsBindingSource.DataMember = "ExpandableProducts";
             this.expandableProductsBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouV2DataSet1;
             // 
+            // patientBindingSource2
+            // 
+            this.patientBindingSource2.DataMember = "Patient";
+            this.patientBindingSource2.DataSource = this.vasiDiaxeirisisIatreiouV2DataSetBindingSource;
+            // 
             // vasiDiaxeirisisIatreiouV2DataSetBindingSource
             // 
             this.vasiDiaxeirisisIatreiouV2DataSetBindingSource.DataSource = this._Vasi_Diaxeirisis_IatreiouV2DataSet;
@@ -837,6 +876,25 @@
             // 
             this._Vasi_Diaxeirisis_IatreiouV2DataSet.DataSetName = "_Vasi_Diaxeirisis_IatreiouV2DataSet";
             this._Vasi_Diaxeirisis_IatreiouV2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // expensesBindingSource1
+            // 
+            this.expensesBindingSource1.DataMember = "Expenses";
+            this.expensesBindingSource1.DataSource = this.vasiDiaxeirisisIatreiouV2DataSetBindingSource;
+            // 
+            // incomesBindingSource1
+            // 
+            this.incomesBindingSource1.DataMember = "Incomes";
+            this.incomesBindingSource1.DataSource = this.vasiDiaxeirisisIatreiouV2DataSetBindingSource;
+            // 
+            // appointmentBindingSource
+            // 
+            this.appointmentBindingSource.DataMember = "Appointment";
+            this.appointmentBindingSource.DataSource = this.vasiDiaxeirisisIatreiouV2DataSetBindingSource;
+            // 
+            // expensesBindingSource
+            // 
+            this.expensesBindingSource.DataMember = "Expenses";
             // 
             // patientTableAdapter1
             // 
@@ -884,6 +942,29 @@
             // 
             this.expandableProductsTableAdapter.ClearBeforeFill = true;
             // 
+            // incomesSearchLabel
+            // 
+            this.incomesSearchLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.incomesSearchLabel.AutoSize = true;
+            this.incomesSearchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.incomesSearchLabel.Location = new System.Drawing.Point(942, 12);
+            this.incomesSearchLabel.Name = "incomesSearchLabel";
+            this.incomesSearchLabel.Size = new System.Drawing.Size(60, 20);
+            this.incomesSearchLabel.TabIndex = 10;
+            this.incomesSearchLabel.Text = "Search";
+            // 
+            // expensesSearchLabel
+            // 
+            this.expensesSearchLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.expensesSearchLabel.AutoSize = true;
+            this.expensesSearchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.expensesSearchLabel.Location = new System.Drawing.Point(937, 274);
+            this.expensesSearchLabel.Name = "expensesSearchLabel";
+            this.expensesSearchLabel.Size = new System.Drawing.Size(60, 20);
+            this.expensesSearchLabel.TabIndex = 11;
+            this.expensesSearchLabel.Text = "Search";
+            this.expensesSearchLabel.Click += new System.EventHandler(this.label4_Click);
+            // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -910,11 +991,21 @@
             this.Income_Expenses.ResumeLayout(false);
             this.Income_Expenses.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expensesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouV2DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource3)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExpendables)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expandableProductsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouV2DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouV2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).EndInit();
@@ -924,16 +1015,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientAppointmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExpendables)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouV2DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expandableProductsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vasiDiaxeirisisIatreiouV2DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Vasi_Diaxeirisis_IatreiouV2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incomesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource1)).EndInit();
@@ -1039,6 +1120,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn staffIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textBoxSearchExpendables;
         private System.Windows.Forms.Button btnDeleteExpendables;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label searchLabel;
+        private System.Windows.Forms.Label expensesSearchLabel;
+        private System.Windows.Forms.Label incomesSearchLabel;
     }
 }
 

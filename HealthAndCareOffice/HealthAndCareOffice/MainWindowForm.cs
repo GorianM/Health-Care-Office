@@ -10,11 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using HealthAndCareOffice.Properties;
+using ModelProject;
+
 namespace HealthAndCareOffice
 {
     public partial class MainWindowForm : Form
     {
         DataTable dt = new DataTable();
+        NewAppointment np;
         static string connection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Vasi-Diaxeirisis-IatreiouV2.accdb";
         OleDbConnection conn = new OleDbConnection(connection);
         bool startAddingPatient = false;
@@ -33,6 +36,8 @@ namespace HealthAndCareOffice
             DataBaseManagement dataBase = new DataBaseManagement();
             dataBase.getPatients(PatientsGridView);
 
+            List<Appointment> appointments = dataBase.getAppointments();
+            sceduller1.SetDataBase(appointments);
             
         }
         
@@ -75,14 +80,27 @@ namespace HealthAndCareOffice
 
         private void AddNewAppoinmentButton_Click(object sender, EventArgs e)
         {
-            NewAppointment np = new NewAppointment();
+            np = new NewAppointment();
             np.ShowDialog();
+            np.FormClosed += Np_FormClosed;
+        }
+
+        private void Np_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable appointment = new _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter apsd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter();
+            apsd.Fill(appointment);
+            appointmentDataGridView.DataSource = appointment;
+
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter psd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
+            psd.Fill(patient);
+            PatientsGridView.DataSource = patient;
         }
 
         private void AddPatientButton_Click(object sender, EventArgs e)
         {
             NPatient myForm = new NPatient();
-            //this.Hide();
             myForm.ShowDialog();
         }
 
@@ -155,11 +173,11 @@ namespace HealthAndCareOffice
                 bool result=Int32.TryParse(txtSearch.Text,out p);
                 if (result)
                 {
-                    asd.FillByLastNameId(patient, ".>", p);
+                    asd.FillByLastNameId(patient, ".>", p,",.,.");
                 }
                 else
                 {
-                    asd.FillByLastNameId(patient, txtSearch.Text, -99999);
+                    asd.FillByLastNameId(patient, txtSearch.Text, -99999,txtSearch.Text);
                 }
                 PatientsGridView.DataSource = patient;
             }
@@ -178,7 +196,7 @@ namespace HealthAndCareOffice
             if (!txtSearch.Text.ToString().Equals(""))
             {
                 p = Convert.ToInt32(txtSearch.Text);
-                asd.FillByLastNameId(patient, txtSearch.Text, p);
+                asd.FillByLastNameId(patient, txtSearch.Text, p,txtSearch.Text);
                 PatientsGridView.DataSource = patient;
             }
             else if (txtSearch.Text.Equals(""))
@@ -241,7 +259,19 @@ namespace HealthAndCareOffice
 
         private void OnResize(object sender, EventArgs e)
         {
-            
+            if (incomesDataGridView != null) incomesDataGridView.SetBounds(0, 0, incomesDataGridView.Width, incomesDataGridView.Parent.Height / 2);
+            if (expensesDataGridView != null) expensesDataGridView.SetBounds(0, expensesDataGridView.Parent.Height / 2, expensesDataGridView.Width, expensesDataGridView.Parent.Height / 2);
+
+            if (incomesSearchLabel != null) incomesSearchLabel.Location = new Point(incomesSearchLabel.Location.X,0);
+            if (textBoxSearchIncome != null) textBoxSearchIncome.Location = new Point(textBoxSearchIncome.Location.X, 0+incomesSearchLabel.Height+10);
+            if (btnDeleteIncomes != null) btnDeleteIncomes.Location = new Point(btnDeleteIncomes.Location.X, 0 + textBoxSearchIncome.Location.Y+ textBoxSearchIncome.Height + 10);
+
+            if (expensesSearchLabel != null) expensesSearchLabel.Location = new Point(expensesSearchLabel.Location.X, expensesSearchLabel.Parent.Height / 2);
+            if (textBoxSearchExpenses != null) textBoxSearchExpenses.Location = new Point(textBoxSearchExpenses.Location.X, (textBoxSearchExpenses.Parent.Height / 2)+expensesSearchLabel.Height+10);
+            if (btnDeleteExpenses != null)
+            {
+                btnDeleteExpenses.Location = new Point(btnDeleteExpenses.Location.X,  textBoxSearchExpenses.Location.Y + textBoxSearchExpendables.Height+10);
+            }
         }
 
         private void PatientsGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -263,9 +293,7 @@ namespace HealthAndCareOffice
             string phonenumber2 = PatientsGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
             string firstname = PatientsGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
             string lastname = PatientsGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
-            int amka = 0;
-            if (!PatientsGridView.Rows[e.RowIndex].Cells[5].Value.ToString().Equals(""))
-                amka = (int)PatientsGridView.Rows[e.RowIndex].Cells[5].Value;
+            string amka = PatientsGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
             string sex = PatientsGridView.Rows[e.RowIndex].Cells[6].Value.ToString();
             DateTime dt= new DateTime();
             try
@@ -309,9 +337,7 @@ namespace HealthAndCareOffice
                 string phonenumber2 = PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[2].Value.ToString();
                 string firstname = PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[3].Value.ToString();
                 string lastname = PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[4].Value.ToString();
-                int amka = 0;
-                if (!PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[5].Value.ToString().Equals(""))
-                    amka = (int)PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[5].Value;
+                string amka = PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[5].Value.ToString();
                 string sex = PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[6].Value.ToString();
                 DateTime dt = new DateTime();
                 try
@@ -332,7 +358,7 @@ namespace HealthAndCareOffice
                 int weight = 0;
                 if (!PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[13].Value.ToString().Equals(""))
                     weight = (int)PatientsGridView.Rows[PatientsGridView.Rows.Count - 2].Cells[13].Value;
-                asd.InsertPatientQuery(patientId, phonenumber, phonenumber2, firstname, lastname, amka, sex, dt, address, registration, debt, insurance, notes, weight);
+                asd.InsertPatientQuery(patientId, phonenumber, phonenumber2, firstname, lastname, amka, sex, address, registration, debt, insurance, notes, weight,dt);
                 PatientsGridView.Refresh();
                 PatientsGridView.EndEdit();
                 startAddingPatient = false;
@@ -656,6 +682,11 @@ namespace HealthAndCareOffice
                 exsd.Fill(expendable);
                 dataGridViewExpendables.DataSource = expendable;
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

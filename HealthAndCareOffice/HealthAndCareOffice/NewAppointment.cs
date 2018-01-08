@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModelProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -78,16 +79,12 @@ namespace HealthAndCareOffice
                 appointment.EstimatedDurationMinutes = duration;
                 appointment.patient = patient;
                 appointment.staff = GlobalConfig.User;
-
-                MessageBox.Show("DateTime: " + appointment.AppontmentDateTime.ToLongDateString() + "\n" +
-                    "Estimated duration: "+appointment.EstimatedDurationMinutes+"\n"+
-                    "Reason: " + appointment.Reason+"\n"+
-                    "Patient id: "+appointment.patient.PatientID+"\n"+
-                    "Staff id: "+ appointment.staff.StaffId);
-
                 DataBaseManagement dbm = new DataBaseManagement();
                 dbm.addAppointment(appointment);
+                this.Close();
             }
+
+            
         }
 
         private bool validateInput()

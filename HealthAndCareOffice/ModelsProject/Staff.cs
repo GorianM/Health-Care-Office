@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HealthAndCareOffice
+namespace ModelProject
 {
-    class Staff
+    public class Staff
     {
         public int StaffId { get; set; }
         public string Username { get; set; }

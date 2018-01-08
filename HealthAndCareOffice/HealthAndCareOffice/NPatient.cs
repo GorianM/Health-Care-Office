@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModelProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -133,7 +134,7 @@ namespace HealthAndCareOffice
         string dbName = @"C:\Users\User\source\repos\Health-Care-Office2\HealthAndCareOffice\HealthAndCareOffice\Vasi-Diaxeirisis-Iatreiou.accdb";
         private void button2_Click(object sender, EventArgs e)
         {
-            int amka = Convert.ToInt32(textBoxAmka.Text);
+            string amka = textBoxAmka.Text;
             string lastName = textBoxLastName.Text;
             string firstName = textBoxFirstName.Text;
             string sex;

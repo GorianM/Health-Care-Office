@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthAndCareOffice", "Heal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScedullerControlLibrary", "ScedullerControlLibrary\ScedullerControlLibrary.csproj", "{44DDB6AA-C184-47AB-B770-BF29B5901F1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelsProject", "ModelsProject\ModelsProject.csproj", "{13D797C0-584D-4449-88CE-E4C3A8884004}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{44DDB6AA-C184-47AB-B770-BF29B5901F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44DDB6AA-C184-47AB-B770-BF29B5901F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44DDB6AA-C184-47AB-B770-BF29B5901F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D797C0-584D-4449-88CE-E4C3A8884004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D797C0-584D-4449-88CE-E4C3A8884004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D797C0-584D-4449-88CE-E4C3A8884004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D797C0-584D-4449-88CE-E4C3A8884004}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

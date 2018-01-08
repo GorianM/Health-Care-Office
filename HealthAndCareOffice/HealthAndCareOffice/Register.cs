@@ -68,30 +68,66 @@ namespace HealthAndCareOffice
             _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable staff = new _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable();
             _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter std = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.StaffTableAdapter();
             //Int32 count = std.GetDataByCountStaff();
-            foreach (TextBox t in this.Controls)
-            {
-                if (t.Text.CompareTo("") > 0)
-                {
-                    MessageBox.Show("You have empty textboxes ","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    break;
-                }
-            }
+            
             int role = 0;
-            if (!textBoxFullName.Text.Equals(""))
+            bool validated = validateRegister(out role);
+            MessageBox.Show("Validated: " + validated);
+            if(validated)
             {
-                if (textBoxFullName.Text.Equals("1") | textBoxFullName.Text.Equals("2"))
+                int count = std.GetStaffId().Count+1;
+                MessageBox.Show("Id: " + count);
+                try
                 {
-                    role = Convert.ToInt32(textBoxFullName.Text);
+                    std.InsertStaffQuery(count, textBoxUsername.Text, textBoxPassword.Text, textBoxMedicalSpeciality.Text, textBoxName.Text, textBoxLastName.Text, textBoxPhonenumber.Text, textBoxPhonenumber2.Text, role);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }
+            
+
+            
+
+
+        }
+
+        private bool validateRegister(out int role)
+        {
+            bool validated = true;
+            role = -1;
+            if (!textBoxRole.Text.Equals(""))
+            {
+                if (textBoxRole.Text.Equals("1") | textBoxRole.Text.Equals("2"))
+                {
+                    role = Convert.ToInt32(textBoxRole.Text);
                 }
                 else
                 {
-                    textBoxFullName.Text = "";
+                    textBoxRole.Text = "";
                 }
+                
+            }
+            else
+            {
+                validated = false;
             }
 
-            //std.InsertQueryStaff(11, textBoxUsername.Text, textBoxPassword.Text, textBoxMedicalSpeciality.Text, textBoxName.Text, textBoxLastName.Text, textBoxPhonenumber.Text, textBoxPhonenumber2.Text, role);
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType() == typeof(TextBox))
+                {
+                    TextBox t = c as TextBox;
+                    if (t.Text.Equals(""))
+                    {
+                        validated = false;
+                    }
+                }
 
+            }
 
+            return validated;
         }
     }
 }

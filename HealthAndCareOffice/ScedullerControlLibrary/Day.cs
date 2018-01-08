@@ -11,8 +11,8 @@ namespace ScedullerControlLibrary
     public class Day
     {
         private string name;
-        public int width { get; set; }
-        public int height { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
         
         private int headerHeight = 20;
         private int timeSlotDuration = 15;
@@ -23,8 +23,8 @@ namespace ScedullerControlLibrary
 
         public Day(int day,int width, Font font)
         {
-            this.width = width;
-            this.height = 30;
+            this.Width = width;
+            this.Height = 30;
             this.font = font;
             this.name = days[day];
             this.day = day;
@@ -45,7 +45,7 @@ namespace ScedullerControlLibrary
             stringSize = e.Graphics.MeasureString(name, font);
             if (brush == null)brush = new SolidBrush(Color.Magenta);
             if (pen == null) pen = new Pen(new SolidBrush(Color.Black));
-            point = new Point((int)((day + 1) * width + (width / 2 - stringSize.Width / 2)), (int)(headerHeight / 2 - stringSize.Height / 2));
+            point = new Point((int)((day + 1) * Width + (Width / 2 - stringSize.Width / 2)), (int)(headerHeight / 2 - stringSize.Height / 2));
             e.Graphics.DrawString(name, font, new SolidBrush(Color.Black), point);
 
             

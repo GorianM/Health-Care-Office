@@ -7268,44 +7268,45 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters {
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT * FROM Patient WHERE(LastName like \'%\'+?+\'%\') OR (PatientId=?) ORDER BY Fi" +
-                "rstName";
+            this._commandCollection[3].CommandText = "SELECT * FROM Patient WHERE(LastName like \'%\'+?+\'%\') OR (PatientId=?) OR (Amka li" +
+                "ke \'%\'+?+\'%\') ORDER BY FirstName";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PatientId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PatientId", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amka", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amka", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "INSERT INTO `Patient` (`PatientId`, `PhoneNumber`, `PhoneNumber2`, `FirstName`, `" +
-                "LastName`, `Amka`, `Sex`, `BirthDate`, `Address`, `RegistrationNumber`, `Debt`, " +
-                "`Insurance`, `Notes`, `Weight`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?" +
-                ")";
+            this._commandCollection[4].CommandText = "INSERT INTO Patient\r\n                         (PatientId, PhoneNumber, PhoneNumbe" +
+                "r2, FirstName, LastName, Amka, Sex, Address, RegistrationNumber, Debt, Insurance" +
+                ", Notes, Weight, BirthDate)\r\nVALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, " +
+                "?, ?)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PatientId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PatientId", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber2", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amka", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amka", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amka", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Sex", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sex", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BirthDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RegistrationNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RegistrationNumber", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Debt", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Debt", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Insurance", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Insurance", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Notes", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Notes", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weight", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BirthDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = @"UPDATE       Patient
-SET                PhoneNumber = ?, PhoneNumber2 = ?, FirstName = ?, LastName = ?, Amka = ?, Sex = ?, BirthDate = ?, Address = ?, RegistrationNumber = ?, Debt = ?, Insurance = ?, 
-                         Notes = ?, Weight = ?
-WHERE        (PatientId = ?)";
+            this._commandCollection[5].CommandText = "UPDATE       Patient\r\nSET                PhoneNumber = ?, PhoneNumber2 = ?, First" +
+                "Name = ?, LastName = ?, Amka = ?, Sex = ?, BirthDate = ?, Address = ?, Registrat" +
+                "ionNumber = ?, Debt = ?, Insurance = ?, Notes = ?, Weight = ?\r\nWHERE        (Pat" +
+                "ientId = ?)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber2", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amka", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amka", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Amka", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Amka", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Sex", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Sex", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("BirthDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "BirthDate", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
@@ -7369,7 +7370,7 @@ WHERE        (PatientId = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByLastNameId(_Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable dataTable, string LastName, int PatientId) {
+        public virtual int FillByLastNameId(_Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable dataTable, string LastName, int PatientId, string Amka) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((LastName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -7378,6 +7379,12 @@ WHERE        (PatientId = ?)";
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(LastName));
             }
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(PatientId));
+            if ((Amka == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Amka));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7389,7 +7396,7 @@ WHERE        (PatientId = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable GetDataBy2(string LastName, int PatientId) {
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable GetDataBy2(string LastName, int PatientId, string Amka) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((LastName == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -7398,6 +7405,12 @@ WHERE        (PatientId = ?)";
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(LastName));
             }
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(PatientId));
+            if ((Amka == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Amka));
+            }
             _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7954,7 +7967,7 @@ WHERE        (PatientId = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertPatientQuery(int PatientId, string PhoneNumber, string PhoneNumber2, string FirstName, string LastName, global::System.Nullable<int> Amka, string Sex, global::System.Nullable<global::System.DateTime> BirthDate, string Address, string RegistrationNumber, global::System.Nullable<int> Debt, string Insurance, string Notes, global::System.Nullable<int> Weight) {
+        public virtual int InsertPatientQuery(int PatientId, string PhoneNumber, string PhoneNumber2, string FirstName, string LastName, string Amka, string Sex, string Address, string RegistrationNumber, global::System.Nullable<int> Debt, string Insurance, string Notes, global::System.Nullable<int> Weight, global::System.Nullable<global::System.DateTime> BirthDate) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[4];
             command.Parameters[0].Value = ((int)(PatientId));
             if ((PhoneNumber == null)) {
@@ -7981,11 +7994,11 @@ WHERE        (PatientId = ?)";
             else {
                 command.Parameters[4].Value = ((string)(LastName));
             }
-            if ((Amka.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(Amka.Value));
+            if ((Amka == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
+                command.Parameters[5].Value = ((string)(Amka));
             }
             if ((Sex == null)) {
                 command.Parameters[6].Value = global::System.DBNull.Value;
@@ -7993,44 +8006,44 @@ WHERE        (PatientId = ?)";
             else {
                 command.Parameters[6].Value = ((string)(Sex));
             }
-            if ((BirthDate.HasValue == true)) {
-                command.Parameters[7].Value = ((System.DateTime)(BirthDate.Value));
-            }
-            else {
+            if ((Address == null)) {
                 command.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Address == null)) {
+            else {
+                command.Parameters[7].Value = ((string)(Address));
+            }
+            if ((RegistrationNumber == null)) {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[8].Value = ((string)(Address));
-            }
-            if ((RegistrationNumber == null)) {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[9].Value = ((string)(RegistrationNumber));
+                command.Parameters[8].Value = ((string)(RegistrationNumber));
             }
             if ((Debt.HasValue == true)) {
-                command.Parameters[10].Value = ((int)(Debt.Value));
+                command.Parameters[9].Value = ((int)(Debt.Value));
             }
             else {
-                command.Parameters[10].Value = global::System.DBNull.Value;
+                command.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((Insurance == null)) {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[10].Value = ((string)(Insurance));
+            }
+            if ((Notes == null)) {
                 command.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[11].Value = ((string)(Insurance));
-            }
-            if ((Notes == null)) {
-                command.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[12].Value = ((string)(Notes));
+                command.Parameters[11].Value = ((string)(Notes));
             }
             if ((Weight.HasValue == true)) {
-                command.Parameters[13].Value = ((int)(Weight.Value));
+                command.Parameters[12].Value = ((int)(Weight.Value));
+            }
+            else {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((BirthDate.HasValue == true)) {
+                command.Parameters[13].Value = ((System.DateTime)(BirthDate.Value));
             }
             else {
                 command.Parameters[13].Value = global::System.DBNull.Value;
@@ -8056,7 +8069,7 @@ WHERE        (PatientId = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateQueryPatients(string PhoneNumber, string PhoneNumber2, string FirstName, string LastName, global::System.Nullable<int> Amka, string Sex, global::System.Nullable<global::System.DateTime> BirthDate, string Address, string RegistrationNumber, global::System.Nullable<int> Debt, string Insurance, string Notes, global::System.Nullable<int> Weight, int Original_PatientId) {
+        public virtual int UpdateQueryPatients(string PhoneNumber, string PhoneNumber2, string FirstName, string LastName, string Amka, string Sex, global::System.Nullable<global::System.DateTime> BirthDate, string Address, string RegistrationNumber, global::System.Nullable<int> Debt, string Insurance, string Notes, global::System.Nullable<int> Weight, int Original_PatientId) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
             if ((PhoneNumber == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -8082,11 +8095,11 @@ WHERE        (PatientId = ?)";
             else {
                 command.Parameters[3].Value = ((string)(LastName));
             }
-            if ((Amka.HasValue == true)) {
-                command.Parameters[4].Value = ((int)(Amka.Value));
+            if ((Amka == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = global::System.DBNull.Value;
+                command.Parameters[4].Value = ((string)(Amka));
             }
             if ((Sex == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
@@ -8364,12 +8377,31 @@ WHERE        (PatientId = ?)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT StaffId, Username, [Password], MedicalSpecialty, FirstName, LastName, Phon" +
                 "eNumber, PhoneNumber2, StaffRole FROM Staff";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO `Staff` (`StaffId`, `Username`, `Password`, `MedicalSpecialty`, `Firs" +
+                "tName`, `LastName`, `PhoneNumber`, `PhoneNumber2`, `StaffRole`) VALUES (?, ?, ?," +
+                " ?, ?, ?, ?, ?, ?)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("StaffId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffId", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Username", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Username", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MedicalSpecialty", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MedicalSpecialty", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber2", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber2", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("StaffRole", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "StaffRole", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT StaffId FROM Staff";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8391,6 +8423,30 @@ WHERE        (PatientId = ?)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int SelectStaffId(_Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable GetStaffId() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable dataTable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.StaffDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8777,6 +8833,83 @@ WHERE        (PatientId = ?)";
                     string Original_PhoneNumber2, 
                     global::System.Nullable<int> Original_StaffRole) {
             return this.Update(Original_StaffId, Username, Password, MedicalSpecialty, FirstName, LastName, PhoneNumber, PhoneNumber2, StaffRole, Original_StaffId, Original_Username, Original_Password, Original_MedicalSpecialty, Original_FirstName, Original_LastName, Original_PhoneNumber, Original_PhoneNumber2, Original_StaffRole);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertStaffQuery(global::System.Nullable<int> StaffId, string Username, string Password, string MedicalSpecialty, string FirstName, string LastName, string PhoneNumber, string PhoneNumber2, global::System.Nullable<int> StaffRole) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
+            if ((StaffId.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(StaffId.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Username == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Username));
+            }
+            if ((Password == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Password));
+            }
+            if ((MedicalSpecialty == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(MedicalSpecialty));
+            }
+            if ((FirstName == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(FirstName));
+            }
+            if ((LastName == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(LastName));
+            }
+            if ((PhoneNumber == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(PhoneNumber));
+            }
+            if ((PhoneNumber2 == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(PhoneNumber2));
+            }
+            if ((StaffRole.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(StaffRole.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
