@@ -73,6 +73,7 @@ namespace HealthAndCareOffice
                 if (t.Text.CompareTo("") > 0)
                 {
                     MessageBox.Show("You have empty textboxes ","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    break;
                 }
             }
             int role = 0;
