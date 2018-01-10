@@ -218,7 +218,8 @@ namespace HealthAndCareOffice
             connection.Open();
             OleDbDataReader reader = null;
             OleDbCommand command = new OleDbCommand("SELECT * from  Appointment ORDER BY AppointmentID;", connection);
-            reader = command.ExecuteReader();
+			
+			reader = command.ExecuteReader();
             List<Appointment> appointments = new List<Appointment>();
            
             while (reader.Read())
@@ -341,7 +342,7 @@ VALUES        (?, ?, ?, ?, ?, '', '', '', ?, ?)";
 		internal List<ExpandableProdact> getExpandableProdacts()
 		{
 			OleDbDataReader reader = null;
-			OleDbCommand command = new OleDbCommand("SELECT * from  ExpandableProducts WHERE StaffId = ?", connection);
+			OleDbCommand command = new OleDbCommand("SELECT ExpandableProductsId, Description, MinimumThreshold, Quantity, StaffId FROM ExpandableProducts WHERE(StaffId = ?) ORDER BY ExpandableProductsId", connection);
 			command.Parameters.AddWithValue("StaffId", GlobalConfig.User.StaffId);
 			connection.Open();
 			reader = command.ExecuteReader();

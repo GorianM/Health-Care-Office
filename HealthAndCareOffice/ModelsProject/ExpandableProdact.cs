@@ -17,7 +17,7 @@ namespace ModelsProject
 
 		public override string ToString()
 		{
-			return "Description: " + Description + "Quantity: " + Quantity + " Minimum Threshold: " + MinimumThreshold; 
+			return "Description: " + Description + "\nQuantity: " + Quantity + "\nMinimum Threshold: " + MinimumThreshold; 
 		}
 	}
 }

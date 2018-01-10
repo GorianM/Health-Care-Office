@@ -2,9 +2,9 @@
 {
 
 
-    partial class _Vasi_Diaxeirisis_IatreiouV2DataSet
-    {
-    }
+	partial class _Vasi_Diaxeirisis_IatreiouV2DataSet
+	{
+	}
 }
 
 namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters {

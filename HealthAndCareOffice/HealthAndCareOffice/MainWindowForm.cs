@@ -27,7 +27,14 @@ namespace HealthAndCareOffice
         bool startAddingAppointment = false;
         bool startAddingExpendables = false;
 
-        public MainWindowForm()
+		bool allowUpdatePatient = true;
+		bool allowUpdateIncomes = true;
+		bool allowUpdateExpenses = true;
+		bool allowUpdateAppointment = true;
+		bool allowUpdateExpandables = true;
+
+
+		public MainWindowForm()
         {
             try
             {
@@ -91,8 +98,7 @@ namespace HealthAndCareOffice
             loginForm.ShowDialog();
 
 			
-            
-        }
+		}
 
         private void ToolbarPanel_Resize(object sender, EventArgs e)
         {
@@ -303,40 +309,44 @@ namespace HealthAndCareOffice
 
         private void PatientsGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            
-            _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
-            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter asd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
-            int patientId = 0;
-            if (!PatientsGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals("")) 
-            patientId = (int)PatientsGridView.Rows[e.RowIndex].Cells[0].Value;
-            
-            string phonenumber = PatientsGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string phonenumber2 = PatientsGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-            string firstname = PatientsGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
-            string lastname = PatientsGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
-            string amka = PatientsGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
-            string sex = PatientsGridView.Rows[e.RowIndex].Cells[6].Value.ToString();
-            DateTime dt= new DateTime();
-            try
-            {
-                dt = Convert.ToDateTime(PatientsGridView.Rows[e.RowIndex].Cells[7].Value.ToString());
-            }catch(Exception ex)
-            {
-                
-            }
-            string address = PatientsGridView.Rows[e.RowIndex].Cells[8].Value.ToString();
-            string registration = PatientsGridView.Rows[e.RowIndex].Cells[9].Value.ToString();
-            int debt = 0;
-            if (!PatientsGridView.Rows[e.RowIndex].Cells[10].Value.ToString().Equals(""))
-                debt = (int)PatientsGridView.Rows[e.RowIndex].Cells[10].Value;
-            string insurance = PatientsGridView.Rows[e.RowIndex].Cells[11].Value.ToString();
-            string notes = PatientsGridView.Rows[e.RowIndex].Cells[12].Value.ToString();
-            int weight = 0;
-            if (!PatientsGridView.Rows[e.RowIndex].Cells[13].Value.ToString().Equals(""))
-                weight = (int)PatientsGridView.Rows[e.RowIndex].Cells[13].Value;
-            //if (patientId!=0 && amka != 0 && debt != 0 && weight != 0 && dt!=null)
-                asd.UpdateQueryPatients(phonenumber, phonenumber2, firstname, lastname, amka, sex, dt, address, registration, debt, insurance, notes, weight, patientId);
-            PatientsGridView.EndEdit();
+            if(allowUpdatePatient)
+			{
+				_Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
+				_Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter asd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
+				int patientId = 0;
+				if (!PatientsGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
+					patientId = (int)PatientsGridView.Rows[e.RowIndex].Cells[0].Value;
+
+				string phonenumber = PatientsGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+				string phonenumber2 = PatientsGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+				string firstname = PatientsGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+				string lastname = PatientsGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+				string amka = PatientsGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+				string sex = PatientsGridView.Rows[e.RowIndex].Cells[6].Value.ToString();
+				DateTime dt = new DateTime();
+				try
+				{
+					dt = Convert.ToDateTime(PatientsGridView.Rows[e.RowIndex].Cells[7].Value.ToString());
+				}
+				catch (Exception ex)
+				{
+
+				}
+				string address = PatientsGridView.Rows[e.RowIndex].Cells[8].Value.ToString();
+				string registration = PatientsGridView.Rows[e.RowIndex].Cells[9].Value.ToString();
+				int debt = 0;
+				if (!PatientsGridView.Rows[e.RowIndex].Cells[10].Value.ToString().Equals(""))
+					debt = (int)PatientsGridView.Rows[e.RowIndex].Cells[10].Value;
+				string insurance = PatientsGridView.Rows[e.RowIndex].Cells[11].Value.ToString();
+				string notes = PatientsGridView.Rows[e.RowIndex].Cells[12].Value.ToString();
+				int weight = 0;
+				if (!PatientsGridView.Rows[e.RowIndex].Cells[13].Value.ToString().Equals(""))
+					weight = (int)PatientsGridView.Rows[e.RowIndex].Cells[13].Value;
+				//if (patientId!=0 && amka != 0 && debt != 0 && weight != 0 && dt!=null)
+				asd.UpdateQueryPatients(phonenumber, phonenumber2, firstname, lastname, amka, sex, dt, address, registration, debt, insurance, notes, weight, patientId);
+				PatientsGridView.EndEdit();
+			}
+           
         }
 
         private void PatientsGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -395,6 +405,7 @@ namespace HealthAndCareOffice
         private void PatientsGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             startAddingPatient = true;
+			allowUpdatePatient = false;
             
         }
 
@@ -433,11 +444,13 @@ namespace HealthAndCareOffice
         private void incomesDataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             startAddingIncomes = true;
+			allowUpdateIncomes = false;
         }
 
         private void expensesDataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             startAddingExpenses = true;
+			allowUpdateExpenses = false;
         }
 
         private void expensesDataGridView_RowLeave(object sender, DataGridViewCellEventArgs e)
@@ -469,24 +482,28 @@ namespace HealthAndCareOffice
 
         private void incomesDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            _Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable income = new _Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable();
-            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.IncomesTableAdapter isd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.IncomesTableAdapter();
-            int incomeid = 0;
-            if (!incomesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
-            {
-                incomeid = (int)incomesDataGridView.Rows[e.RowIndex].Cells[0].Value;
-            }
-            string description = incomesDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
-            int amount = 0;
-            if (!incomesDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString().Equals(""))
-            {
-                amount = (int)incomesDataGridView.Rows[e.RowIndex].Cells[2].Value;
-            }
-            int staffId = GlobalConfig.User.StaffId;
+			if(allowUpdateIncomes)
+			{
+				_Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable income = new _Vasi_Diaxeirisis_IatreiouV2DataSet.IncomesDataTable();
+				_Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.IncomesTableAdapter isd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.IncomesTableAdapter();
+				int incomeid = 0;
+				if (!incomesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
+				{
+					incomeid = (int)incomesDataGridView.Rows[e.RowIndex].Cells[0].Value;
+				}
+				string description = incomesDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+				int amount = 0;
+				if (!incomesDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString().Equals(""))
+				{
+					amount = (int)incomesDataGridView.Rows[e.RowIndex].Cells[2].Value;
+				}
+				int staffId = GlobalConfig.User.StaffId;
 
-            isd.UpdateIncomesQuery(description, amount, staffId,incomeid);
-                  
-            incomesDataGridView.EndEdit();
+				isd.UpdateIncomesQuery(description, amount, staffId, incomeid);
+
+				incomesDataGridView.EndEdit();
+			}
+           
         }
 
         private void textBoxSearchIncome_TextChanged(object sender, EventArgs e)
@@ -508,24 +525,28 @@ namespace HealthAndCareOffice
 
         private void expensesDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable expenses = new _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable();
-            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpensesTableAdapter esd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpensesTableAdapter();
-            int expensesid = 0;
-            if (!expensesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
-            {
-                expensesid = (int)expensesDataGridView.Rows[e.RowIndex].Cells[0].Value;
-            }
-            string description = expensesDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
-            int amount = 0;
-            if (!expensesDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString().Equals(""))
-            {
-                amount = (int)expensesDataGridView.Rows[e.RowIndex].Cells[2].Value;
-            }
-            int staffId = GlobalConfig.User.StaffId;
+			if(allowUpdateExpenses)
+			{
+				_Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable expenses = new _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpensesDataTable();
+				_Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpensesTableAdapter esd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpensesTableAdapter();
+				int expensesid = 0;
+				if (!expensesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
+				{
+					expensesid = (int)expensesDataGridView.Rows[e.RowIndex].Cells[0].Value;
+				}
+				string description = expensesDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+				int amount = 0;
+				if (!expensesDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString().Equals(""))
+				{
+					amount = (int)expensesDataGridView.Rows[e.RowIndex].Cells[2].Value;
+				}
+				int staffId = GlobalConfig.User.StaffId;
 
-            esd.UpdateExpensesQuery(description, amount, staffId, expensesid);
+				esd.UpdateExpensesQuery(description, amount, staffId, expensesid);
 
-            expensesDataGridView.EndEdit();
+				expensesDataGridView.EndEdit();
+			}
+            
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -594,56 +615,60 @@ namespace HealthAndCareOffice
 
         private void appointmentDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable appointment = new _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable();
-            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter apsd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter();
+			if(allowUpdateAppointment)
+			{
+				_Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable appointment = new _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable();
+				_Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter apsd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter();
 
-            int appointmentid = 0;
-            if (!appointmentDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
-            {
-                appointmentid = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[0].Value;
-            }
-            DateTime dt = new DateTime();
-            try
-            {
-                dt = Convert.ToDateTime(appointmentDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
-            }
-            catch (Exception ex)
-            {
-            }
-            string diagnosis = appointmentDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString(); 
-            string treatment =appointmentDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString(); ;
-            string reason = appointmentDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString(); ;
-            string notes = appointmentDataGridView.Rows[e.RowIndex].Cells[7].Value.ToString(); ;
-            DateTime exactTime = new DateTime();
-            try
-            {
-                exactTime = Convert.ToDateTime(appointmentDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
-            }
-            catch (Exception ex)
-            {
-                
-            }
+				int appointmentid = 0;
+				if (!appointmentDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
+				{
+					appointmentid = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[0].Value;
+				}
+				DateTime dt = new DateTime();
+				try
+				{
+					dt = Convert.ToDateTime(appointmentDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
+				}
+				catch (Exception ex)
+				{
+				}
+				string diagnosis = appointmentDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+				string treatment = appointmentDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString(); ;
+				string reason = appointmentDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString(); ;
+				string notes = appointmentDataGridView.Rows[e.RowIndex].Cells[7].Value.ToString(); ;
+				DateTime exactTime = new DateTime();
+				try
+				{
+					exactTime = Convert.ToDateTime(appointmentDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
+				}
+				catch (Exception ex)
+				{
 
-            int duration = 0; ;
-            int patientId = 0;
-            if (!appointmentDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString().Equals(""))
-            {
-                duration = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[3].Value;
-            }
+				}
 
-            if (!appointmentDataGridView.Rows[e.RowIndex].Cells[8].Value.ToString().Equals(""))
-            {
-               patientId = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[8].Value;
-            }
-            int staffId = 0;
-            if (!appointmentDataGridView.Rows[e.RowIndex].Cells[9].Value.ToString().Equals(""))
-            {
-                staffId = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[9].Value;
-            }
+				int duration = 0; ;
+				int patientId = 0;
+				if (!appointmentDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString().Equals(""))
+				{
+					duration = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[3].Value;
+				}
 
-            apsd.UpdateAppointmentQuery(dt, exactTime, duration, reason, diagnosis, treatment, notes, patientId, staffId, appointmentid);
+				if (!appointmentDataGridView.Rows[e.RowIndex].Cells[8].Value.ToString().Equals(""))
+				{
+					patientId = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[8].Value;
+				}
+				int staffId = 0;
+				if (!appointmentDataGridView.Rows[e.RowIndex].Cells[9].Value.ToString().Equals(""))
+				{
+					staffId = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[9].Value;
+				}
 
-            appointmentDataGridView.EndEdit();
+				apsd.UpdateAppointmentQuery(dt, exactTime, duration, reason, diagnosis, treatment, notes, patientId, staffId, appointmentid);
+
+				appointmentDataGridView.EndEdit();
+			}
+           
         }
 
         private void btnDeleteExpendables_Click(object sender, EventArgs e)
@@ -668,28 +693,32 @@ namespace HealthAndCareOffice
 
         private void dataGridViewExpendables_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable expandable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable();
-            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpandableProductsTableAdapter exsd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpandableProductsTableAdapter();
-            int expendablesid = 0;     
-            int treshhold = 0;
-            int quantity = 0;
-            if (!dataGridViewExpendables.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
-            {
-                expendablesid = (int)dataGridViewExpendables.Rows[e.RowIndex].Cells[0].Value;
-            }
-            string description = dataGridViewExpendables.Rows[e.RowIndex].Cells[1].Value.ToString();
-            if (!dataGridViewExpendables.Rows[e.RowIndex].Cells[2].Value.ToString().Equals(""))
-            {
-                treshhold = (int)dataGridViewExpendables.Rows[e.RowIndex].Cells[2].Value;
-            }
-            if (!dataGridViewExpendables.Rows[e.RowIndex].Cells[3].Value.ToString().Equals(""))
-            {
-                quantity = (int)dataGridViewExpendables.Rows[e.RowIndex].Cells[3].Value;
-            }
-            int staffId = GlobalConfig.User.StaffId;
-            exsd.UpdateExpendablesQuery(description, treshhold,quantity,staffId, expendablesid);
-
-            dataGridViewExpendables.EndEdit();
+			if(allowUpdateExpandables)
+			{
+				_Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable expandable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable();
+				_Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpandableProductsTableAdapter exsd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpandableProductsTableAdapter();
+				int expendablesid = 0;
+				int treshhold = 0;
+				int quantity = 0;
+				if (!dataGridViewExpendables.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
+				{
+					expendablesid = (int)dataGridViewExpendables.Rows[e.RowIndex].Cells[0].Value;
+				}
+				string description = dataGridViewExpendables.Rows[e.RowIndex].Cells[1].Value.ToString();
+				if (!dataGridViewExpendables.Rows[e.RowIndex].Cells[2].Value.ToString().Equals(""))
+				{
+					treshhold = (int)dataGridViewExpendables.Rows[e.RowIndex].Cells[2].Value;
+				}
+				if (!dataGridViewExpendables.Rows[e.RowIndex].Cells[3].Value.ToString().Equals(""))
+				{
+					quantity = (int)dataGridViewExpendables.Rows[e.RowIndex].Cells[3].Value;
+				}
+				int staffId = GlobalConfig.User.StaffId;
+				exsd.UpdateExpendablesQuery(description, treshhold, quantity, staffId, expendablesid);
+				
+				dataGridViewExpendables.EndEdit();
+			}
+            
         }
 
         private void dataGridViewExpendables_RowLeave(object sender, DataGridViewCellEventArgs e)
@@ -716,7 +745,8 @@ namespace HealthAndCareOffice
                 }
                 int staffId = GlobalConfig.User.StaffId;
                 exsd.InsertExpendablesQuery(expendablesid, description, treshhold, quantity, staffId);
-                startAddingExpendables = false;
+				dataGridViewExpendables.DataSource = expandable;
+				startAddingExpendables = false;
 
             }
         }
@@ -724,6 +754,7 @@ namespace HealthAndCareOffice
         private void dataGridViewExpendables_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             startAddingExpendables = true;
+			allowUpdateExpandables = false;
         }
 
         private void textBoxSearchExpendables_TextChanged(object sender, EventArgs e)
@@ -813,8 +844,25 @@ namespace HealthAndCareOffice
 		{
 
 			List<ExpandableProdact> expandableProdacts = new List<ExpandableProdact>();
-			DataBaseManagement dbm = new DataBaseManagement();
-			expandableProdacts = dbm.getExpandableProdacts();
+			_Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable expendable = new _Vasi_Diaxeirisis_IatreiouV2DataSet.ExpandableProductsDataTable();
+			_Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpandableProductsTableAdapter exsd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.ExpandableProductsTableAdapter();
+
+			DataTable dt =  exsd.GetDataByStaffID(GlobalConfig.User.StaffId);
+			
+
+			for(int i = 0; i< dt.Rows.Count;i++)
+			{
+				object[] row = dt.Rows[i].ItemArray;				
+				ExpandableProdact ep = new ExpandableProdact();
+				ep.ID = (int)row[0];
+				ep.Description = row[1].ToString();
+				ep.MinimumThreshold = (int)row[2];
+				ep.Quantity = (int)row[3];
+				ep.staff = GlobalConfig.User;
+				expandableProdacts.Add(ep);
+				
+			}
+			
 			string s = "";
 			int counter = 0;
 			foreach(ExpandableProdact expandableProdact in expandableProdacts)
@@ -831,6 +879,7 @@ namespace HealthAndCareOffice
 					s += "The Prodact is out of stock\n";
 					counter++;
 				}
+				else { Debug.WriteLine(expandableProdact.ToString()); }
 				
 			}
 
@@ -842,7 +891,7 @@ namespace HealthAndCareOffice
 			
 			if(counter>0)
 			{
-				MessageBox.Show(s);
+				MessageBox.Show(s,"Expandable Prodacts report",MessageBoxButtons.OK,MessageBoxIcon.Information);
 			}
 			
 		}
@@ -861,9 +910,9 @@ namespace HealthAndCareOffice
                 string diagnosis;
                 string reason;
                 DateTime dt = new DateTime();
-                DateTime exacttime = new DateTime();
-               
+                DateTime exacttime = new DateTime();                
                 int patientid = 0;
+
                 if (!appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[0].Value.ToString().Equals(""))
                 {
                     appointmentid = (int)appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[0].Value;
@@ -899,6 +948,7 @@ namespace HealthAndCareOffice
                 staffid = GlobalConfig.User.StaffId;
                 aptb.InsertAppointmentQuery(appointmentid,dt,exacttime,duration,reason,diagnosis,treatment,notes,patientid,staffid);
                 startAddingAppointment = false;
+				allowUpdateAppointment = true;
 
             }
 
@@ -907,6 +957,7 @@ namespace HealthAndCareOffice
         private void appointmentDataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             startAddingAppointment = true;
+			allowUpdateAppointment = false;
         }
     }
 }
