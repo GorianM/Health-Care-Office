@@ -184,6 +184,7 @@
             this.addNewPatientButton.TabIndex = 20;
             this.addNewPatientButton.Text = "Add New Patient";
             this.addNewPatientButton.UseVisualStyleBackColor = true;
+            this.addNewPatientButton.Click += new System.EventHandler(this.addNewPatientButton_Click);
             // 
             // selectedPatientLabel
             // 

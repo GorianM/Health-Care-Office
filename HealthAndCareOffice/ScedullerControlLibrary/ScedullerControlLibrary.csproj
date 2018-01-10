@@ -45,6 +45,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="AppointmentManager.cs" />
+    <Compile Include="TimeSlot.cs" />
     <Compile Include="Day.cs" />
     <Compile Include="Sceduller.cs">
       <SubType>UserControl</SubType>

@@ -20,8 +20,8 @@ namespace HealthAndCareOffice
         {
             InitializeComponent();
             CenterToParent();
-            newAppointmentDatePicker.Format = DateTimePickerFormat.Custom;
-            newAppointmentDatePicker.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+           
+            
 
             DataBaseManagement dbm = new DataBaseManagement();
             patientList = dbm.getPatientsForSelection();
@@ -103,6 +103,24 @@ namespace HealthAndCareOffice
         {
             selectedPatient = patientList.ElementAt(PatientListBox.SelectedIndex);
             selectedPatientLabel.Text = selectedPatient.getShortString();
+        }
+
+        private void addNewPatientButton_Click(object sender, EventArgs e)
+        {
+            NPatient myForm = new NPatient();
+            myForm.FormClosed += MyForm_FormClosed;
+            myForm.ShowDialog();
+        }
+
+        private void MyForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DataBaseManagement dbm = new DataBaseManagement();
+            patientList = dbm.getPatientsForSelection();
+            PatientListBox.Items.Clear();
+            foreach (Patient patient in patientList)
+            {
+                PatientListBox.Items.Add(patient.getShortString());
+            }
         }
     }
 }

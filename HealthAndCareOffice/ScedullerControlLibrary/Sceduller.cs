@@ -17,38 +17,65 @@ namespace ScedullerControlLibrary
         public Day[] days = new Day[7];
         ScedullerTable scedullerTable;
         AppointmentManager appointmentManager;
+
+        List<Appointment> appointments;
+
+        bool readyToPaint = false;
         public Sceduller()
         {
             InitializeComponent();
+        }
 
-            scedullerTable= new ScedullerTable(Width);
+        public void initScedulerTable()
+        {
+            SuspendLayout();
+            scedullerTable = new ScedullerTable(Width);
             Height = scedullerTable.Height;
+            readyToPaint = true;
+            ResumeLayout();
+        }
+
+        public void initAppointmentManager()
+        {
             appointmentManager = new AppointmentManager(this, Width, 15);
+            appointmentManager.initAppointments(appointments, DateTime.Now);	           
             
+        }
+
+        public void refreshApointmentManager(DateTime now)
+        {
+            appointmentManager.initAppointments(appointments,now);
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnPaint(e);
-            SuspendLayout();
-            scedullerTable.onPaint(e,Font);
-            ResumeLayout();
+            if (readyToPaint)
+            {
+                base.OnPaint(e);
+                SuspendLayout();
+                scedullerTable.onPaint(e, Font);
+                ResumeLayout();
+            }
         }
 
         protected override void OnResize(EventArgs e)
         {
-            base.OnResize(e);
-            if(scedullerTable!= null)Height = scedullerTable.Height;
-            if (scedullerTable != null)scedullerTable.SetWidth(Width);
-            if (appointmentManager != null) appointmentManager.resetValues(this, Width, 15);
+            if(readyToPaint)
+            {
+                base.OnResize(e);
+                if (scedullerTable != null) Height = scedullerTable.Height;
+                if (scedullerTable != null) scedullerTable.SetWidth(Width);
+                if (appointmentManager != null) appointmentManager.resetValues(this, Width, 15);
+
+                Invalidate();
+            }
             
-            Invalidate();
 
         }
 
         public void SetDataBase(List<Appointment> appointments)
         {
-            throw new NotImplementedException();
+            this.appointments = appointments;
         }
 
         

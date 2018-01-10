@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +9,15 @@ namespace ScedullerControlLibrary
 {
     class TimeRangeHelper
     {
-        List<String> timeRanges;
+        public static List<TimeSlot> TimeRanges = new List<TimeSlot>();
         public TimeRangeHelper()
         {
-            timeRanges = new List<string>();
-            addTimeRange(8, 14, 15);
-            addTimeRange(17, 21, 15);
+            
+            
+
         }
 
-        public void addTimeRange(int startTime,int endTime,int minsPerHour)
+        public static void addTimeRange(int startTime,int endTime,int minsPerHour)
         {
             int time = startTime;
             int mins = 0;
@@ -29,7 +30,8 @@ namespace ScedullerControlLibrary
                 if(mins<10){stringTime+= " : 0"+mins;}
                 else{stringTime += " : " + mins;}
                 
-                timeRanges.Add(stringTime);
+                TimeRanges.Add(new TimeSlot(stringTime,time,mins));
+				Debug.WriteLine(TimeRanges.ElementAt(TimeRanges.Count - 1).ToString());
                 mins += minsPerHour;
                 if (mins == 60)
                 {
@@ -44,13 +46,28 @@ namespace ScedullerControlLibrary
             if (mins < 10) { stringTime += " : 0" + mins; }
             else { stringTime += " : " + mins; }
 
-            timeRanges.Add(stringTime);
+            TimeRanges.Add(new TimeSlot(stringTime,time,mins));
 
         }
 
-        public List<string> getTimeRanges()
+        public static List<TimeSlot> getTimeRanges()
         {
-            return timeRanges;
+            return TimeRanges;
         }
+
+		public static int getYByTime(int hour, int minute)
+		{
+			int y = 0;
+			foreach(TimeSlot timeSlot in TimeRanges)
+			{
+				 if(timeSlot.Hour == hour && minute >= timeSlot.Minute)
+				{
+					y = timeSlot.Y;
+					return y;
+				}
+			}
+
+			return y;
+		}
     }
 }

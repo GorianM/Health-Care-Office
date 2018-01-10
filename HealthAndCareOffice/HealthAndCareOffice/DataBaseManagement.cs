@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ModelsProject;
 
 namespace HealthAndCareOffice
 {
@@ -106,7 +107,7 @@ namespace HealthAndCareOffice
             List<Staff> staffList = new List<Staff>();
             connection.Open();
             OleDbDataReader reader = null;
-            OleDbCommand command = new OleDbCommand("SELECT * from  Staff", connection);
+            OleDbCommand command = new OleDbCommand("SELECT * from  Staff;", connection);
             reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -134,7 +135,7 @@ namespace HealthAndCareOffice
         {
             connection.Open();
             OleDbDataReader reader = null;
-            OleDbCommand command = new OleDbCommand("SELECT * from  Patient ", connection);
+            OleDbCommand command = new OleDbCommand("SELECT * from  Patient;", connection);
             reader = command.ExecuteReader();
             List<Patient> patients = new List<Patient>();
             while (reader.Read())
@@ -198,7 +199,7 @@ namespace HealthAndCareOffice
         {
             connection.Open();
            
-            OleDbCommand command = new OleDbCommand("SELECT * from  Patient ", connection);
+            OleDbCommand command = new OleDbCommand("SELECT * from  Patient;", connection);
             
 
             DataSet dataSet = new DataSet();
@@ -216,7 +217,7 @@ namespace HealthAndCareOffice
             List<Patient> patients = getPatientsForSelection();
             connection.Open();
             OleDbDataReader reader = null;
-            OleDbCommand command = new OleDbCommand("SELECT * from  Appointment ", connection);
+            OleDbCommand command = new OleDbCommand("SELECT * from  Appointment ORDER BY AppointmentID;", connection);
             reader = command.ExecuteReader();
             List<Appointment> appointments = new List<Appointment>();
            
@@ -224,7 +225,11 @@ namespace HealthAndCareOffice
             {
                 Appointment appointment = new Appointment();
                 appointment.AppointmentID = (int)reader[0];
-                appointment.AppontmentDateTime = reader.GetDateTime(1);
+				DateTime date = reader.GetDateTime(1).Date;
+				DateTime time = new DateTime(1999, 1, 1, reader.GetDateTime(2).Hour, reader.GetDateTime(2).Minute, reader.GetDateTime(2).Second);
+				DateTime dateTime = new DateTime(date.Year,date.Month,date.Day,time.Hour,time.Minute,time.Second);
+
+                appointment.AppontmentDateTime = dateTime;
                 appointment.EstimatedDurationMinutes = (int)reader[3];
                 appointment.Reason = reader[4].ToString();
                 appointment.Diagnosis = reader[5].ToString();
@@ -267,7 +272,7 @@ VALUES        (?, ?, ?, ?, ?, '', '', '', ?, ?)";
                 
                 
                 command.Parameters.AddWithValue("AppointmentID", appointments.Last().AppointmentID+1);
-                command.Parameters.AddWithValue("[DateTime]", appointment.AppontmentDateTime);
+                command.Parameters.AddWithValue("[DateTime]", appointment.AppontmentDateTime.Date);
                 command.Parameters.AddWithValue("ExactTime", appointment.AppontmentDateTime);
                 command.Parameters.AddWithValue("EstimatedDurationMinutes", appointment.EstimatedDurationMinutes);
                 command.Parameters.AddWithValue("Reason", appointment.Reason);
@@ -332,5 +337,32 @@ VALUES        (?, ?, ?, ?, ?, '', '', '', ?, ?)";
             }
             
         }
-    }
+
+		internal List<ExpandableProdact> getExpandableProdacts()
+		{
+			OleDbDataReader reader = null;
+			OleDbCommand command = new OleDbCommand("SELECT * from  ExpandableProducts WHERE StaffId = ?", connection);
+			command.Parameters.AddWithValue("StaffId", GlobalConfig.User.StaffId);
+			connection.Open();
+			reader = command.ExecuteReader();
+			List<ExpandableProdact> expandableProdacts = new List<ExpandableProdact>();
+
+			while (reader.Read())
+			{
+				ExpandableProdact expandableProdact = new ExpandableProdact();
+				expandableProdact.ID = (int)reader[0];
+				expandableProdact.Description = reader[1].ToString();
+				expandableProdact.MinimumThreshold = (int)reader[2];
+				expandableProdact.Quantity = (int)reader[3];
+				expandableProdact.staff = GlobalConfig.User;
+				
+			}
+
+			connection.Close();
+			return expandableProdacts;
+
+		}
+
+
+	}
 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using HealthAndCareOffice.Properties;
 using ModelProject;
+using ModelsProject;
 
 namespace HealthAndCareOffice
 {
@@ -18,8 +19,8 @@ namespace HealthAndCareOffice
     {
         DataTable dt = new DataTable();
         NewAppointment np;
-        static string connection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Vasi-Diaxeirisis-IatreiouV2.accdb";
-        OleDbConnection conn = new OleDbConnection(connection);
+        //static string connection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Vasi-Diaxeirisis-IatreiouV2.accdb";
+        //OleDbConnection conn = new OleDbConnection(connection);
         bool startAddingPatient = false;
         bool startAddingIncomes = false;
         bool startAddingExpenses = false;
@@ -28,18 +29,36 @@ namespace HealthAndCareOffice
 
         public MainWindowForm()
         {
-            InitializeComponent();
-            sceduller1.Height= 2900;
+            try
+            {
+                InitializeComponent();
+            }catch(Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+           
+            
             this.Size = new Size(1224, 900);
             CenterToParent();
             
             DataBaseManagement dataBase = new DataBaseManagement();
             dataBase.getPatients(PatientsGridView);
-
             List<Appointment> appointments = dataBase.getAppointments();
+            sceduller1.initScedulerTable();
             sceduller1.SetDataBase(appointments);
-            
-        }
+
+			try
+			{
+				sceduller1.initAppointmentManager();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+
+			
+
+		}
         
         private void appointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -70,6 +89,8 @@ namespace HealthAndCareOffice
             loginForm.BringToFront();
             loginForm.Focus();
             loginForm.ShowDialog();
+
+			
             
         }
 
@@ -94,7 +115,7 @@ namespace HealthAndCareOffice
 
             _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable patient = new _Vasi_Diaxeirisis_IatreiouV2DataSet.PatientDataTable();
             _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter psd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.PatientTableAdapter();
-            psd.Fill(patient);
+            psd.FillByEverything(patient);
             PatientsGridView.DataSource = patient;
         }
 
@@ -688,5 +709,94 @@ namespace HealthAndCareOffice
         {
 
         }
-    }
+
+        private void TodayButton_Click(object sender, EventArgs e)
+        {
+            currentWeekDate.Value = DateTime.Now;
+            sceduller1.refreshApointmentManager(currentWeekDate.Value);
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            DateTime date = currentWeekDate.Value;
+            if(date.DayOfWeek ==DayOfWeek.Monday)
+            {
+                currentWeekDate.Value = currentWeekDate.Value.Subtract(new TimeSpan(7, 0, 0, 0));
+            }
+            else
+            {
+                while(date.DayOfWeek != DayOfWeek.Monday)
+                {
+                    date = date.Subtract(new TimeSpan(1, 0, 0, 0));
+                }
+                currentWeekDate.Value = date.Subtract(new TimeSpan(7, 0, 0, 0));
+            }
+            sceduller1.refreshApointmentManager(currentWeekDate.Value);
+			sceduller1.Invalidate();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            DateTime date = currentWeekDate.Value;
+            if (date.DayOfWeek == DayOfWeek.Sunday)
+            {
+                currentWeekDate.Value = currentWeekDate.Value.Add(new TimeSpan(1, 0, 0, 0));
+            }
+            else
+            {
+                while (date.DayOfWeek != DayOfWeek.Sunday)
+                {
+                    date = date.Add(new TimeSpan(1, 0, 0, 0));
+                }
+                currentWeekDate.Value = date.Add(new TimeSpan(1, 0, 0, 0));
+            }
+			sceduller1.SuspendLayout();
+            sceduller1.refreshApointmentManager(currentWeekDate.Value);
+			sceduller1.ResumeLayout();
+			sceduller1.Invalidate();
+        }
+
+		private void currentWeekDate_ValueChanged(object sender, EventArgs e)
+		{
+			sceduller1.refreshApointmentManager(currentWeekDate.Value);
+		}
+
+		private void MainWindowForm_Shown(object sender, EventArgs e)
+		{
+
+			List<ExpandableProdact> expandableProdacts = new List<ExpandableProdact>();
+			DataBaseManagement dbm = new DataBaseManagement();
+			expandableProdacts = dbm.getExpandableProdacts();
+			string s = "";
+			int counter = 0;
+			foreach(ExpandableProdact expandableProdact in expandableProdacts)
+			{
+				if(expandableProdact.Quantity< expandableProdact.MinimumThreshold && expandableProdact.Quantity>0)
+				{
+					s += expandableProdact.ToString() + "\n";
+					s += "The Prodact is going out of stock\n";
+					counter++;
+				}
+				else if(expandableProdact.Quantity == 0)
+				{
+					s += expandableProdact.ToString() + "\n";
+					s += "The Prodact is out of stock\n";
+					counter++;
+				}
+				
+			}
+
+			foreach (ExpandableProdact expandableProdact in expandableProdacts)
+			{
+				Debug.WriteLine(expandableProdact.ToString());
+
+			}
+			
+			if(counter>0)
+			{
+				MessageBox.Show(s);
+			}
+			
+		}
+	}
 }
