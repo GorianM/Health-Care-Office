@@ -792,12 +792,20 @@ namespace HealthAndCareOffice
         private void TodayButton_Click(object sender, EventArgs e)
         {
             currentWeekDate.Value = DateTime.Now;
-            sceduller1.refreshApointmentManager(currentWeekDate.Value);
+			DataBaseManagement dataBase = new DataBaseManagement();
+			List<Appointment> appointments = dataBase.getAppointments();
+			
+			sceduller1.SetDataBase(appointments);
+			sceduller1.refreshApointmentManager(currentWeekDate.Value);
         }
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            DateTime date = currentWeekDate.Value;
+			currentWeekDate.Value = DateTime.Now;
+			DataBaseManagement dataBase = new DataBaseManagement();
+			List<Appointment> appointments = dataBase.getAppointments();
+
+			DateTime date = currentWeekDate.Value;
             if(date.DayOfWeek ==DayOfWeek.Monday)
             {
                 currentWeekDate.Value = currentWeekDate.Value.Subtract(new TimeSpan(7, 0, 0, 0));
@@ -816,7 +824,11 @@ namespace HealthAndCareOffice
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            DateTime date = currentWeekDate.Value;
+			currentWeekDate.Value = DateTime.Now;
+			DataBaseManagement dataBase = new DataBaseManagement();
+			List<Appointment> appointments = dataBase.getAppointments();
+
+			DateTime date = currentWeekDate.Value;
             if (date.DayOfWeek == DayOfWeek.Sunday)
             {
                 currentWeekDate.Value = currentWeekDate.Value.Add(new TimeSpan(1, 0, 0, 0));
@@ -837,6 +849,9 @@ namespace HealthAndCareOffice
 
 		private void currentWeekDate_ValueChanged(object sender, EventArgs e)
 		{
+			currentWeekDate.Value = DateTime.Now;
+			DataBaseManagement dataBase = new DataBaseManagement();
+			List<Appointment> appointments = dataBase.getAppointments();
 			sceduller1.refreshApointmentManager(currentWeekDate.Value);
 		}
 

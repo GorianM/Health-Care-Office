@@ -217,7 +217,7 @@ namespace HealthAndCareOffice
             List<Patient> patients = getPatientsForSelection();
             connection.Open();
             OleDbDataReader reader = null;
-            OleDbCommand command = new OleDbCommand("SELECT * from  Appointment ORDER BY AppointmentID;", connection);
+            OleDbCommand command = new OleDbCommand("SELECT * from  Appointment;", connection);
 			
 			reader = command.ExecuteReader();
             List<Appointment> appointments = new List<Appointment>();
