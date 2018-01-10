@@ -463,7 +463,7 @@ namespace HealthAndCareOffice
                     esd.InsertExpensesQuery(expensesid, description, amount, staffId);
                 }
                 startAddingIncomes = false;
-                incomesDataGridView.EndEdit();
+                
             }
         }
 
@@ -596,6 +596,54 @@ namespace HealthAndCareOffice
         {
             _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable appointment = new _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable();
             _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter apsd = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter();
+
+            int appointmentid = 0;
+            if (!appointmentDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString().Equals(""))
+            {
+                appointmentid = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[0].Value;
+            }
+            DateTime dt = new DateTime();
+            try
+            {
+                dt = Convert.ToDateTime(appointmentDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
+            }
+            catch (Exception ex)
+            {
+            }
+            string diagnosis = appointmentDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString(); 
+            string treatment =appointmentDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString(); ;
+            string reason = appointmentDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString(); ;
+            string notes = appointmentDataGridView.Rows[e.RowIndex].Cells[7].Value.ToString(); ;
+            DateTime exactTime = new DateTime();
+            try
+            {
+                exactTime = Convert.ToDateTime(appointmentDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
+            }
+            catch (Exception ex)
+            {
+                
+            }
+
+            int duration = 0; ;
+            int patientId = 0;
+            if (!appointmentDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString().Equals(""))
+            {
+                duration = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[3].Value;
+            }
+
+            if (!appointmentDataGridView.Rows[e.RowIndex].Cells[8].Value.ToString().Equals(""))
+            {
+               patientId = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[8].Value;
+            }
+            int staffId = 0;
+            if (!appointmentDataGridView.Rows[e.RowIndex].Cells[9].Value.ToString().Equals(""))
+            {
+                staffId = (int)appointmentDataGridView.Rows[e.RowIndex].Cells[9].Value;
+            }
+
+            apsd.UpdateAppointmentQuery(dt, exactTime, duration, reason, diagnosis, treatment, notes, patientId, staffId, appointmentid);
+
+            appointmentDataGridView.EndEdit();
         }
 
         private void btnDeleteExpendables_Click(object sender, EventArgs e)
@@ -798,5 +846,67 @@ namespace HealthAndCareOffice
 			}
 			
 		}
-	}
+
+        private void appointmentDataGridView_RowLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable ap = new _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter aptb = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter();
+            if (startAddingAppointment)
+            {
+                int appointmentid = 0;
+                int duration = 0;
+                int staffid = 0;
+                string treatment;
+                string notes;
+                string diagnosis;
+                string reason;
+                DateTime dt = new DateTime();
+                DateTime exacttime = new DateTime();
+               
+                int patientid = 0;
+                if (!appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[0].Value.ToString().Equals(""))
+                {
+                    appointmentid = (int)appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[0].Value;
+                }
+
+                try
+                {
+                    dt = Convert.ToDateTime(appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[1].Value.ToString());
+                }
+                catch
+                {}
+                try
+                {
+                   exacttime = Convert.ToDateTime(appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[2].Value.ToString());
+                }
+                catch
+                {}
+               
+                if (!appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[3].Value.ToString().Equals(""))
+                {
+                    duration = (int)appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[3].Value;
+                }
+                reason = appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[4].Value.ToString();
+                diagnosis = appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[5].Value.ToString();
+                treatment = appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[6].Value.ToString();
+
+                notes = appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[7].Value.ToString();
+
+                if (!appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[8].Value.ToString().Equals(""))
+                {
+                    patientid = (int)appointmentDataGridView.Rows[appointmentDataGridView.Rows.Count - 2].Cells[8].Value;
+                }
+                staffid = GlobalConfig.User.StaffId;
+                aptb.InsertAppointmentQuery(appointmentid,dt,exacttime,duration,reason,diagnosis,treatment,notes,patientid,staffid);
+                startAddingAppointment = false;
+
+            }
+
+        }
+
+        private void appointmentDataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            startAddingAppointment = true;
+        }
+    }
 }

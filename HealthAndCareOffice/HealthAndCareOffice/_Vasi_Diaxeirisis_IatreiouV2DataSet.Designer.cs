@@ -4817,10 +4817,11 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Reason", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Reason", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "INSERT INTO `Appointment` (`DateTime`, `ExactTime`, `EstimatedDurationMinutes`, `" +
-                "Reason`, `Diagnosis`, `Treatment`, `Notes`, `PatientId`, `StaffId`) VALUES (?, ?" +
-                ", ?, ?, ?, ?, ?, ?, ?)";
+            this._commandCollection[3].CommandText = "INSERT INTO Appointment\r\n                         (AppointmentID,[DateTime], Exac" +
+                "tTime, EstimatedDurationMinutes, Reason, Diagnosis, Treatment, Notes, PatientId," +
+                " StaffId)\r\nVALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("AppointmentID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "AppointmentID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateTime", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateTime", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ExactTime", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ExactTime", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EstimatedDurationMinutes", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EstimatedDurationMinutes", global::System.Data.DataRowVersion.Current, false, null));
@@ -4938,61 +4939,62 @@ namespace HealthAndCareOffice._Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertAppointmentQuery(global::System.Nullable<global::System.DateTime> DateTime, global::System.Nullable<global::System.DateTime> ExactTime, global::System.Nullable<int> EstimatedDurationMinutes, string Reason, string Diagnosis, string Treatment, string Notes, global::System.Nullable<int> PatientId, global::System.Nullable<int> StaffId) {
+        public virtual int InsertAppointmentQuery(int AppointmentID, global::System.Nullable<global::System.DateTime> DateTime, global::System.Nullable<global::System.DateTime> ExactTime, global::System.Nullable<int> EstimatedDurationMinutes, string Reason, string Diagnosis, string Treatment, string Notes, global::System.Nullable<int> PatientId, global::System.Nullable<int> StaffId) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[3];
+            command.Parameters[0].Value = ((int)(AppointmentID));
             if ((DateTime.HasValue == true)) {
-                command.Parameters[0].Value = ((System.DateTime)(DateTime.Value));
-            }
-            else {
-                command.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((ExactTime.HasValue == true)) {
-                command.Parameters[1].Value = ((System.DateTime)(ExactTime.Value));
+                command.Parameters[1].Value = ((System.DateTime)(DateTime.Value));
             }
             else {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((EstimatedDurationMinutes.HasValue == true)) {
-                command.Parameters[2].Value = ((int)(EstimatedDurationMinutes.Value));
+            if ((ExactTime.HasValue == true)) {
+                command.Parameters[2].Value = ((System.DateTime)(ExactTime.Value));
             }
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Reason == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
+            if ((EstimatedDurationMinutes.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(EstimatedDurationMinutes.Value));
             }
             else {
-                command.Parameters[3].Value = ((string)(Reason));
+                command.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Diagnosis == null)) {
+            if ((Reason == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(Diagnosis));
+                command.Parameters[4].Value = ((string)(Reason));
             }
-            if ((Treatment == null)) {
+            if ((Diagnosis == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(Treatment));
+                command.Parameters[5].Value = ((string)(Diagnosis));
             }
-            if ((Notes == null)) {
+            if ((Treatment == null)) {
                 command.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[6].Value = ((string)(Notes));
+                command.Parameters[6].Value = ((string)(Treatment));
             }
-            if ((PatientId.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(PatientId.Value));
-            }
-            else {
+            if ((Notes == null)) {
                 command.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((StaffId.HasValue == true)) {
-                command.Parameters[8].Value = ((int)(StaffId.Value));
+            else {
+                command.Parameters[7].Value = ((string)(Notes));
+            }
+            if ((PatientId.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(PatientId.Value));
             }
             else {
                 command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((StaffId.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(StaffId.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

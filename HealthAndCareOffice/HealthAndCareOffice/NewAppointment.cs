@@ -69,7 +69,8 @@ namespace HealthAndCareOffice
             string reason = textBoxReasonOfAppointment.Text;
             Patient patient = selectedPatient;
             int duration = Convert.ToInt32(textBoxEstimatedDuration.Text);
-
+            _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable ap = new _Vasi_Diaxeirisis_IatreiouV2DataSet.AppointmentDataTable();
+            _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter ata = new _Vasi_Diaxeirisis_IatreiouV2DataSetTableAdapters.AppointmentTableAdapter();
             bool validated = validateInput();
             if(validated)
             {
@@ -81,8 +82,10 @@ namespace HealthAndCareOffice
                 appointment.staff = GlobalConfig.User;
                 DataBaseManagement dbm = new DataBaseManagement();
                 dbm.addAppointment(appointment);
+                //ata.InsertAppointmentQuery(date, time, duration, reason,appointment.Diagnosis,appointment.Notes, patient.PatientID, appointment.AppointmentID);
                 this.Close();
             }
+           
 
             
         }
